@@ -23,23 +23,23 @@
       </thead>
       <tbody>
         <tr>
+          <td>Borja Molina, Gabriel Sebastián</td>
+          <td>123</td>
+        </tr>
+        <tr>
           <td>Lang Nassi, Werner Khalil</td>
           <td>U202310003</td>
         </tr>
         <tr>
-          <td>hola mundo</td>
+          <td>Rodriguez Rodriguez, Luis Piero Zinadine</td>
           <td>123</td>
         </tr>
         <tr>
-          <td>hola mundo</td>
+          <td>Román Pajuelo, Luis Gustavo </td>
           <td>123</td>
         </tr>
         <tr>
-          <td>hola mundo</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>hola mundo</td>
+          <td>Suárez Romero, Santiago Manuel</td>
           <td>123</td>
         </tr>
       </tbody>
