@@ -56,6 +56,11 @@
 # Contenido
 ## Tabla de Contenidos
 
+### [Contenido](#contenido)
+### [Registro de versiones del informe](#registro-de-versiones-del-informe)
+### [Project Report Collaboration Insights](#project-report-collaboration-insights)
+### [Student Outcome](#student-outcome-1)
+
 ## Registro de versiones del informe
 | Versión | Fecha      | Autor                                        | Descripción de la modificación|
 |---------|------------|----------------------------------------------|-------------------------------|
@@ -63,3 +68,8 @@
 ## Project Report Collaboration Insights
 
 Para el desarrollo de este informe se utilizó GitHub como plataforma de colaboración y control de versiones. A continuación, se presentan algunos insights sobre la colaboración del equipo durante la elaboración del informe:
+
+## Student Outcome
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+|---------------------|---------------------|--------------|
