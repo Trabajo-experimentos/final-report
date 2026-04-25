@@ -131,7 +131,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ### 4.10.1 Relational Database Diagram
 
-La base de datos **MySQL** mantiene las entidades descritas en los capítulos anteriores:
+La base de datos **Postgres** mantiene las entidades descritas en los capítulos anteriores:
 
 ![WhatsApp Image 2025-11-30 at 9 21 40 PM](https://github.com/user-attachments/assets/59d10088-aa49-4da6-a5b4-be8bac062fe1)
 
