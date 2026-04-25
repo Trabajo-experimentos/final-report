@@ -7,7 +7,7 @@
 | Control de versiones | Git + GitHub                                  | Versionamiento y trabajo colaborativo  |
 | Testing              | Gherkin                                       | Acceptance Tests                       |
 | API Client           | Postman / Swagger                             | Validación de endpoints                |
-| Base de Datos        | MySQL (FreeSQL)                               | Almacenamiento persistente             |
+| Base de Datos        | Postgres                                      | Almacenamiento persistente             |
 | Documentación        | Swagger (OpenAPI)                             | Generación automática de documentación |
 | Gestión de proyecto  | Trello                                        | Control ágil de tareas y User Stories  |
 
