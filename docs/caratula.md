@@ -1,50 +1,36 @@
 <p align="center">
-  <img src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/logoupc.png?raw=true"  style="width:200px; height:auto;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" alt="LogoUPC">
 </p>
 
-# <div style="text-align: center;"> Universidad Peruana de Ciencias Aplicadas
+# <p align="center">Universidad Peruana de Ciencias Aplicadas</p>
+## <p align="center">Ingeniería de Software</p>
+<p align="center">Periodo: 202610</p>
+<p align="center">1ASI0732 | Diseño de Experimentos de Ingeniería de Software</p>
+<p align="center">NRC: 17821</p>
+<p align="center">Docente: Lennin Percy Cenas Vasquez</p>
 
+---
 
-## <div style="text-align: center;">Ingeniería de Software </div>
-## <div style="text-align: center;">1ASI0732 Diseño de Experimentos de Ingeniería de Software 202610</div>
-## <div style="text-align: center;"> NRC: 17821 </div>
-## <div style="text-align: center;"> Profesor: Lennin Percy Cenas Vasquez</div>
-## <div style="text-align: center;"> Informe del Trabajo Final</div>
-## <div style="text-align: center;"> Nombre del Producto: FoodFlow </div>
+<br>
 
-### <div style="text-align: center;"> Integrantes:</div>
-<div style="display: flex; justify-content: center;">
-    <table>
-      <thead>
-        <tr>
-          <th style="background-color: #333; color: #fff;">Apellidos y Nombres</th>
-          <th style="background-color: #333; color: #fff;">Código de Alumno</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Borja Molina, Gabriel Sebastián</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>Lang Nassi, Werner Khalil</td>
-          <td>U202310003</td>
-        </tr>
-        <tr>
-          <td>Rodriguez Rodriguez, Luis Piero Zinadine</td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>Román Pajuelo, Luis Gustavo </td>
-          <td>123</td>
-        </tr>
-        <tr>
-          <td>Suárez Romero, Santiago Manuel</td>
-          <td>123</td>
-        </tr>
-      </tbody>
-    </table> 
-</div>
+## <p align="center">Informe del Trabajo Final</p>
+
+<p align="center">Producto: FoodFlow</p>
+
+<br>
+
+<p align="center">Integrantes:</p>
+<p align="center"><code>123</code> - Borja Molina, Gabriel Sebastián</p>
+<p align="center"><code>U202310003</code> - Lang Nassi, Werner Khalil</p>
+<p align="center"><code>U202311334</code> - Rodriguez Rodriguez, Luis Piero</p>
+<p align="center"><code>U202123373</code> - Román Pajuelo, Luis Gustavo</p>
+<p align="center"><code>123</code> - Suárez Romero, Santiago Manuel</p>
+  
+<br>
+
+<p align="center"><i>Ciclo 202601</i></p>
+
+<br>
 
 
 
