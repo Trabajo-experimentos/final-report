@@ -2,7 +2,7 @@
 ## 1.1 Startup Profile
 ### 1.1.1 Descripción de la Startup
 
-**Nombre creativo** es una startup dedicada a soluciones de gestión financiera digital enfocadas en restaurantes. 
+**ClaudeFlow** es una startup dedicada a soluciones de gestión financiera digital enfocadas en restaurantes. 
 Utilizamos tecnologías web inteligentes para simplificar el control económico de restaurantes. 
 Nuestro enfoque es preventivo, proporcionando dashboards y herramientas analíticas 
 para evitar pérdidas financieras y optimizar la rentabilidad. No ofrecemos servicios contables 
