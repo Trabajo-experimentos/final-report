@@ -34,9 +34,6 @@
 
 
 
-<div style="text-align: center;"> Ciclo 2026-10 </div>
-
-
 <div style="page-break-after: always;"></div>
 
 # Contenido
