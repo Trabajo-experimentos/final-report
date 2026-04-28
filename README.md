@@ -961,11 +961,170 @@ Para la planeación y desarrollo del proyecto, se han definido las siguientes é
 
 ## 4.1 Style Guidelines
 
-### 4.1.1 General Style Guidelines
+FoodFlow busca transformar la manera en que los dueños de restaurantes gestionan, interpretan y utilizan la información financiera y operativa de sus negocios. Para ello, funciona como una aplicación web especializada que centraliza métricas clave, reportes, inventario, órdenes y análisis de platos dentro de una experiencia visual clara, accesible y orientada a la toma de decisiones. Además de facilitar el control diario del restaurante, FoodFlow permite que los propietarios identifiquen oportunidades de mejora, reduzcan errores administrativos y comprendan con mayor precisión la salud financiera de su negocio.
+
+Esta sección presenta una Guía de Estilo integral y estructurada, diseñada para unificar los elementos visuales, de interacción y composición que conforman la plataforma FoodFlow. El propósito es establecer una identidad de producto coherente con su misión: simplificar la gestión financiera de restaurantes mediante una herramienta digital intuitiva, organizada y confiable. Al definir recursos clave como tipografía, paleta de colores, espaciado, componentes visuales y tono comunicacional, la plataforma garantiza consistencia en cada pantalla. Esto no solo mejora la navegación y facilita la lectura de información financiera, sino que también refuerza la percepción de FoodFlow como una solución moderna, profesional y accesible para negocios gastronómicos.
+
+### 4.1.1. General Style Guidelines
+
+El diseño de FoodFlow se sustenta en una Guía de Estilo integral y estructurada, cuyo objetivo es proyectar una identidad visual coherente con los valores del producto: claridad financiera, simplicidad operativa, accesibilidad y confianza. Esta sección define los principales lineamientos visuales de la plataforma, abordando aspectos como Branding, Logotipo, Paleta de Colores, Tipografía, Iconografía, Espaciado y Lenguaje aplicado.
+
+La implementación actual del frontend se basa en Material UI (MUI), utilizando componentes reutilizables, tokens visuales del tema y una estructura responsiva que permite mantener consistencia entre pantallas. Esta decisión favorece una interfaz ordenada, modular y adaptable, especialmente adecuada para una aplicación que presenta información financiera, operativa y analítica mediante dashboards, cards, tablas y gráficos.
+
+Todas las decisiones de diseño se basan en el principio de claridad funcional. FoodFlow prioriza que el usuario pueda comprender rápidamente el estado de su restaurante, identificar métricas relevantes y ejecutar acciones sin fricción. Por ello, cada elemento visual cumple una función específica: jerarquizar información, facilitar la lectura, reducir la carga cognitiva y guiar al usuario hacia las secciones más importantes del sistema.
+
+#### Branding y Logotipo
+
+El Branding de FoodFlow busca transmitir profesionalismo, control y confianza, valores fundamentales para una plataforma enfocada en la gestión financiera de restaurantes. La identidad de marca se expresa principalmente a través del nombre “FoodFlow”, el cual comunica la idea de flujo organizado de información dentro del negocio gastronómico: ingresos, gastos, órdenes, inventario, platos y reportes.
+
+El logotipo y la identidad textual de FoodFlow deben mantener una presencia clara y reconocible dentro de la interfaz, especialmente en la landing page, la barra superior y los espacios de navegación principal. Su uso debe ser consistente, evitando variaciones visuales que puedan debilitar la identidad del producto. En la aplicación web, el branding se complementa con el uso de componentes MUI, tarjetas de métricas, navegación lateral y una estructura visual limpia que refuerza la percepción de una herramienta seria, moderna y confiable.
+
+#### Paleta de Colores (Colors)
+
+La paleta de colores de FoodFlow se basa en un enfoque semántico, donde cada color cumple una función específica dentro de la experiencia de usuario. Esta decisión resulta especialmente importante en una plataforma financiera, ya que los colores permiten comunicar estados, variaciones, alertas y resultados de manera rápida y visual.
+
+<p align="center">
+  <img src="assets/ColoresFoodflow.png" alt="UJM" width="1000">
+</p>
+
+**Paleta semántica principal:**
+
+* **Success - Verde principal (`#4caf50`)**: utilizado para representar resultados positivos, métricas favorables, ingresos, crecimiento o estados correctos dentro del sistema.
+* **Success Light (`#e8f5e9`)**: utilizado como fondo suave para reforzar información positiva sin saturar visualmente la interfaz.
+* **Error - Rojo principal (`#f44336`)**: utilizado para representar pérdidas, errores, alertas críticas o estados que requieren atención del usuario.
+* **Error Light (`#ffebee`)**: utilizado como fondo de apoyo para mensajes de error o indicadores negativos.
+* **Info - Azul principal (`#2196f3`)**: utilizado para información general, métricas neutras, acciones principales y elementos de navegación.
+* **Info Light (`#e3f2fd`)**: utilizado como fondo informativo para destacar contenido relevante sin generar alarma.
+* **Warning - Naranja principal (`#ff9800`)**: utilizado para advertencias, estados intermedios, alertas de inventario o información que requiere revisión.
+* **Warning Light (`#fff3e0`)**: utilizado como fondo de apoyo para advertencias o indicadores preventivos.
+
+**Colores para gráficas y visualizaciones:**
+
+* Azul: `#2196f3`
+* Verde: `#4caf50`
+* Naranja: `#ff9800`
+* Rojo: `#f44336`
+* Morado: `#9c27b0`
+* Cian: `#00bcd4`
+* Violeta: `#8884d8`
+
+Estos colores se emplean en gráficos, series comparativas, indicadores financieros y cards de métricas. Su uso permite diferenciar categorías, visualizar tendencias y facilitar la lectura de datos sin depender únicamente de texto o tablas extensas.
+
+#### Tipografía (Typography)
+
+La selección tipográfica de FoodFlow prioriza la legibilidad, la jerarquía visual y la claridad en la lectura de datos. Debido a que la plataforma presenta información financiera y operativa, es fundamental que los usuarios puedan identificar rápidamente títulos, cifras, descripciones, etiquetas y acciones.
+
+<p align="center">
+  <img src="assets/TipografiaFoodflow.png" alt="UJM" width="1000">
+</p>
+
+El stack tipográfico global utilizado en la aplicación es el siguiente (tanto versión light, regular y bold):
+
+* `Lucida Grande`
+* `Segoe UI`
+* `Roboto`
+* `Helvetica Neue`
+
+Esta combinación permite una visualización estable en distintos sistemas operativos y navegadores, manteniendo una apariencia moderna y familiar para el usuario.
+
+**Variantes tipográficas utilizadas en la aplicación:**
+
+* `h4`: utilizado para títulos principales de páginas o secciones relevantes.
+* `h5`: utilizado para encabezados secundarios o bloques destacados.
+* `h6`: utilizado para títulos de cards, módulos o subsecciones.
+* `body1`: utilizado para textos principales y descripciones.
+* `body2`: utilizado para textos secundarios o información complementaria.
+* `caption`: utilizado para etiquetas pequeñas, detalles o información contextual.
+* `subtitle2`: utilizado para subtítulos, encabezados menores o textos de apoyo.
+* `button`: utilizado para acciones dentro de botones y elementos interactivos.
+
+El énfasis visual se aplica principalmente mediante `fontWeight: 'bold'`, especialmente en títulos, cifras financieras y encabezados de métricas. Esta decisión permite que los datos más importantes destaquen dentro de dashboards y reportes, facilitando una lectura rápida del estado del negocio.
+
+#### Iconografía (Iconography)
+
+La iconografía de FoodFlow debe ser simple, clara y funcional. Su propósito principal es apoyar la navegación, facilitar la identificación de módulos y reforzar visualmente las acciones disponibles dentro de la plataforma.
+
+El estilo recomendado para los íconos es limpio y consistente con Material UI, manteniendo proporciones equilibradas y una lectura inmediata. Los íconos deben representar acciones o secciones clave del sistema, tales como dashboard, menú, inventario, órdenes, reportes financieros, configuración, perfil y autenticación.
+
+**Propósito de la iconografía:**
+
+* Facilitar la identificación rápida de módulos dentro del menú lateral.
+* Reforzar visualmente acciones como agregar, editar, eliminar, buscar o guardar.
+* Acompañar métricas financieras mediante señales visuales de estado.
+* Reducir la carga cognitiva del usuario al navegar por la plataforma.
+* Mantener coherencia entre la landing page y la aplicación web.
+
+La iconografía no debe utilizarse como elemento decorativo aislado, sino como apoyo funcional para mejorar la comprensión de la interfaz.
+
+#### Espaciado (Spacing)
+
+El sistema de espaciado de FoodFlow se basa en las propiedades `sx` de Material UI, utilizando valores numéricos que se ajustan al tema visual de la aplicación. Esta estructura permite mantener una distribución consistente entre componentes, secciones, cards, tablas y contenedores.
+
+**Ejemplos de espaciado utilizados:**
+
+* `p: 3`: padding interno para contenedores principales o tarjetas.
+* `mb: 3`: margen inferior para separar secciones.
+* `mt: 8`: margen superior para generar distancia estructural.
+* `spacing={2}`: separación entre elementos dentro de layouts flexibles o grids.
+
+La estructura principal de la aplicación está compuesta por un `AppBar` fijo y un `Drawer` lateral con ancho de `240px`, lo que permite mantener una navegación persistente y clara. El contenido principal utiliza padding consistente para evitar saturación visual y asegurar que los datos se presenten con suficiente espacio de lectura.
+
+El espaciado cumple una función esencial dentro de FoodFlow, ya que permite organizar grandes volúmenes de información sin que la interfaz se perciba sobrecargada. En dashboards, reportes y tablas, la separación entre elementos facilita la comparación de métricas, la lectura de cifras y la identificación de acciones disponibles.
+
+#### Responsive Design
+
+FoodFlow utiliza los breakpoints por defecto de Material UI para adaptar la interfaz a distintos tamaños de pantalla. Esta decisión permite que la plataforma conserve una estructura ordenada tanto en vistas compactas como en pantallas de escritorio.
+
+| Media Query | Dispositivo |
+|------------|-------------|
+| 0px (`xs`) | Web compacto |
+| 600px (`sm`) | Web regular |
+| 900px (`md`) | Web amplio |
+| 1200px (`lg`) | Web escritorio |
+
+Con estas convenciones se definen los momentos en los que el layout debe ajustarse significativamente. Por ejemplo, el `Drawer` puede comportarse de manera distinta según el tamaño de pantalla, mientras que las secciones organizadas en filas pueden transformarse en columnas para preservar la legibilidad en espacios reducidos.
+
+Este enfoque responsivo permite que FoodFlow mantenga una experiencia consistente, priorizando siempre la claridad de la información y la facilidad de navegación.
+
+#### Tono de Comunicación y Lenguaje Aplicado
+
+El tono de comunicación de FoodFlow debe ser claro, profesional y orientado a la acción. Al tratarse de una plataforma de gestión financiera para restaurantes, el lenguaje debe transmitir confianza, precisión y facilidad de uso, evitando tecnicismos innecesarios que puedan dificultar la comprensión de usuarios sin formación contable avanzada.
+
+La comunicación debe enfocarse en guiar al usuario de manera directa, explicando cada acción o resultado de forma sencilla. Los mensajes del sistema, botones, etiquetas y descripciones deben utilizar términos familiares para el dueño de restaurante, como ingresos, gastos, inventario, órdenes, platos, reportes y configuración.
+
+**Características del tono de FoodFlow:**
+
+* **Claro:** los mensajes deben ser directos y fáciles de entender.
+* **Profesional:** la plataforma debe transmitir seriedad y confianza en la gestión del negocio.
+* **Accesible:** el lenguaje debe evitar complejidad innecesaria y adaptarse a usuarios con distintos niveles de experiencia digital.
+* **Orientado a decisiones:** la información debe ayudar al usuario a interpretar resultados y actuar.
+* **Consistente:** las etiquetas, botones y mensajes deben mantener una misma lógica en toda la aplicación.
+
+En cuanto al lenguaje aplicado, FoodFlow prioriza la comprensión inmediata. Por ello, las etiquetas del sistema son breves y funcionales, como `Dashboard`, `Menu / Dishes`, `Inventory`, `Orders`, `Finance` y `Settings`. Estas denominaciones permiten que el usuario identifique rápidamente cada sección y comprenda su propósito dentro de la plataforma.
+
+Este enfoque comunicativo permite que FoodFlow no solo sea una herramienta funcional, sino también una experiencia confiable y fácil de adoptar para dueños de restaurantes que buscan mejorar el control financiero y operativo de sus negocios.
 
 ### 4.1.2 Web Style Guidelines
 
+En esta sección se explicamos e ilustramos las decisiones sobre los estándares visuales y de
+interacción para responsive web interfaces.
+
+Respecto a responsive definimos breakpoints segun el sistema por defecto de MUI, usando los tamaños del tema (no hay overrides) y las etiquetas `xs`, `sm`, `md`, `lg` en los componentes.
+
+|Media Query|Dispositivo|
+|-|-|
+| 0px (xs) | Web compacto |
+| 600px (sm) | Web regular |
+| 900px (md) | Web amplio |
+| 1200px (lg) | Web escritorio |
+
+con estas convenciones nos hemos guiado para saber en que momentos debemos realizar cambios significativos en layout (por ejemplo, Drawer permanente vs temporal, y stacks en columna vs fila).
+
 ## 4.2 Information Architecture
+
+La arquitectura de información es fundamental para definir la manera en que se organizan los diferentes componentes de FoodFlow, permitiendo que los dueños de restaurantes puedan interactuar con la plataforma de forma clara, intuitiva y eficiente. Al tratarse de una aplicación orientada a la gestión financiera y operativa, resulta indispensable estructurar adecuadamente módulos como Dashboard, Menu / Dishes, Inventory, Orders, Finance y Settings, de modo que el usuario pueda encontrar rápidamente la información que necesita para monitorear el estado de su negocio.
+
+Una correcta organización de la información permite reducir la carga cognitiva del usuario, mejorar la navegación entre secciones y facilitar la interpretación de datos clave como ingresos, gastos, órdenes, inventario y rendimiento de platos. Por ello, FoodFlow prioriza una arquitectura visual ordenada y funcional, orientada a retener la atención del usuario, simplificar la consulta de métricas y fomentar el uso constante de la aplicación como herramienta de apoyo para la toma de decisiones.
 
 ### 4.2.1 Organization Systems
 
