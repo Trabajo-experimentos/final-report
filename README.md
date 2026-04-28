@@ -829,6 +829,11 @@ y la gestión de inventario, que realiza con alta frecuencia e importancia.
 
 ### 2.3.3 User Journey Mapping
 
+***Segmento objetivo: Dueños de restaurantes***
+<p align="center">
+  <img src="assets/User_Journey_Mapping.png" alt="UJM" width="1000">
+</p>
+
 ### 2.3.4 Empathy Map
 Esta sección presenta el Empathy Map desarrollado para el User Persona. El proceso de elaboración incluyó la reflexión colaborativa del equipo en torno a la experiencia, necesidades, pensamientos, emociones y percepciones de cada usuario. Este mapa permite profundizar en la comprensión de sus contextos y motivaciones, respondiendo preguntas clave sobre lo que ven, escuchan, piensan, sienten, dicen y hacen. A partir de este análisis, se identificaron sus Pains y Gains, los cuales servirán como base para el diseño de una propuesta de valor relevante. <br>
 
