@@ -849,9 +849,20 @@ Esta sección presenta el Empathy Map desarrollado para el User Persona. El proc
 
 ### 2.4 Ubiquitous Language
 
+| Término | Definición |
+| :--- | :--- |
+| **Dueño de restaurante** | Propietario o administrador principal de un negocio gastronómico pequeño o mediano, y usuario principal de la plataforma. |
+| **Dashboard financiero** | Panel visual centralizado que muestra un resumen rápido de ingresos, pérdidas, porcentajes de variación y el estado general del negocio. |
+| **Inventario** | Registro digital de productos e ingredientes que permite controlar el stock actual, costo unitario y unidad de medida. |
+| **Menú** | Catálogo digital gestionable de los platos ofrecidos por el restaurante, que detalla nombre, descripción, precio e ingredientes. |
+| **Órdenes** | Registro operativo de los pedidos de los clientes, que asocia los platos solicitados a una mesa específica y calcula automáticamente el precio total. |
+| **Rentabilidad por plato** | Indicador que clasifica y muestra los platos más populares y vendidos para ayudar en la toma de decisiones sobre precios y compras. |
+| **Reporte financiero** | Consolidado visual de datos económicos que permite analizar ingresos y gastos filtrados por períodos (diario, semanal, mensual). |
+| **Quiebre de stock** | Situación operativa en la que el restaurante se queda sin ingredientes importantes, generando pedidos no atendidos. |
+| **Categoría de gasto** | Clasificación específica de los egresos del restaurante, utilizada en los reportes para identificar áreas de optimización de costos. |
+| **Plan de suscripción** | Modelo de servicio SaaS que determina el nivel de acceso (ej. Básico, Premium) a las funcionalidades de la plataforma mediante un pago recurrente. |
 
-
----
+<hr>
 
 # Capítulo III: Requirements Specification
 
