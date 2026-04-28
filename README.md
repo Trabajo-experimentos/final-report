@@ -168,7 +168,7 @@ ClaudeFlow es una startup liderada por estudiantes de la Universidad Peruana de 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | ![GabrielBorja.jpg](assets/GabrielBorja.jpg) | Borja Molina, Gabriel Sebastián | U202310308 | Ingeniería de Software | | |
 | ![WernerLang.jpg](assets/WernerLang.jpg) | Lang Nassi, Werner Khalil | U202310003 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas. | Investigador, Innovador, Analista, Cooperativo. |
-| ![LuisRodriguez.jpg](assets/LuisRodriguez.jpg) | Rodriguez Rodriguez, Luis Piero | U202311334 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), actualmente en 7mo ciclo, con interés en el rubro de desarrollo y análisis de datos. | |
+| ![LuisRodriguez.jpg](assets/LuisRodriguez.png) | Rodriguez Rodriguez, Luis Piero | U202311334 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), actualmente en 7mo ciclo, con interés en el rubro de desarrollo y análisis de datos. | |
 | ![GustavoRoman.jpg](assets/GustavoRoman.jpg) | Román Pajuelo, Luis Gustavo | U202123373 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Me considero un estudiante con ganas de seguir aprendiendo constantemente | Responsable, Cooperativo, Proactivo, Perseverante. |
 | ![SantiagoSuarez.jpg](assets/SantiagoSuarez.jpg) | Suárez Romero, Santiago Manuel | U202311532 | Ingeniería de Software | | |
 
