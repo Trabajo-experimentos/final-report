@@ -977,6 +977,10 @@ Todas las decisiones de diseño se basan en el principio de claridad funcional. 
 
 El Branding de FoodFlow busca transmitir profesionalismo, control y confianza, valores fundamentales para una plataforma enfocada en la gestión financiera de restaurantes. La identidad de marca se expresa principalmente a través del nombre “FoodFlow”, el cual comunica la idea de flujo organizado de información dentro del negocio gastronómico: ingresos, gastos, órdenes, inventario, platos y reportes.
 
+<p align="center">
+  <img src="assets/LogoFoodflow.png" alt="UJM">
+</p>
+
 El logotipo y la identidad textual de FoodFlow deben mantener una presencia clara y reconocible dentro de la interfaz, especialmente en la landing page, la barra superior y los espacios de navegación principal. Su uso debe ser consistente, evitando variaciones visuales que puedan debilitar la identidad del producto. En la aplicación web, el branding se complementa con el uso de componentes MUI, tarjetas de métricas, navegación lateral y una estructura visual limpia que refuerza la percepción de una herramienta seria, moderna y confiable.
 
 #### Paleta de Colores (Colors)
@@ -984,7 +988,7 @@ El logotipo y la identidad textual de FoodFlow deben mantener una presencia clar
 La paleta de colores de FoodFlow se basa en un enfoque semántico, donde cada color cumple una función específica dentro de la experiencia de usuario. Esta decisión resulta especialmente importante en una plataforma financiera, ya que los colores permiten comunicar estados, variaciones, alertas y resultados de manera rápida y visual.
 
 <p align="center">
-  <img src="assets/ColoresFoodflow.png" alt="UJM" width="1000">
+  <img src="assets/ColoresFoodflow.png" alt="UJM">
 </p>
 
 **Paleta semántica principal:**
@@ -1015,7 +1019,7 @@ Estos colores se emplean en gráficos, series comparativas, indicadores financie
 La selección tipográfica de FoodFlow prioriza la legibilidad, la jerarquía visual y la claridad en la lectura de datos. Debido a que la plataforma presenta información financiera y operativa, es fundamental que los usuarios puedan identificar rápidamente títulos, cifras, descripciones, etiquetas y acciones.
 
 <p align="center">
-  <img src="assets/TipografiaFoodflow.png" alt="UJM" width="1000">
+  <img src="assets/TipografiaFoodflow.png" alt="UJM">
 </p>
 
 El stack tipográfico global utilizado en la aplicación es el siguiente (tanto versión light, regular y bold):
