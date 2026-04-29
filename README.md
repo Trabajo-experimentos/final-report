@@ -129,7 +129,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
     - [5.1.4. Software Deployment Configuration.](#514-software-deployment-configuration)
   - [5.2. Product Implementation \& Deployment.](#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs.](#521-sprint-backlogs)
-    - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+    - [](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
     - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
     - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
@@ -1692,6 +1692,14 @@ El despliegue del backend se realiza en **FreeSQL** para la base de datos.
 ### 5.2.1. Sprint Backlogs.
 
 ### 5.2.2. Implemented Landing Page Evidence
+
+Se completó el desarrollo de la Landing Page de FoodFlow como el primer espacio de presentación del producto ante potenciales usuarios. Esta página funciona como una entrada informativa y comercial a la plataforma, permitiendo que los visitantes comprendan rápidamente qué problema resuelve FoodFlow, cómo ayuda a los restaurantes y cuáles son sus principales beneficios.
+
+La landing page está organizada en una secuencia clara de secciones que guían al usuario durante todo el recorrido: Inicio, Funciones, Beneficios, Sobre nosotros, Cómo funciona, Planes, Contacto, Términos y Condiciones, Política de Privacidad, Ayuda y Preguntas frecuentes. Además, incorpora navegación superior, llamados a la acción, formulario de contacto, selector de idioma en español e inglés y un pie de página con accesos relevantes para reforzar la usabilidad y la confianza del visitante.
+
+A nivel visual y funcional, la implementación respeta la identidad definida para FoodFlow, utilizando una composición moderna, jerarquía tipográfica clara, tarjetas informativas, contraste adecuado, componentes visuales consistentes y una estructura adaptable a distintos tamaños de pantalla. De esta manera, la Landing Page no solo comunica la propuesta de valor de la aplicación, sino que también facilita que los dueños de restaurantes identifiquen a FoodFlow como una solución accesible para organizar sus finanzas, centralizar información operativa y tomar decisiones basadas en datos.
+
+Link de la Landing Page: [https://claudeflow-org.github.io/FoodFlow-LandingPage/](https://claudeflow-org.github.io/FoodFlow-LandingPage/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
