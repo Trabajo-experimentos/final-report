@@ -129,7 +129,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
     - [5.1.4. Software Deployment Configuration.](#514-software-deployment-configuration)
   - [5.2. Product Implementation \& Deployment.](#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs.](#521-sprint-backlogs)
-    - [](#522-implemented-landing-page-evidence)
+    - [### 5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
     - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
     - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
