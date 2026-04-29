@@ -1142,9 +1142,149 @@ Una correcta organización de la información permite reducir la carga cognitiva
 
 ## 4.3 Landing Page UI Design
 
+La propuesta de diseño para la interfaz de usuario (UI) de la Landing Page de FoodFlow representa la materialización visual de su arquitectura de información y de su enfoque centrado en el usuario. Desde el primer contacto, la interfaz está diseñada para comunicar una identidad profesional, clara y confiable, alineada con el propósito principal de la plataforma: ayudar a los restaurantes a gestionar mejor sus finanzas, optimizar sus operaciones y tomar decisiones basadas en datos.
+
+La estructura de la Landing Page se organiza en secciones clave como Inicio, Funciones, Beneficios, Sobre nosotros, Cómo funciona, Planes, Términos y Condiciones, Política de Privacidad, Ayuda, Preguntas frecuentes y Contacto. Esta distribución permite una navegación ordenada e intuitiva, guiando al visitante desde la presentación general del producto hasta la comprensión de sus funcionalidades, beneficios, modelo de suscripción y canales de soporte.
+
+A nivel visual, FoodFlow emplea una jerarquía clara, componentes modernos, tipografías legibles y una paleta de colores adecuada. Estos elementos permiten transmitir confianza, accesibilidad y eficiencia, reforzando la propuesta de valor del producto. Además, la Landing Page está disponible en español e inglés, lo que amplía su alcance comunicacional y facilita que distintos usuarios puedan comprender la plataforma desde su idioma de preferencia.
+
 ### 4.3.1 Landing Page Wireframe
 
+La primera sección de la landing page presenta una descripción breve y directa sobre el propósito de FoodFlow. En la parte superior se ubica un encabezado fijo que acompaña al usuario durante todo el recorrido de la página, facilitando el acceso a las secciones principales. Asimismo, se incluyen dos botones de acción que permiten redirigir al visitante de manera más rápida hacia opciones relevantes, junto con el logotipo de la aplicación y una animación ligera que refuerza la identidad visual del producto.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow1.png" alt="Wireframe de la sección inicial de FoodFlow">
+</p>
+
+La siguiente sección presenta los principales problemas que enfrentan actualmente los restaurantes. Cada problema se organiza en tarjetas visuales acompañadas de íconos representativos, lo que permite comunicar de forma clara las dificultades asociadas al control de ingresos, gastos, inventario y toma de decisiones.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow2.png" alt="Wireframe de la sección de problemas actuales">
+</p>
+
+Posteriormente, la landing page introduce a FoodFlow como una solución frente a los problemas previamente identificados. Esta sección destaca la propuesta de valor de la aplicación, acompañada por el logotipo del producto y una animación sutil que ayuda a reforzar la presentación visual de la plataforma.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow3.png" alt="Wireframe de la presentación de FoodFlow como solución">
+</p>
+
+A continuación, se presentan las principales funciones de FoodFlow, explicando cómo cada una contribuye a resolver las necesidades actuales de los restaurantes. Esta sección permite que el visitante comprenda de manera general el alcance de la plataforma y su utilidad dentro de la gestión diaria del negocio.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow4.png" alt="Wireframe de la sección de funciones de FoodFlow">
+</p>
+
+Luego, se profundiza en el propósito de cada función, detallando qué problema específico ayuda a resolver dentro del restaurante. Esta sección busca mostrar con mayor claridad el valor práctico de la plataforma, relacionando sus funcionalidades con beneficios concretos para el usuario.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow5.png" alt="Wireframe de la explicación de funciones y beneficios">
+</p>
+
+La siguiente sección resume el proceso de inicio en tres pasos simples, con el objetivo de demostrar que FoodFlow puede ser utilizado de manera rápida y sencilla. Esta estructura facilita que el visitante comprenda cómo comenzar a usar la aplicación sin enfrentarse a procesos complejos.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow6.png" alt="Wireframe de la sección de pasos para iniciar">
+</p>
+
+Posteriormente, se realiza una comparación entre FoodFlow y otros métodos tradicionales que suelen emplear los restaurantes para organizar su información, como hojas de cálculo, registros manuales o herramientas no especializadas. Esta sección permite evidenciar las ventajas de utilizar una plataforma centralizada frente a alternativas dispersas o poco eficientes.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow7.png" alt="Wireframe de la sección comparativa de FoodFlow">
+</p>
+
+Luego, se presenta la sección “Sobre nosotros”, donde se explica el origen de FoodFlow y la motivación detrás de su creación. Esta parte permite comunicar la identidad del equipo, la problemática que impulsó el desarrollo de la solución y el compromiso de la startup con la mejora de la gestión financiera en restaurantes.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow8.png" alt="Wireframe de la sección sobre nosotros">
+</p>
+
+A continuación, se muestran los planes de suscripción que ofrece FoodFlow. Esta sección permite que el visitante compare las opciones disponibles, revise sus beneficios y evalúe cuál se adapta mejor a las necesidades de su restaurante.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow9.png" alt="Wireframe de la sección de planes de FoodFlow">
+</p>
+
+La última sección principal corresponde al formulario de contacto. En este espacio, el visitante puede comunicarse con el equipo de FoodFlow ante cualquier consulta, duda o solicitud de información adicional, facilitando un canal directo de interacción con la plataforma.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow10.png" alt="Wireframe de la sección de contacto">
+</p>
+
+Finalmente, al completar el recorrido de la página, el usuario llega al pie de página. En esta sección se incluyen enlaces a redes sociales, accesos rápidos para volver a distintas partes de la landing page, y enlaces relacionados con aspectos legales, ayuda, términos y condiciones, política de privacidad y soporte al usuario.
+
+<p align="center">
+  <img src="assets/WireframeFoodFlow11.png" alt="Wireframe del pie de página de FoodFlow">
+</p>
+
 ### 4.3.2 Landing Page Mock-up
+
+Los mockups de la landing page de FoodFlow presentan una representación más cercana a la interfaz final del sitio, incorporando los elementos visuales definidos en la guía de estilo, como la paleta de colores, la tipografía, los componentes gráficos y la jerarquía visual. Esta versión permite validar cómo la estructura planteada en los wireframes se transforma en una experiencia más clara, profesional y atractiva para el usuario, manteniendo el enfoque de comunicar la propuesta de valor de FoodFlow como una solución financiera para restaurantes.
+
+La primera sección del mockup corresponde al hero principal de la landing page. En esta vista se presenta de forma directa la propuesta de valor de FoodFlow: ayudar a los restaurantes a controlar sus finanzas con mayor claridad. La composición utiliza un encabezado superior con navegación hacia las secciones principales, selector de idioma en español e inglés, botón de acción “Comenzar ahora” y el logotipo del producto. Además, se incorpora una ilustración visual relacionada con reportes y métricas financieras, reforzando el enfoque de la plataforma como una solución moderna para centralizar ingresos, gastos, inventario, órdenes y reportes.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow1.png" alt="Mockup de la sección inicial de FoodFlow">
+</p>
+
+La segunda sección del mockup expone los principales problemas que enfrentan los restaurantes al gestionar su información financiera y operativa de forma dispersa. Mediante tarjetas visuales con íconos representativos, se presentan situaciones como el uso de cuadernos, hojas de cálculo desconectadas, POS enfocados solo en ventas, inventario manejado por memoria, reportes tardíos y decisiones tomadas por intuición. Esta sección busca generar identificación con el usuario, mostrando que vender todos los días no necesariamente significa ganar dinero de manera sostenible.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow2.png" alt="Mockup de la sección de problemas actuales de los restaurantes">
+</p>
+
+La tercera sección introduce a FoodFlow como la solución centralizada frente a los problemas previamente descritos. El diseño combina un mensaje claro con una composición visual circular alrededor del logotipo, donde se destacan módulos clave como ingresos, inventario, órdenes, menú y reportes. Esta representación refuerza la idea de que FoodFlow funciona como un único punto de control para comprender el estado del negocio, permitiendo que el dueño del restaurante acceda a información financiera y operativa de forma organizada, visual y accionable.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow3.png" alt="Mockup de la sección de FoodFlow como solución centralizada">
+</p>
+
+La cuarta sección presenta las principales funcionalidades de FoodFlow mediante una interfaz de fondo oscuro y tarjetas modulares. Esta decisión visual permite generar contraste y destacar los módulos más importantes de la plataforma, como finanzas centralizadas, reportes claros, inventario, control de órdenes, platos estrella, gestión de menú, perfil y suscripciones. Cada tarjeta resume una funcionalidad concreta y comunica cómo la aplicación responde a las preguntas que un dueño de restaurante se realiza durante la gestión diaria de su negocio.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow4.png" alt="Mockup de la sección de funcionalidades de FoodFlow">
+</p>
+
+La quinta sección profundiza en los beneficios que FoodFlow ofrece al usuario, organizándolos en una cuadrícula numerada de fácil lectura. Cada tarjeta presenta un beneficio específico, como claridad de ingresos y gastos, mejor control de inventario, reducción de desperdicio, órdenes ordenadas, decisiones más rápidas, reemplazo de hojas de cálculo frágiles, ahorro de tiempo administrativo, análisis de rentabilidad por plato y uso sin necesidad de conocimientos contables. Esta estructura permite comunicar el valor práctico de la plataforma de manera ordenada y visualmente atractiva.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow5.png" alt="Mockup de la sección de beneficios de FoodFlow">
+</p>
+
+La sexta sección resume el proceso de adopción de FoodFlow en tres pasos simples: registrar el restaurante, centralizar la información y decidir con datos. El diseño utiliza tarjetas amplias conectadas visualmente, lo que facilita comprender el flujo inicial de uso de la plataforma. Esta sección transmite que FoodFlow no requiere instalaciones complejas ni procesos extensos, sino que está pensado para que el dueño del restaurante pueda empezar a organizar su negocio de forma rápida, clara y progresiva.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow6.png" alt="Mockup de la sección de pasos para comenzar con FoodFlow">
+</p>
+
+La séptima sección muestra una comparación entre FoodFlow, un software contable tradicional y un POS convencional. Mediante una tabla clara y estructurada, se evalúan características como enfoque gastronómico, inventario por insumo, rentabilidad por plato, lenguaje sin jerga contable y precio accesible. Esta sección cumple una función estratégica dentro de la landing page, ya que evidencia cómo FoodFlow se diferencia de herramientas genéricas al estar diseñado específicamente para restaurantes y no para auditores o procesos contables complejos.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow7.png" alt="Mockup de la sección comparativa de FoodFlow">
+</p>
+
+La octava sección corresponde a “Sobre nosotros”, donde se presenta la relación entre ClaudeFlow y FoodFlow. El contenido explica que ClaudeFlow es la startup impulsora del producto y que FoodFlow nace como una solución orientada a ordenar la gestión financiera gastronómica. Visualmente, se utiliza una composición de dos columnas: a la izquierda se desarrolla el contexto del proyecto y a la derecha se refuerza la conexión entre startup y producto mediante tarjetas informativas. Esta sección aporta credibilidad, identidad y propósito a la propuesta.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow8.png" alt="Mockup de la sección sobre ClaudeFlow y FoodFlow">
+</p>
+
+La novena sección presenta los planes de suscripción de FoodFlow mediante tres tarjetas comparativas: Free, Standard y Premium. Cada plan muestra su precio mensual, descripción y beneficios incluidos, permitiendo que el usuario evalúe cuál se adapta mejor a las necesidades de su restaurante. El plan Standard se destaca visualmente como recomendado, utilizando un fondo oscuro y un llamado de atención diferenciado. Esta jerarquía ayuda a guiar la decisión del visitante sin perder claridad en la comparación de opciones.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow9.png" alt="Mockup de la sección de planes de suscripción de FoodFlow">
+</p>
+
+La décima sección corresponde al bloque de contacto y llamada a la acción final. El diseño utiliza un contenedor amplio con fondo degradado en tonos naranjas, reforzando la identidad visual del producto y generando un cierre llamativo antes del footer. En esta sección se invita al usuario a comenzar a gestionar su restaurante con datos y no con intuición. Además, se incluye un formulario con campos para nombre, correo, teléfono y mensaje, facilitando que el visitante pueda comunicarse directamente con el equipo de FoodFlow.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow10.png" alt="Mockup de la sección de contacto de FoodFlow">
+</p>
+
+Finalmente, la última sección muestra el footer de la landing page. Este bloque organiza la información complementaria en columnas, incluyendo la identidad de FoodFlow, enlaces del producto, secciones legales, recursos de ayuda y accesos a redes sociales. También se mantiene el selector de idioma en español e inglés, reforzando la disponibilidad bilingüe de la plataforma. El diseño oscuro del pie de página genera un cierre visual sólido y permite concentrar accesos importantes sin sobrecargar el resto de la página.
+
+<p align="center">
+  <img src="assets/MockupFoodFlow11.png" alt="Mockup del footer de FoodFlow">
+</p>
 
 ## 4.4 Web Applications UX/UI Design
 
@@ -1160,9 +1300,28 @@ Una correcta organización de la información permite reducir la carga cognitiva
 
 ## 4.6 Domain-Driven Software Architecture
 
+#### Strategic-Level Domain-Driven Design
+
+En esta sección se introduce el proceso de Domain-Driven Design a nivel estratégico aplicado a FoodFlow. Este enfoque permitió conceptualizar el sistema a partir de la lógica propia del negocio gastronómico, considerando procesos como la gestión financiera, el control de inventario, la administración del menú, el registro de órdenes, los reportes y las suscripciones. A partir de ello, se buscó modelar una arquitectura coherente, alineada con las necesidades reales de los dueños de restaurantes y con los límites funcionales del producto.
+
+Para este propósito, se identificaron los principales subconjuntos del sistema con responsabilidades claras y delimitadas, conocidos como Bounded Contexts. Estos contextos permiten separar adecuadamente las áreas del dominio, evitando mezclar reglas de negocio distintas dentro de un mismo módulo. Asimismo, se emplearon herramientas como EventStorming, para visualizar el flujo de eventos relevantes del negocio, y Bounded Context Canvas, para definir formalmente cada contexto, sus responsabilidades y relaciones. De esta manera, FoodFlow cuenta con una base arquitectónica más ordenada y sólida para representar su dominio de gestión financiera y operativa para restaurantes.
+
+#### Event Storming
+
+
+#### Candidate Context Discovery
+
+
+#### Domain Message Flows Modelling
+
+
+#### Bounded Context Canvases
+
+
+
 ### 4.6.1 Software Architecture Context Diagram
 
-El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web Angular.
+El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web.
 
 <img alt="contexto" src="https://github.com/user-attachments/assets/67481017-f88b-4c69-b8d5-e9dac63b09fe" />
 
@@ -1190,7 +1349,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ### 4.7.2 Class Dictionary
 
-## Suscripción
+#### Suscripción
 
 | Clase                      | Tipo             | Descripción                                               | Propósito                                                                                                                                      |
 |----------------------------|------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1207,7 +1366,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 | **PaymentResult**          | DTO              | Resultado del procesamiento de pago                       | Contiene si el pago fue exitoso, ID de transacción y mensajes de error si aplica                                                               |
 ---
 
-## Inventario
+#### Inventario
 
 | Clase                   | Tipo        | Descripción                                      | Propósito                                                                                            |
 |-------------------------|-------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -1219,7 +1378,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ---
 
-## Menú
+#### Menú
 
 | Clase              | Tipo        | Descripción                     | Propósito                                                                       |
 |--------------------|-------------|---------------------------------|---------------------------------------------------------------------------------|
@@ -1231,7 +1390,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ---
 
-## Órdenes
+#### Órdenes
 
 | Clase                | Tipo                   | Descripción                              | Propósito                                                                                       |
 |----------------------|------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|
@@ -1249,7 +1408,7 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ## 4.8 Database Design
 
-### 4.10.1 Relational Database Diagram
+### 4.8.1 Relational Database Diagram
 
 La base de datos **Postgres** mantiene las entidades descritas en los capítulos anteriores:
 
@@ -1257,9 +1416,9 @@ La base de datos **Postgres** mantiene las entidades descritas en los capítulos
 
 <div style="page-break-after: always;"></div>
 
-## Entidades del Sistema
+#### Entidades del Sistema
 
-### 1. USER (Usuario)
+#### 1. USER (Usuario)
 Almacena la información de los usuarios del sistema.
 
 | Campo      | Tipo        | Descripción                                       |
@@ -1275,7 +1434,7 @@ Almacena la información de los usuarios del sistema.
 
 ---
 
-### 2. SUBSCRIPTION (Suscripción)
+#### 2. SUBSCRIPTION (Suscripción)
 Registra las suscripciones activas e históricas de los usuarios.
 
 | Campo          | Tipo        | Descripción                                                  |
@@ -1296,7 +1455,7 @@ Registra las suscripciones activas e históricas de los usuarios.
 
 ---
 
-### 3. SUBSCRIPTION_PLAN (Plan de Suscripción)
+#### 3. SUBSCRIPTION_PLAN (Plan de Suscripción)
 Define los diferentes planes de suscripción disponibles.
 
 | Campo          | Tipo        | Descripción                                         |
@@ -1316,7 +1475,7 @@ Define los diferentes planes de suscripción disponibles.
 
 ---
 
-### 4. PAYMENT_TRANSACTION (Transacción de Pago)
+#### 4. PAYMENT_TRANSACTION (Transacción de Pago)
 Registra todas las transacciones de pago relacionadas con suscripciones.
 
 | Campo           | Tipo        | Descripción                                            |
@@ -1335,7 +1494,7 @@ Registra todas las transacciones de pago relacionadas con suscripciones.
 
 ---
 
-### 5. PRODUCT (Producto)
+#### 5. PRODUCT (Producto)
 Almacena información de los productos del inventario.
 
 | Campo          | Tipo        | Descripción                                           |
@@ -1356,7 +1515,7 @@ Almacena información de los productos del inventario.
 
 ---
 
-### 6. DISH (Platillo)
+#### 6. DISH (Platillo)
 Contiene los platillos disponibles en el menú.
 
 | Campo       | Tipo        | Descripción                                               |
@@ -1374,7 +1533,7 @@ Contiene los platillos disponibles en el menú.
 
 ---
 
-### 7. ORDER (Orden)
+#### 7. ORDER (Orden)
 Registra las órdenes realizadas por los clientes.
 
 | Campo        | Tipo        | Descripción                                          |
@@ -1392,7 +1551,7 @@ Registra las órdenes realizadas por los clientes.
 
 ---
 
-### 8. ORDER_ITEM (Item de Orden)
+#### 8. ORDER_ITEM (Item de Orden)
 Detalla los platillos incluidos en cada orden.
 
 | Campo      | Tipo        | Descripción                           |
@@ -1410,7 +1569,7 @@ Detalla los platillos incluidos en cada orden.
 
 ---
 
-### 9. INCOME_DETAIL (Detalle de Ingresos)
+#### 9. INCOME_DETAIL (Detalle de Ingresos)
 Desglosa la información detallada de ingresos en un reporte.
 
 | Campo               | Tipo        | Descripción                            |
@@ -1428,7 +1587,7 @@ Desglosa la información detallada de ingresos en un reporte.
 
 ---
 
-### 10. LOSS_DETAIL (Detalle de Pérdidas)
+#### 10. LOSS_DETAIL (Detalle de Pérdidas)
 Desglosa la información detallada de pérdidas en un reporte.
 
 | Campo                 | Tipo        | Descripción                              |
@@ -1445,7 +1604,7 @@ Desglosa la información detallada de pérdidas en un reporte.
 
 ---
 
-## Relaciones entre Entidades
+#### Relaciones entre Entidades
 
 | Relación                           | Cardinalidad | Descripción                                                                                              |
 |------------------------------------|--------------|----------------------------------------------------------------------------------------------------------|
