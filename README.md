@@ -166,7 +166,7 @@ ClaudeFlow es una startup liderada por estudiantes de la Universidad Peruana de 
 
 | Foto | Nombre | Codigo | Carrera | Acerca de | Habilidades |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ![GabrielBorja.jpg](assets/GabrielBorja.jpg) | Borja Molina, Gabriel Sebastián | U202310308 | Ingeniería de Software | | |
+| ![GabrielBorja.jpg](assets/GabrielBorja.jpg) | Borja Molina, Gabriel Sebastián | U202310308 | Ingeniería de Software | Estudiante en la Universidad Peruana de Ciencias Aplicadas (UPC). Enfocado en el desarrollo web y la creación de soluciones robustas orientadas al usuario. | Creativo, Amigable, Responsable, Proactivo |
 | ![WernerLang.jpg](assets/WernerLang.jpg) | Lang Nassi, Werner Khalil | U202310003 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas. | Investigador, Innovador, Analista, Cooperativo. |
 | ![LuisRodriguez.jpg](assets/LuisRodriguez.png) | Rodriguez Rodriguez, Luis Piero | U202311334 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), actualmente en 7mo ciclo, con interés en el rubro de desarrollo y análisis de datos. | |
 | ![GustavoRoman.jpg](assets/GustavoRoman.jpg) | Román Pajuelo, Luis Gustavo | U202123373 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Me considero un estudiante con ganas de seguir aprendiendo constantemente | Responsable, Cooperativo, Proactivo, Perseverante. |
@@ -175,8 +175,6 @@ ClaudeFlow es una startup liderada por estudiantes de la Universidad Peruana de 
 ## 1.2 Solution Profile
 
 FoodFlow es una aplicación web diseñada para transformar la manera en que los restaurantes gestionan y analizan su información financiera y operativa. A través de una plataforma intuitiva, accesible y especializada, permite a los dueños de restaurantes visualizar ingresos, gastos, reportes, inventario, órdenes y rendimiento de platos de forma clara y centralizada. Con el objetivo de facilitar la toma de decisiones estratégicas y mejorar la rentabilidad del negocio, FoodFlow conecta la información diaria del restaurante con herramientas visuales que permiten comprender mejor su desempeño económico en un entorno digital moderno.
-
-### 1.2.1 Antecedentes y problemática
 
 ### 1.2.1. Antecedentes y Problemática
 
