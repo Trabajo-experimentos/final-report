@@ -2267,97 +2267,97 @@ El Acuerdo de Servicio (SaaS) para FoodFlow establece los términos y condicione
 
 **Definiciones:**
 
-**Plataforma:** Se refiere a FoodFlow, el servicio SaaS orientado a la gestión financiera y operativa de restaurantes.
+- **Plataforma:** Se refiere a FoodFlow, el servicio SaaS orientado a la gestión financiera y operativa de restaurantes.
 
-**Usuario:** Persona natural o jurídica que utiliza la plataforma, ya sea como dueño de restaurante, administrador, encargado de operaciones o miembro autorizado del equipo.
+- **Usuario:** Persona natural o jurídica que utiliza la plataforma, ya sea como dueño de restaurante, administrador, encargado de operaciones o miembro autorizado del equipo.
 
-**Servicio:** Funcionalidades ofrecidas por FoodFlow, incluyendo gestión de platos, inventario, órdenes, reportes financieros, métricas del negocio, suscripciones y administración de cuenta.
+- **Servicio:** Funcionalidades ofrecidas por FoodFlow, incluyendo gestión de platos, inventario, órdenes, reportes financieros, métricas del negocio, suscripciones y administración de cuenta.
 
-**Restaurante:** Negocio gastronómico que utiliza FoodFlow para organizar información operativa y financiera.
+- **Restaurante:** Negocio gastronómico que utiliza FoodFlow para organizar información operativa y financiera.
 
 **Alcance del Servicio:**
 
-FoodFlow proporciona una plataforma digital para centralizar y organizar información relacionada con ingresos, gastos, inventario, órdenes, platos y reportes financieros de restaurantes.
+- FoodFlow proporciona una plataforma digital para centralizar y organizar información relacionada con ingresos, gastos, inventario, órdenes, platos y reportes financieros de restaurantes.
 
-La plataforma permite visualizar métricas, registrar operaciones y consultar reportes que apoyan la toma de decisiones del negocio.
+- La plataforma permite visualizar métricas, registrar operaciones y consultar reportes que apoyan la toma de decisiones del negocio.
 
-FoodFlow no reemplaza asesoría contable, tributaria, legal o financiera especializada. Los reportes generados dependen de la información ingresada por los usuarios.
+- FoodFlow no reemplaza asesoría contable, tributaria, legal o financiera especializada. Los reportes generados dependen de la información ingresada por los usuarios.
 
 **Responsabilidades del Usuario:**
 
-Proporcionar información precisa, completa y actualizada al registrarse y al utilizar los módulos de la plataforma.
+- Proporcionar información precisa, completa y actualizada al registrarse y al utilizar los módulos de la plataforma.
 
-Registrar datos reales sobre platos, productos, inventario, órdenes, costos e ingresos del restaurante.
+- Registrar datos reales sobre platos, productos, inventario, órdenes, costos e ingresos del restaurante.
 
-Mantener la confidencialidad de sus credenciales de acceso.
+- Mantener la confidencialidad de sus credenciales de acceso.
 
-Cumplir con las leyes locales aplicables a la gestión comercial, tributaria y operativa del restaurante.
+- Cumplir con las leyes locales aplicables a la gestión comercial, tributaria y operativa del restaurante.
 
-No utilizar la plataforma para actividades fraudulentas, ilegales, engañosas o que afecten la seguridad del sistema.
+- No utilizar la plataforma para actividades fraudulentas, ilegales, engañosas o que afecten la seguridad del sistema.
 
-Verificar la información antes de tomar decisiones financieras, comerciales o administrativas basadas en los reportes generados.
+- Verificar la información antes de tomar decisiones financieras, comerciales o administrativas basadas en los reportes generados.
 
 **Responsabilidades de FoodFlow:**
 
-Mantener la disponibilidad razonable de la plataforma, salvo interrupciones por mantenimiento, mejoras, fallas técnicas o causas externas.
+- Mantener la disponibilidad razonable de la plataforma, salvo interrupciones por mantenimiento, mejoras, fallas técnicas o causas externas.
 
-Proteger los datos personales y operativos de los usuarios conforme a la política de privacidad aplicable.
+- Proteger los datos personales y operativos de los usuarios conforme a la política de privacidad aplicable.
 
-Implementar medidas de seguridad para reducir riesgos de acceso no autorizado, pérdida o alteración de información.
+- Implementar medidas de seguridad para reducir riesgos de acceso no autorizado, pérdida o alteración de información.
 
-Ofrecer soporte técnico relacionado con el uso de la plataforma.
+- Ofrecer soporte técnico relacionado con el uso de la plataforma.
 
-Actualizar y mejorar las funcionalidades del servicio cuando sea necesario para optimizar la experiencia del usuario.
+- Actualizar y mejorar las funcionalidades del servicio cuando sea necesario para optimizar la experiencia del usuario.
 
 **Pagos y Tarifas:**
 
-FoodFlow puede ofrecer planes gratuitos y planes de suscripción pagados según las funcionalidades, límites y beneficios disponibles.
+- FoodFlow puede ofrecer planes gratuitos y planes de suscripción pagados según las funcionalidades, límites y beneficios disponibles.
 
-Los planes pueden variar en cantidad de platos, productos, órdenes, reportes avanzados, funcionalidades financieras y soporte.
+- Los planes pueden variar en cantidad de platos, productos, órdenes, reportes avanzados, funcionalidades financieras y soporte.
 
-El usuario es responsable de revisar las condiciones, precios y límites del plan seleccionado antes de contratarlo.
+- El usuario es responsable de revisar las condiciones, precios y límites del plan seleccionado antes de contratarlo.
 
-Las tarifas pagadas no serán reembolsables, salvo que la normativa aplicable indique lo contrario o FoodFlow establezca una política específica de devolución.
+- Las tarifas pagadas no serán reembolsables, salvo que la normativa aplicable indique lo contrario o FoodFlow establezca una política específica de devolución.
 
-FoodFlow se reserva el derecho de modificar precios, planes o beneficios, notificando previamente a los usuarios cuando corresponda.
+- FoodFlow se reserva el derecho de modificar precios, planes o beneficios, notificando previamente a los usuarios cuando corresponda.
 
 **Limitación de Responsabilidad:**
 
-FoodFlow no garantiza resultados económicos, aumento de ventas, reducción de gastos o mejora automática de rentabilidad.
+- FoodFlow no garantiza resultados económicos, aumento de ventas, reducción de gastos o mejora automática de rentabilidad.
 
-La exactitud de los reportes depende de la calidad y veracidad de los datos ingresados por el usuario.
+- La exactitud de los reportes depende de la calidad y veracidad de los datos ingresados por el usuario.
 
-FoodFlow no se hace responsable por decisiones comerciales, financieras, tributarias o legales tomadas únicamente con base en la información mostrada por la plataforma.
+- FoodFlow no se hace responsable por decisiones comerciales, financieras, tributarias o legales tomadas únicamente con base en la información mostrada por la plataforma.
 
-La plataforma no garantiza disponibilidad continua e ininterrumpida del servicio y no será responsable por pérdidas derivadas de interrupciones, errores técnicos o fallas externas.
+- La plataforma no garantiza disponibilidad continua e ininterrumpida del servicio y no será responsable por pérdidas derivadas de interrupciones, errores técnicos o fallas externas.
 
 **Terminación del Servicio:**
 
-FoodFlow se reserva el derecho de suspender o cancelar cuentas que incumplan los términos del acuerdo, realicen actividades fraudulentas o pongan en riesgo la seguridad de la plataforma.
+- FoodFlow se reserva el derecho de suspender o cancelar cuentas que incumplan los términos del acuerdo, realicen actividades fraudulentas o pongan en riesgo la seguridad de la plataforma.
 
-El usuario puede cancelar su cuenta o suscripción en cualquier momento, según las opciones disponibles en la plataforma.
+- El usuario puede cancelar su cuenta o suscripción en cualquier momento, según las opciones disponibles en la plataforma.
 
-La cancelación de la cuenta puede implicar la pérdida de acceso a datos, funcionalidades y reportes asociados al servicio.
+- La cancelación de la cuenta puede implicar la pérdida de acceso a datos, funcionalidades y reportes asociados al servicio.
 
-No se reembolsarán tarifas ya pagadas, salvo disposición legal o política específica de FoodFlow.
+- No se reembolsarán tarifas ya pagadas, salvo disposición legal o política específica de FoodFlow.
 
 **Modificaciones al Acuerdo:**
 
-FoodFlow puede actualizar este acuerdo cuando lo considere necesario para reflejar cambios en el servicio, nuevas funcionalidades, ajustes legales o mejoras operativas.
+- FoodFlow puede actualizar este acuerdo cuando lo considere necesario para reflejar cambios en el servicio, nuevas funcionalidades, ajustes legales o mejoras operativas.
 
-Los usuarios serán notificados sobre cambios relevantes y, cuando corresponda, deberán aceptar los nuevos términos para continuar utilizando la plataforma.
+- Los usuarios serán notificados sobre cambios relevantes y, cuando corresponda, deberán aceptar los nuevos términos para continuar utilizando la plataforma.
 
-El uso continuo de FoodFlow después de una actualización implica la aceptación de las nuevas condiciones.
+- El uso continuo de FoodFlow después de una actualización implica la aceptación de las nuevas condiciones.
 
 **Jurisdicción:**
 
-Este acuerdo se rige por las leyes aplicables del país donde opere FoodFlow o donde se haya contratado el servicio.
+- Este acuerdo se rige por las leyes aplicables del país donde opere FoodFlow o donde se haya contratado el servicio.
 
-Cualquier controversia relacionada con el uso de la plataforma será resuelta conforme a la jurisdicción correspondiente.
+- Cualquier controversia relacionada con el uso de la plataforma será resuelta conforme a la jurisdicción correspondiente.
 
 **Contacto:**
 
-Para consultas, soporte técnico o solicitudes relacionadas con el servicio, los usuarios pueden comunicarse con el equipo de FoodFlow a través de los canales oficiales proporcionados en la plataforma.
+- Para consultas, soporte técnico o solicitudes relacionadas con el servicio, los usuarios pueden comunicarse con el equipo de FoodFlow a través de los canales oficiales proporcionados en la plataforma.
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
