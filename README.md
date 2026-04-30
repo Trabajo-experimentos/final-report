@@ -58,7 +58,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
     - [1.1.1 Descripción de la Startup](#111-descripción-de-la-startup)
     - [1.1.2 Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
   - [1.2 Solution Profile](#12-solution-profile)
-    - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.1. Antecedentes y Problemática](#121-antecedentes-y-problemática)
       - [1.2.1.1. What](#1211-what)
       - [1.2.1.2. When](#1212-when)
       - [1.2.1.3. Where](#1213-where)
@@ -71,12 +71,13 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
       - [1.2.2.1. Lean UX Problem Statement](#1221-lean-ux-problem-statement)
       - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
       - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
-      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+      - [1.2.2.4. Minimum Viable Product](#minimum-viable-product)
+      - [1.2.2.5. Lean UX Canvas](#1224-lean-ux-canvas)
   - [1.3. Segmento Objetivo](#13-segmento-objetivo)
 - [Capítulo II: Requirements \& Analysis](#capítulo-ii-requirements--analysis)
   - [2.1 Competidores](#21-competidores)
     - [2.1.1. Análisis competitivo.](#211-análisis-competitivo)
-    - [2.1.2. Estrategias y Tácticas Competitivas de FoodFlow](#212-estrategias-y-tácticas-competitivas-de-foodflow)
+  - [2.1.2. Estrategias y Tácticas Competitivas de FoodFlow](#212-estrategias-y-tácticas-competitivas-de-foodflow)
   - [2.2 Entrevistas](#22-entrevistas)
     - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
     - [2.2.2. Registro de entrevistas.](#222-registro-de-entrevistas)
@@ -95,8 +96,7 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
   - [3.4 Impact Map](#34-impact-map)
 - [Capítulo IV: Product Design](#capítulo-iv-product-design)
   - [4.1 Style Guidelines](#41-style-guidelines)
-    - [4.1.1 General Style Guidelines](#411-general-style-guidelines)
-    - [4.1.2 Web Style Guidelines](#412-web-style-guidelines)
+    - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
   - [4.2 Information Architecture](#42-information-architecture)
     - [4.2.1 Organization Systems](#421-organization-systems)
     - [4.2.2 Labeling Systems](#422-labeling-systems)
@@ -116,28 +116,32 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
     - [4.6.1 Software Architecture Context Diagram](#461-software-architecture-context-diagram)
     - [4.6.2 Software Architecture Container Diagrams.](#462-software-architecture-container-diagrams)
     - [4.6.3 Software Architecture Components Diagrams.](#463-software-architecture-components-diagrams)
+      - [4.6.3.1 Bounded Context: .](#4631-bounded-context-)
+      - [4.6.3.2 Bounded Context: .](#4632-bounded-context-)
   - [4.7 Software Object-Oriented Design](#47-software-object-oriented-design)
     - [4.7.1 Class Diagrams](#471-class-diagrams)
+      - [4.7.1.1 Bounded Context: .](#4711-bounded-context-)
+      - [4.7.1.2 Bounded Context: .](#4712-bounded-context-)
     - [4.7.2 Class Dictionary](#472-class-dictionary)
   - [4.8 Database Design](#48-database-design)
-    - [4.10.1 Relational Database Diagram](#4101-relational-database-diagram)
+    - [4.8.1 Relational Database Diagram](#481-relational-database-diagram)
 - [Capítulo V: Product Implementation](#capítulo-v-product-implementation)
   - [5.1. Software Configuration Management.](#51-software-configuration-management)
     - [5.1.1. Software Development Environment Configuration.](#511-software-development-environment-configuration)
     - [5.1.2. Source Code Management.](#512-source-code-management)
     - [5.1.3. Source Code Style Guide \& Conventions.](#513-source-code-style-guide--conventions)
-    - [5.1.4. Software Deployment Configuration.](#514-software-deployment-configuration)
   - [5.2. Product Implementation \& Deployment.](#52-product-implementation--deployment)
     - [5.2.1. Sprint Backlogs.](#521-sprint-backlogs)
-    - [### 5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
+    - [5.2.2. Implemented Landing Page Evidence](#522-implemented-landing-page-evidence)
     - [5.2.3. Implemented Frontend-Web Application Evidence](#523-implemented-frontend-web-application-evidence)
     - [5.2.4. Acuerdo de Servicio - SaaS](#524-acuerdo-de-servicio---saas)
     - [5.2.5. Implemented RESTful API and/or Serverless Backend Evidence](#525-implemented-restful-api-andor-serverless-backend-evidence)
     - [5.2.6. RESTful API documentation](#526-restful-api-documentation)
     - [5.2.7. Team Collaboration Insights](#527-team-collaboration-insights)
   - [5.3. Video About-the-Product](#53-video-about-the-product)
-- [Conclusiones](#conclusiones)
-  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+  - [Conclusiones](#conclusiones)
+  - [Recomendaciones](#recomendaciones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
 
@@ -453,7 +457,7 @@ Creemos que, al incluir análisis de ventas y rendimiento de platos, para usuari
 
 <div style="page-break-after: always;"></div>
 
-#### Minimum Viable Product
+#### 1.2.2.4. Minimum Viable Product
 
 El MVP de FoodFlow debe enfocarse en validar, en el menor tiempo posible, los elementos esenciales de la propuesta de valor del producto. La pregunta principal que guía esta etapa es:
 
@@ -475,7 +479,7 @@ Por ello, el MVP debe ser una versión simplificada del sistema que permita trab
 
 De esta manera, el MVP de FoodFlow busca validar si la centralización de información financiera y operativa en una plataforma sencilla, visual y accesible responde realmente a las necesidades de los restaurantes pequeños y medianos.
 
-#### 1.2.2.4. Lean UX Canvas
+#### 1.2.2.5. Lean UX Canvas
 
 <img alt="canvas" src="https://github.com/Fundamentos-de-Arquitectura/final-project-report/blob/master/assets/canvas.png?raw=true" />
 
@@ -1615,9 +1619,19 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ### 4.6.3 Software Architecture Components Diagrams.
 
+#### 4.6.3.1 Bounded Context: .
+
+#### 4.6.3.2 Bounded Context: .
+
+
 ## 4.7 Software Object-Oriented Design
 
 ### 4.7.1 Class Diagrams
+
+#### 4.7.1.1 Bounded Context: .
+
+#### 4.7.1.2 Bounded Context: .
+
 
 <img alt="Untitled diagram-2025-10-09-034906" src="https://github.com/user-attachments/assets/7cd76b45-2db5-4829-947f-626c5e9c8989" />
 
@@ -1702,7 +1716,7 @@ La base de datos **Postgres** mantiene las entidades descritas en los capítulos
 
 <div style="page-break-after: always;"></div>
 
-#### Entidades del Sistema
+#### Entidades del Sistema (Bounded Contexts)
 
 #### 1. USER (Usuario)
 Almacena la información de los usuarios del sistema.
@@ -1917,6 +1931,11 @@ Desglosa la información detallada de pérdidas en un reporte.
 | Base de Datos        | Postgres                                      | Almacenamiento persistente             |
 | Documentación        | Swagger (OpenAPI)                             | Generación automática de documentación |
 | Gestión de proyecto  | Trello                                        | Control ágil de tareas y User Stories  |
+| Herramiente de diseño| Figma                                         | Diseño UX/UI de la plataforma          |
+| Despliegue           | GitHub Pages                                  | Despliegue de la landing page          |
+| Despliegue           | Vercel                                        | Despliegue del frontend                |
+| Despliegue           | Render                                        | Despliegue del backend                 |
+
 
 **Configuraciones adicionales:**  
 El entorno de desarrollo utiliza variables `.env`, dependencias gestionadas con `npm`, y scripts configurados para automatizar pruebas y despliegues.
@@ -1925,53 +1944,302 @@ El entorno de desarrollo utiliza variables `.env`, dependencias gestionadas con 
 
 ### 5.1.2. Source Code Management.
 
-El control de versiones se gestiona con **GitHub** bajo la metodología **GitFlow Workflow**, que define ramas estables y de desarrollo:
+La administración del código fuente constituye un elemento clave para asegurar un desarrollo ordenado, colaborativo y trazable dentro del proyecto FoodFlow. En esta sección se define la estrategia que seguirá el equipo para organizar los repositorios, controlar los cambios realizados durante el desarrollo y mantener un historial claro de las modificaciones aplicadas al producto. Para ello, se utilizará GitHub como plataforma principal de versionamiento y colaboración, permitiendo que los integrantes del equipo trabajen de manera coordinada sobre los distintos componentes del proyecto.
 
-- `develop`: rama principal de desarrollo.
-- `feature/*`: ramas por funcionalidad.
+Con el propósito de mantener una estructura de trabajo consistente, se empleará el flujo de trabajo GitFlow, el cual permite separar adecuadamente las ramas de desarrollo, funcionalidades y versiones estables. Asimismo, se establecerán convenciones para la creación de ramas, redacción de mensajes de commit y publicación de versiones mediante Semantic Versioning. Esta combinación permitirá gestionar el avance del proyecto de forma organizada, reducir conflictos durante la integración de cambios y facilitar la identificación de versiones funcionales del sistema.
 
-**Convenciones:**
-- Semantic Versioning (`v1.0.0`, `v1.1.0`, etc.)
-- Conventional Commits (`feat:`, `fix:`, `docs:`)
+Para mejorar la organización del proyecto y separar adecuadamente los entregables, se trabajará con repositorios específicos en GitHub. Cada repositorio cumplirá una finalidad concreta dentro del desarrollo, documentación y control de calidad de FoodFlow, permitiendo mantener una gestión más clara del ciclo de trabajo y de los archivos asociados a cada parte del proyecto.
 
-**Repositorio donde se realizó el código:**
+#### Report
 
-<br>
+Este repositorio estará dedicado al almacenamiento, edición y control de versiones del informe final del proyecto FoodFlow. Contendrá los documentos en formato Markdown relacionados con la investigación, análisis, diseño, arquitectura, implementación y conclusiones del proyecto. Su uso permitirá registrar los avances del informe, mantener evidencia del trabajo colaborativo y conservar un historial de cambios sobre la documentación académica.
 
-**Repositorio del proyecto actual:**
+La existencia de un repositorio específico para el reporte permite separar el desarrollo del producto de la elaboración del informe, evitando mezclar código fuente con documentación extensa. De esta forma, el equipo puede revisar, corregir y actualizar los capítulos del informe de manera organizada, garantizando una presentación coherente y alineada con los entregables del curso.
 
----
+<p align="center">
+  <img src="assets/reportrepo.png" alt="">
+</p>
+
+Link del repositorio del reporte: [https://github.com/ClaudeFlow-Org/FoodFlow-Report](https://github.com/ClaudeFlow-Org/FoodFlow-Report)
+
+#### Landing Page
+
+Este repositorio estará enfocado en el desarrollo de la Landing Page de FoodFlow, la cual funciona como el principal punto de presentación del producto ante potenciales usuarios. En él se almacenarán los archivos correspondientes a la interfaz informativa del proyecto, incluyendo recursos HTML, CSS, JavaScript, imágenes, estilos, componentes visuales y demás elementos frontend necesarios para comunicar la propuesta de valor de la plataforma.
+
+La Landing Page tiene como objetivo explicar de manera clara qué es FoodFlow, qué problemas resuelve, cuáles son sus funciones principales, qué beneficios ofrece a los restaurantes y qué planes de suscripción se encuentran disponibles. Por ello, este repositorio permitirá gestionar de forma independiente los cambios visuales, ajustes de contenido, mejoras de navegación y elementos orientados a la conversión de visitantes en usuarios interesados en la aplicación.
+
+<p align="center">
+  <img src="assets/landingrepo.png" alt="">
+</p>
+
+Link del repositorio de la landing page: [https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage](https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage)
+
+#### Frontend 
+
+Este repositorio estará destinado al desarrollo de la aplicación web principal de FoodFlow. En él se gestionará el código correspondiente a las vistas internas del sistema. También incluirá componentes reutilizables, configuración de rutas, estilos, lógica de presentación y recursos necesarios para la experiencia de usuario dentro de la plataforma.
+
+La separación de este repositorio permite mantener un control más preciso sobre la evolución funcional del producto, diferenciando la aplicación operativa de la landing page informativa. De esta manera, el equipo puede trabajar de forma más ordenada sobre los módulos que permiten a los dueños de restaurantes consultar información financiera y operativa de su negocio.
+
+<p align="center">
+  <img src="assets/frontendrepo.png" alt="">
+</p>
+
+Link del repositorio del frontend: [https://github.com/ClaudeFlow-Org/FoodFlow-Frontend](https://github.com/ClaudeFlow-Org/FoodFlow-Frontend)
+
+#### Backend 
+
+Este repositorio estará orientado al desarrollo de los servicios backend y endpoints REST utilizados por FoodFlow. Su propósito será centralizar la lógica de negocio, la conexión con la base de datos, la gestión de entidades, la validación de datos y las operaciones necesarias.
+
+Al mantener el backend en un repositorio independiente, se facilita la organización de responsabilidades técnicas, la documentación de endpoints, las pruebas de integración y el despliegue de servicios. Además, permite que el frontend consuma la información de manera estructurada a través de una API clara y mantenible.
+
+<p align="center">
+  <img src="assets/backendrepo.png" alt="">
+</p>
+
+Link del repositorio del backend: [https://github.com/ClaudeFlow-Org/FoodFlow-Backend](https://github.com/ClaudeFlow-Org/FoodFlow-Backend)
+
+#### Links de los repositorios:
+- Link del repositorio del reporte: [https://github.com/ClaudeFlow-Org/FoodFlow-Report](https://github.com/ClaudeFlow-Org/FoodFlow-Report)
+- Link del repositorio de la landing page: [https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage](https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage)
+- Link del repositorio del frontend: [https://github.com/ClaudeFlow-Org/FoodFlow-Frontend](https://github.com/ClaudeFlow-Org/FoodFlow-Frontend)
+- Link del repositorio del backend: [https://github.com/ClaudeFlow-Org/FoodFlow-Backend](https://github.com/ClaudeFlow-Org/FoodFlow-Backend)
+
+### Workflow de control de versiones
+
+Para mantener un proceso de desarrollo ordenado y facilitar la integración de cambios dentro de FoodFlow, se utilizará un flujo de trabajo basado en ramas dentro de GitHub. Este esquema permitirá organizar el avance del proyecto, separar el código estable del código en desarrollo y reducir conflictos durante la colaboración entre los integrantes del equipo.
+
+En el caso de FoodFlow, el workflow se simplifica al uso de dos ramas principales: `main` y `develop`. Esta estructura resulta adecuada para el alcance del proyecto, ya que permite mantener una rama estable para entregas finales y una rama de trabajo donde se integran los cambios antes de ser aprobados.
+
+#### Estructura de ramas
+
+| Nombre de la rama | Descripción |
+|-------------------|-------------|
+| **Main Branch (`main`)** | Es la rama principal del repositorio y contiene la versión estable del proyecto. En esta rama solo se integrarán cambios previamente revisados, probados y aprobados desde `develop`. Su propósito es conservar una versión funcional y lista para presentación o despliegue. |
+| **Develop Branch (`develop`)** | Es la rama destinada al desarrollo e integración de avances. En ella se incorporan las modificaciones realizadas durante la construcción del proyecto, permitiendo validar nuevas funcionalidades, ajustes visuales, correcciones y mejoras antes de fusionarlas con `main`. |
+
+#### Flujo de trabajo aplicado
+
+El equipo trabajará principalmente sobre la rama `develop`, donde se realizarán los cambios relacionados con nuevas funcionalidades, ajustes de interfaz, correcciones de errores, documentación o mejoras generales del proyecto. Una vez que los cambios hayan sido revisados y se confirme que no afectan la estabilidad del sistema, estos serán integrados en la rama `main`.
+
+Este flujo permite mantener una separación clara entre el entorno de desarrollo y la versión estable del proyecto. De esta manera, `develop` funciona como un espacio de integración y prueba, mientras que `main` conserva el estado final y validado de FoodFlow.
+
+#### Convenciones para nombres de ramas
+
+Debido a que el proyecto utiliza únicamente las ramas `main` y `develop`, no se aplicará una estructura extensa de ramas como `feature/*`, `hotfix/*` o `release/*`. Sin embargo, se mantendrá una convención clara en el uso de las ramas existentes:
+
+* `main`: rama estable del proyecto.
+* `develop`: rama de integración y desarrollo.
+
+Esta decisión simplifica el flujo de trabajo del equipo y se ajusta al alcance académico del proyecto, permitiendo una gestión más directa del código sin perder control sobre las versiones principales.
+
+#### Convenciones de commits
+
+Para mantener claridad y consistencia en el historial de cambios, se utilizará el estándar **Conventional Commits**. Esta convención permite identificar rápidamente el tipo de modificación realizada en cada commit, facilitando la revisión del avance del proyecto y la comprensión del trabajo realizado por cada integrante.
+
+Cada mensaje de commit deberá incluir un tipo de cambio seguido de una descripción breve y clara de la modificación realizada.
+
+#### Tipos de commits utilizados
+
+| Tipo de commit | Uso |
+|----------------|-----|
+| **feat:** | Se utiliza cuando se agrega una nueva funcionalidad, sección o componente al proyecto. |
+| **fix:** | Se utiliza cuando se corrige un error funcional, visual o de comportamiento. |
+| **docs:** | Se utiliza cuando se realizan cambios en la documentación del proyecto. |
+| **style:** | Se utiliza para ajustes de formato, estilos visuales o cambios que no afectan la lógica del sistema. |
+| **refactor:** | Se utiliza cuando se reorganiza o mejora el código sin modificar su comportamiento externo. |
+| **test:** | Se utiliza cuando se agregan o modifican pruebas. |
+| **chore:** | Se utiliza para tareas de mantenimiento, configuración o ajustes menores del proyecto. |
+
+#### Ejemplos de commits
+
+feat: agregar sección de planes en landing page
+fix: corregir redirección al dashboard
+docs: actualizar descripción del proyecto FoodFlow
+style: mejorar espaciado de tarjetas de beneficios
+refactor: reorganizar componentes del layout principal
+chore: actualizar configuración del proyecto
 
 ### 5.1.3. Source Code Style Guide & Conventions.
 
-Guías de estilo aplicadas:
+Este capítulo define las convenciones de estilo y organización adoptadas para el desarrollo de **FoodFlow**, una aplicación web orientada a la gestión financiera y operativa de restaurantes. El proyecto integra una **Landing Page** desarrollada con HTML, CSS y JavaScript, un **Frontend** construido con React, TypeScript y Vite, y un **Backend** implementado con Java 17, Spring Boot, Maven, PostgreSQL, Spring Security, JWT, JPA, Lombok y OpenAPI/Swagger.
 
-- TypeScript Style Guide.
-- Gherkin Conventions for Readable Specifications.
-- Clases en camelCase
-- Uso de inglés en todo el código.
+Para mantener una base de código coherente, legible y escalable, FoodFlow toma como referencia buenas prácticas de la industria como Google HTML/CSS Style Guide, MDN JavaScript Guidelines, TypeScript ESLint Recommended Rules, React Guidelines, Spring Boot Best Practices, Java Code Conventions y principios de Clean Architecture y Domain-Driven Design.
 
----
+**Principios generales**
 
-### 5.1.4. Software Deployment Configuration.
+- El código fuente debe escribirse con nombres descriptivos en inglés.
+- Los textos visibles para el usuario deben gestionarse mediante internacionalización cuando pertenezcan a la aplicación principal.
+- La indentación debe ser consistente según el lenguaje: 2 espacios en HTML, CSS, JavaScript, TypeScript, TSX y YAML; 4 espacios en Java y XML.
+- Se debe priorizar código claro, modular, reutilizable y fácil de mantener.
+- Se debe aplicar el principio DRY para evitar duplicación innecesaria.
+- Se deben separar responsabilidades entre interfaz, estado, servicios, dominio, persistencia y configuración.
+- Se debe evitar incluir secretos, tokens o credenciales reales dentro del repositorio.
+- Antes de integrar cambios, se debe ejecutar validación local mediante `npm run lint`, `npm run build` y, para backend, compilación Maven.
 
-El despliegue de la landing page se realiza en Vercel
+**Arquitectura y organización del proyecto**
 
-El despliegue del frontend se realiza en netlify
+FoodFlow organiza su sistema en dos grandes bloques: frontend y backend.
 
-El despliegue del backend se realiza en **FreeSQL** para la base de datos.
+En el **frontend**, la aplicación se estructura por responsabilidad:
 
-**Pasos del pipeline:**
-1. Build del proyecto (`npm run build`)
-2. Ejecución de pruebas (`npm run test`)
-3. Despliegue automatizado en entorno cloud
-4. Validación mediante Postman y Swagger
+- `components`: componentes reutilizables de interfaz.
+- `components/common`: elementos compartidos como tablas, alertas, botones, diálogos y estados vacíos.
+- `components/layout`: estructura general de navegación y layout.
+- `components/modules`: componentes asociados a módulos de negocio.
+- `pages`: vistas principales de autenticación, dashboard, platos, productos, órdenes, finanzas y configuración.
+- `hooks`: hooks personalizados para encapsular lógica de carga y operaciones.
+- `services`: servicios encargados de comunicarse con la API.
+- `types`: contratos TypeScript compartidos.
+- `utils`: funciones auxiliares de validación, formato y cálculo.
+- `store`: estado global gestionado con Zustand.
+- `i18n`: traducciones y proveedor de internacionalización.
+- `theme`: configuración visual y modo de tema.
 
-<div style="page-break-after: always;"></div>
+En el **backend**, el paquete base `com.foodflow` se divide por bounded contexts:
 
-**Deployment Diagram (C4):**
+- `identity`
+- `inventory`
+- `catalog`
+- `sales`
+- `billing`
+- `finance`
+- `common`
 
-<div style="page-break-after: always;"></div>
+Cada contexto mantiene una separación por capas:
+
+- `presentation`: controladores REST y configuración expuesta.
+- `application`: servicios de caso de uso y DTOs de entrada/salida.
+- `domain`: entidades, value objects, reglas de negocio y contratos de repositorio.
+- `infrastructure`: entidades JPA, repositorios Spring Data, mappers, seguridad e implementaciones técnicas.
+
+Esta organización permite mantener bajo acoplamiento, mejorar la mantenibilidad y facilitar la evolución de cada módulo sin afectar innecesariamente al resto del sistema.
+
+**HTML**
+
+El código HTML debe mantener una estructura semántica, accesible y compatible con HTML5.
+
+- Incluir siempre `<!doctype html>` al inicio del documento.
+- Definir `lang="es"` o el idioma correspondiente en la etiqueta `<html>`.
+- Declarar `charset`, `viewport` y `title` dentro del `<head>`.
+- Usar etiquetas semánticas como `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` y `<form>`.
+- Nombrar clases, IDs y atributos personalizados en kebab-case.
+- Usar comillas dobles para atributos.
+- Incluir `alt` descriptivo en imágenes informativas.
+- Usar `aria-label` cuando un botón o enlace dependa de íconos.
+- Cargar CSS en el `<head>` y JavaScript antes del cierre de `</body>`, salvo justificación técnica.
+- Evitar estilos en línea; los estilos deben centralizarse en archivos CSS o en el sistema de estilos del framework usado.
+
+**CSS**
+
+El CSS de FoodFlow debe mantener una estructura modular, responsive y basada en tokens visuales.
+
+- Usar 2 espacios de indentación.
+- Escribir selectores en minúsculas y kebab-case.
+- Utilizar variables CSS en `:root` para colores, sombras, radios y valores reutilizables.
+- Finalizar declaraciones con punto y coma.
+- Mantener un orden lógico de propiedades: layout, box model, tipografía, color, efectos visuales y animaciones.
+- Agrupar estilos por sección funcional.
+- Ubicar media queries cerca del bloque relacionado o al final del archivo cuando correspondan a ajustes globales.
+- Evitar selectores excesivamente anidados.
+- Priorizar unidades relativas y layouts responsive con `grid`, `flex`, `clamp`, `minmax` y media queries.
+
+**JavaScript**
+
+La Landing Page utiliza JavaScript para internacionalización, navegación móvil, modales legales, filtros de FAQ y animaciones de aparición.
+
+- Usar `const` por defecto y `let` solo cuando exista reasignación.
+- Evitar `var`.
+- Usar camelCase para funciones y variables.
+- Usar UPPER_SNAKE_CASE para constantes globales como `I18N` o `LEGAL_CONTENT`.
+- Mantener funciones pequeñas y con una sola responsabilidad.
+- Usar `addEventListener` para manejar eventos del DOM.
+- Validar la existencia de elementos antes de manipularlos.
+- Usar `dataset` para leer atributos `data-*`.
+- Evitar lógica de negocio compleja en scripts de presentación.
+
+**TypeScript y React**
+
+El frontend principal sigue convenciones de React con TypeScript estricto.
+
+- Usar archivos `.tsx` para componentes y páginas.
+- Usar archivos `.ts` para servicios, tipos, hooks, utilidades y configuración.
+- Nombrar componentes en PascalCase: `ProductsPage`, `DataTable`, `MainLayout`.
+- Nombrar hooks con el prefijo `use`: `useProducts`, `useOrders`, `useAuth`.
+- Nombrar variables, funciones y métodos en camelCase.
+- Nombrar interfaces y tipos en PascalCase: `Product`, `CreateProductRequest`, `ApiResponse`.
+- Usar imports absolutos con el alias `@/` para rutas dentro de `src`.
+- Usar `type` imports cuando solo se importen tipos.
+- Preferir `const` sobre `let`.
+- Evitar `any`; si es inevitable, debe justificarse y limitarse.
+- Centralizar llamadas HTTP en servicios como `productService`, `orderService` o `authService`.
+- Encapsular estados de carga, error y datos en hooks personalizados.
+- Usar `try/catch/finally` en operaciones asíncronas.
+- Usar React Hook Form y Zod para formularios con validaciones complejas.
+- Evitar strings visibles hardcodeados en componentes; usar claves de i18n mediante `t('module.key')`.
+- Utilizar componentes de Material UI y la propiedad `sx` para estilos locales de interfaz.
+- Separar componentes grandes en subcomponentes cuando mezclen demasiada lógica, estado y presentación.
+
+**Java y Spring Boot**
+
+El backend de FoodFlow sigue una arquitectura modular basada en Spring Boot y Java 17.
+
+- Usar paquetes en minúsculas: `com.foodflow.inventory.application`.
+- Nombrar clases, records y enums en PascalCase.
+- Nombrar métodos, atributos y variables locales en camelCase.
+- Nombrar constantes en UPPER_SNAKE_CASE.
+- Usar 4 espacios de indentación.
+- Colocar llaves de apertura en la misma línea.
+- Usar una línea en blanco entre métodos.
+- Aplicar inyección de dependencias por constructor mediante `final` y `@RequiredArgsConstructor`.
+- Mantener los controladores sin lógica de negocio; solo deben recibir solicitudes, validar entrada básica y delegar a servicios de aplicación.
+- Nombrar controladores con sufijo `Controller`.
+- Nombrar servicios de casos de uso con sufijo `ApplicationService`.
+- Nombrar DTOs de entrada y salida con sufijos `Request` y `Response`.
+- Nombrar repositorios de dominio con sufijo `Repository`.
+- Nombrar entidades de persistencia con sufijo `JpaEntity`.
+- Nombrar mappers con sufijo `Mapper`.
+- Usar `BigDecimal` para valores monetarios, costos, stock y métricas financieras.
+- Usar `LocalDateTime` para fechas de creación y actualización.
+- Usar Jakarta Validation en DTOs: `@NotBlank`, `@NotNull`, `@Size`, `@DecimalMin`.
+- Usar excepciones específicas de dominio como `ValidationException`, `NotFoundException`, `DuplicateResourceException` y `UnauthorizedException`.
+- Centralizar el manejo de errores en `GlobalExceptionHandler`.
+- Responder desde la API con una envoltura común `ApiResponse<T>`.
+- Documentar endpoints relevantes con anotaciones OpenAPI como `@Operation`, `@Tag` y `@SecurityRequirement`.
+
+**Convenciones REST y datos**
+
+- Usar rutas REST bajo el prefijo `/api`.
+- Nombrar recursos en plural: `/api/products`, `/api/orders`, `/api/dishes`.
+- Usar métodos HTTP según intención: `GET`, `POST`, `PUT`, `DELETE`.
+- Usar path variables para identificadores: `/api/products/{id}`.
+- Mantener JSON en camelCase.
+- Mantener tablas y columnas de base de datos en snake_case cuando se definan mediante JPA.
+- Proteger endpoints privados mediante JWT y `@AuthenticationPrincipal`.
+- Permitir acceso público solo a rutas estrictamente necesarias, como autenticación y consulta de planes.
+
+**YAML, Maven y Docker**
+
+- Usar 2 espacios de indentación en archivos `.yml`.
+- Definir variables de entorno en UPPER_SNAKE_CASE.
+- Usar valores configurables con formato `${VARIABLE:valorPorDefecto}`.
+- No versionar secretos reales de producción.
+- Mantener `pom.xml` ordenado por grupos de dependencias.
+- Usar Docker y Docker Compose para reproducir ambientes de ejecución de backend y base de datos.
+
+**Control de versiones**
+
+Para mantener un flujo colaborativo ordenado, se recomienda usar Conventional Commits:
+
+- `feat(scope): description` para nuevas funcionalidades.
+- `fix(scope): description` para correcciones.
+- `docs(scope): description` para documentación.
+- `refactor(scope): description` para cambios internos sin alterar comportamiento.
+- `test(scope): description` para pruebas.
+- `chore(scope): description` para tareas de mantenimiento.
+
+Ejemplo: `feat(inventory): add low stock threshold`.
+
+La adopción de estas convenciones permite que FoodFlow mantenga una base de código consistente, comprensible y preparada para crecer de forma ordenada tanto en su aplicación web como en su backend de servicios.
 
 ## 5.2. Product Implementation & Deployment.
 
@@ -1981,19 +2249,205 @@ El despliegue del backend se realiza en **FreeSQL** para la base de datos.
 
 Se completó el desarrollo de la Landing Page de FoodFlow como el primer espacio de presentación del producto ante potenciales usuarios. Esta página funciona como una entrada informativa y comercial a la plataforma, permitiendo que los visitantes comprendan rápidamente qué problema resuelve FoodFlow, cómo ayuda a los restaurantes y cuáles son sus principales beneficios.
 
-La landing page está organizada en una secuencia clara de secciones que guían al usuario durante todo el recorrido: Inicio, Funciones, Beneficios, Sobre nosotros, Cómo funciona, Planes, Contacto, Términos y Condiciones, Política de Privacidad, Ayuda y Preguntas frecuentes. Además, incorpora navegación superior, llamados a la acción, formulario de contacto, selector de idioma en español e inglés y un pie de página con accesos relevantes para reforzar la usabilidad y la confianza del visitante.
-
 A nivel visual y funcional, la implementación respeta la identidad definida para FoodFlow, utilizando una composición moderna, jerarquía tipográfica clara, tarjetas informativas, contraste adecuado, componentes visuales consistentes y una estructura adaptable a distintos tamaños de pantalla. De esta manera, la Landing Page no solo comunica la propuesta de valor de la aplicación, sino que también facilita que los dueños de restaurantes identifiquen a FoodFlow como una solución accesible para organizar sus finanzas, centralizar información operativa y tomar decisiones basadas en datos.
 
 Link de la Landing Page: [https://claudeflow-org.github.io/FoodFlow-LandingPage/](https://claudeflow-org.github.io/FoodFlow-LandingPage/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
+Se ha completado el desarrollo y despliegue de la aplicación web de FoodFlow, la cual forma parte del ecosistema digital de ClaudeFlow y está orientada a la gestión financiera y operativa de restaurantes. Esta solución fue implementada como una plataforma web accesible desde navegador, permitiendo a los usuarios interactuar con módulos como dashboard, inventario, menú, órdenes, reportes financieros, perfil, suscripciones y autenticación.
+
+El despliegue de la aplicación se realizó en Vercel, lo que permite contar con un entorno web disponible para la revisión, validación y presentación del producto. Gracias a este despliegue, FoodFlow puede ser accedido sin necesidad de instalaciones locales, facilitando que los usuarios y evaluadores prueben la plataforma directamente desde un enlace público.
+
+Link de la aplicación: [https://food-flow-frontend-ipmc.vercel.app/login](https://food-flow-frontend-ipmc.vercel.app/login)
+
 ### 5.2.4. Acuerdo de Servicio - SaaS
+
+El Acuerdo de Servicio (SaaS) para FoodFlow establece los términos y condiciones bajo los cuales los usuarios pueden acceder y utilizar la plataforma. Este acuerdo incluye los siguientes puntos clave:
+
+**Definiciones:**
+
+**Plataforma:** Se refiere a FoodFlow, el servicio SaaS orientado a la gestión financiera y operativa de restaurantes.
+
+**Usuario:** Persona natural o jurídica que utiliza la plataforma, ya sea como dueño de restaurante, administrador, encargado de operaciones o miembro autorizado del equipo.
+
+**Servicio:** Funcionalidades ofrecidas por FoodFlow, incluyendo gestión de platos, inventario, órdenes, reportes financieros, métricas del negocio, suscripciones y administración de cuenta.
+
+**Restaurante:** Negocio gastronómico que utiliza FoodFlow para organizar información operativa y financiera.
+
+**Alcance del Servicio:**
+
+FoodFlow proporciona una plataforma digital para centralizar y organizar información relacionada con ingresos, gastos, inventario, órdenes, platos y reportes financieros de restaurantes.
+
+La plataforma permite visualizar métricas, registrar operaciones y consultar reportes que apoyan la toma de decisiones del negocio.
+
+FoodFlow no reemplaza asesoría contable, tributaria, legal o financiera especializada. Los reportes generados dependen de la información ingresada por los usuarios.
+
+**Responsabilidades del Usuario:**
+
+Proporcionar información precisa, completa y actualizada al registrarse y al utilizar los módulos de la plataforma.
+
+Registrar datos reales sobre platos, productos, inventario, órdenes, costos e ingresos del restaurante.
+
+Mantener la confidencialidad de sus credenciales de acceso.
+
+Cumplir con las leyes locales aplicables a la gestión comercial, tributaria y operativa del restaurante.
+
+No utilizar la plataforma para actividades fraudulentas, ilegales, engañosas o que afecten la seguridad del sistema.
+
+Verificar la información antes de tomar decisiones financieras, comerciales o administrativas basadas en los reportes generados.
+
+**Responsabilidades de FoodFlow:**
+
+Mantener la disponibilidad razonable de la plataforma, salvo interrupciones por mantenimiento, mejoras, fallas técnicas o causas externas.
+
+Proteger los datos personales y operativos de los usuarios conforme a la política de privacidad aplicable.
+
+Implementar medidas de seguridad para reducir riesgos de acceso no autorizado, pérdida o alteración de información.
+
+Ofrecer soporte técnico relacionado con el uso de la plataforma.
+
+Actualizar y mejorar las funcionalidades del servicio cuando sea necesario para optimizar la experiencia del usuario.
+
+**Pagos y Tarifas:**
+
+FoodFlow puede ofrecer planes gratuitos y planes de suscripción pagados según las funcionalidades, límites y beneficios disponibles.
+
+Los planes pueden variar en cantidad de platos, productos, órdenes, reportes avanzados, funcionalidades financieras y soporte.
+
+El usuario es responsable de revisar las condiciones, precios y límites del plan seleccionado antes de contratarlo.
+
+Las tarifas pagadas no serán reembolsables, salvo que la normativa aplicable indique lo contrario o FoodFlow establezca una política específica de devolución.
+
+FoodFlow se reserva el derecho de modificar precios, planes o beneficios, notificando previamente a los usuarios cuando corresponda.
+
+**Limitación de Responsabilidad:**
+
+FoodFlow no garantiza resultados económicos, aumento de ventas, reducción de gastos o mejora automática de rentabilidad.
+
+La exactitud de los reportes depende de la calidad y veracidad de los datos ingresados por el usuario.
+
+FoodFlow no se hace responsable por decisiones comerciales, financieras, tributarias o legales tomadas únicamente con base en la información mostrada por la plataforma.
+
+La plataforma no garantiza disponibilidad continua e ininterrumpida del servicio y no será responsable por pérdidas derivadas de interrupciones, errores técnicos o fallas externas.
+
+**Terminación del Servicio:**
+
+FoodFlow se reserva el derecho de suspender o cancelar cuentas que incumplan los términos del acuerdo, realicen actividades fraudulentas o pongan en riesgo la seguridad de la plataforma.
+
+El usuario puede cancelar su cuenta o suscripción en cualquier momento, según las opciones disponibles en la plataforma.
+
+La cancelación de la cuenta puede implicar la pérdida de acceso a datos, funcionalidades y reportes asociados al servicio.
+
+No se reembolsarán tarifas ya pagadas, salvo disposición legal o política específica de FoodFlow.
+
+**Modificaciones al Acuerdo:**
+
+FoodFlow puede actualizar este acuerdo cuando lo considere necesario para reflejar cambios en el servicio, nuevas funcionalidades, ajustes legales o mejoras operativas.
+
+Los usuarios serán notificados sobre cambios relevantes y, cuando corresponda, deberán aceptar los nuevos términos para continuar utilizando la plataforma.
+
+El uso continuo de FoodFlow después de una actualización implica la aceptación de las nuevas condiciones.
+
+**Jurisdicción:**
+
+Este acuerdo se rige por las leyes aplicables del país donde opere FoodFlow o donde se haya contratado el servicio.
+
+Cualquier controversia relacionada con el uso de la plataforma será resuelta conforme a la jurisdicción correspondiente.
+
+**Contacto:**
+
+Para consultas, soporte técnico o solicitudes relacionadas con el servicio, los usuarios pueden comunicarse con el equipo de FoodFlow a través de los canales oficiales proporcionados en la plataforma.
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
+La arquitectura de servicios de FoodFlow fue implementada mediante un backend desarrollado en Java con Spring Boot, encargado de centralizar la lógica de negocio y exponer los servicios necesarios para el funcionamiento de la aplicación web. Esta capa backend permite gestionar las operaciones relacionadas con autenticación, inventario, menú, órdenes, reportes, perfiles y suscripciones, manteniendo una estructura orientada a servicios RESTful para facilitar la comunicación con el frontend.
+
+Para la persistencia de datos se utilizó Supabase, permitiendo almacenar y administrar la información del sistema en un entorno cloud accesible y escalable. Asimismo, con el objetivo de facilitar la validación de los endpoints y la integración con la aplicación web, se incorporó documentación interactiva mediante Swagger, desde donde es posible revisar los contratos de datos, consultar las rutas disponibles y realizar pruebas de los servicios en tiempo real.
+
+Link del backend: [https://foodflow-backend-y3lj.onrender.com/](https://foodflow-backend-y3lj.onrender.com/)
+
 ### 5.2.6. RESTful API documentation
+
+Link de la documentación swagger: [https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html](https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html)
+
+La siguiente tabla resume la documentación Swagger de la API RESTful de FoodFlow. En ella se detallan los endpoints disponibles, el método HTTP utilizado, la acción que realiza cada servicio, los parámetros requeridos, el cuerpo de la solicitud, las respuestas esperadas y el Bounded Context o módulo funcional al que pertenece cada operación.
+
+| Bounded Context / Módulo | Endpoint | Método | Nombre del servicio | Acción / Descripción | Parámetros | Request Body | Respuestas | Observaciones |
+|--------------------------|----------|--------|---------------------|----------------------|------------|--------------|------------|---------------|
+| **Authentication** | `/api/auth/register` | `POST` | Register a new user | Crea una nueva cuenta de usuario con nombre, correo y contraseña. El correo debe ser único dentro del sistema. | No requiere parámetros. | `RegisterRequest`<br><br>`name`: string<br>`email`: string<br>`password`: string | `200`: User registered successfully.<br>`400`: Validation error or email already exists. | Permite registrar nuevos usuarios en FoodFlow antes de acceder a los módulos internos de la aplicación. |
+| **Authentication** | `/api/auth/login` | `POST` | User login | Autentica al usuario mediante correo y contraseña para permitir el acceso al sistema. | No requiere parámetros. | `LoginRequest`<br><br>`email`: string<br>`password`: string | `200`: Login successful.<br>`401`: Invalid credentials. | Valida las credenciales del usuario. Según la documentación Swagger, el login permite recibir un JWT token. |
+| **User Profile** | `/api/users/profile` | `GET` | Get user profile | Obtiene la información del perfil del usuario autenticado. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna `UserResponse` con `id`, `name`, `email`, `profileImageUrl` y `createdAt`. | Permite visualizar los datos personales del usuario dentro de la sección de perfil. |
+| **User Profile** | `/api/users/profile` | `PUT` | Update user profile | Actualiza el nombre y correo electrónico del usuario autenticado. | No requiere parámetros. | `UpdateProfileRequest`<br><br>`name`: string<br>`email`: string | `200`: OK.<br><br>Retorna `UserResponse` actualizado. | Se utiliza para modificar la información principal del perfil del usuario. |
+| **User Profile** | `/api/users/password` | `PUT` | Update password | Actualiza la contraseña del usuario autenticado. | No requiere parámetros. | `UpdatePasswordRequest`<br><br>`currentPassword`: string<br>`newPassword`: string | `200`: OK.<br><br>Retorna `ApiResponseVoid`. | Permite cambiar la contraseña siempre que se proporcione la contraseña actual y una nueva contraseña válida. |
+| **Subscriptions** | `/api/subscriptions/plans` | `GET` | Get available subscription plans | Obtiene todos los planes de suscripción disponibles junto con sus beneficios y precios. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna una lista de `SubscriptionPlanResponse` con `name`, `monthlyPrice` y `benefits`. | Se utiliza para mostrar los planes disponibles en la sección de suscripciones. |
+| **Subscriptions** | `/api/subscriptions/current` | `GET` | Get current subscription | Obtiene los detalles de la suscripción actual del usuario autenticado. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna `SubscriptionResponse` con `id`, `plan`, `status`, `startDate`, `endDate` y `cancellationDate`. | Permite consultar el plan activo, estado y fechas de vigencia de la suscripción. |
+| **Subscriptions** | `/api/subscriptions/subscribe` | `POST` | Subscribe to a plan | Crea una nueva suscripción para el usuario autenticado. | No requiere parámetros. | `SubscribeRequest`<br><br>`plan`: string<br><br>Ejemplo: `FREE` | `200`: OK.<br><br>Retorna `SubscriptionResponse` con datos de la suscripción creada. | Permite al usuario suscribirse a un plan disponible dentro de FoodFlow. |
+| **Subscriptions** | `/api/subscriptions/cancel` | `POST` | Cancel subscription | Cancela la suscripción activa del usuario autenticado. El acceso permanece disponible hasta el final del periodo vigente. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna `SubscriptionResponse` con información actualizada de la suscripción cancelada. | Gestiona la cancelación de una suscripción activa sin eliminar inmediatamente el acceso del usuario. |
+| **Inventory / Products** | `/api/products` | `GET` | Get all products | Obtiene todos los productos registrados en el inventario del usuario. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna una lista de `ProductResponse`. | Permite visualizar el inventario completo del restaurante. |
+| **Inventory / Products** | `/api/products` | `POST` | Add a new product | Agrega un nuevo producto al inventario con nivel de stock, costo unitario y unidad de medida. | No requiere parámetros. | `ProductRequest`<br><br>`name`: string<br>`stockLevel`: number<br>`unitCost`: number<br>`unitOfMeasure`: string | `200`: OK.<br><br>Retorna `ProductResponse` con los datos del producto creado. | Se utiliza para registrar nuevos insumos o productos dentro del inventario. |
+| **Inventory / Products** | `/api/products/{id}` | `GET` | Get product by ID | Obtiene un producto específico mediante su identificador. | `id`: integer `int64` en path.<br><br>Descripción: Product ID. | No aplica. | `200`: OK.<br><br>Retorna `ProductResponse`. | Permite consultar el detalle de un producto específico. |
+| **Inventory / Products** | `/api/products/{id}` | `PUT` | Update a product | Actualiza la información de un producto existente. | `id`: integer `int64` en path.<br><br>Descripción: Product ID. | `ProductRequest`<br><br>`name`: string<br>`stockLevel`: number<br>`unitCost`: number<br>`unitOfMeasure`: string | `200`: OK.<br><br>Retorna `ProductResponse` actualizado. | Permite modificar los datos principales de un producto del inventario. |
+| **Inventory / Products** | `/api/products/{id}` | `DELETE` | Delete a product | Elimina un producto del inventario. | `id`: integer `int64` en path.<br><br>Descripción: Product ID. | No aplica. | `200`: OK.<br><br>Retorna `ApiResponseVoid`. | Permite retirar un producto del inventario del usuario. |
+| **Menu / Dishes** | `/api/dishes` | `GET` | Get all dishes or search by name | Obtiene todos los platos registrados o filtra resultados por nombre usando el parámetro de búsqueda. | `search`: string en query, opcional.<br><br>Descripción: Search term to filter dishes by name. | No aplica. | `200`: OK.<br><br>Retorna una lista de `DishResponse`. | Permite listar platos del menú o realizar búsquedas por nombre. |
+| **Menu / Dishes** | `/api/dishes` | `POST` | Add a new dish | Crea un nuevo plato para el menú del restaurante. El precio debe ser positivo. | No requiere parámetros. | `DishRequest`<br><br>`name`: string<br>`description`: string<br>`price`: number<br>`ingredients`: string | `200`: OK.<br><br>Retorna `DishResponse` con los datos del plato creado. | Se utiliza para registrar nuevos platos dentro del menú del restaurante. |
+| **Menu / Dishes** | `/api/dishes/{id}` | `GET` | Get dish by ID | Obtiene un plato específico mediante su identificador. | `id`: integer `int64` en path.<br><br>Descripción: Dish ID. | No aplica. | `200`: OK.<br><br>Retorna `DishResponse`. | Permite consultar el detalle de un plato registrado. |
+| **Menu / Dishes** | `/api/dishes/{id}` | `PUT` | Update a dish | Actualiza la información de un plato existente. | `id`: integer `int64` en path.<br><br>Descripción: Dish ID. | `DishRequest`<br><br>`name`: string<br>`description`: string<br>`price`: number<br>`ingredients`: string | `200`: OK.<br><br>Retorna `DishResponse` actualizado. | Permite modificar nombre, descripción, precio e ingredientes de un plato. |
+| **Menu / Dishes** | `/api/dishes/{id}` | `DELETE` | Delete a dish | Elimina un plato del menú. | `id`: integer `int64` en path.<br><br>Descripción: Dish ID. | No aplica. | `200`: OK.<br><br>Retorna `ApiResponseVoid`. | Permite retirar un plato registrado dentro del menú. |
+| **Orders** | `/api/orders` | `GET` | Get all orders | Obtiene todas las órdenes del usuario autenticado, ordenadas cronológicamente. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna una lista de `OrderResponse`. | Permite visualizar el historial de órdenes registradas en el sistema. |
+| **Orders** | `/api/orders` | `POST` | Create a new order | Crea una nueva orden con ítems de línea. El monto total se calcula automáticamente. | No requiere parámetros. | `OrderRequest`<br><br>`tableIdentifier`: string<br>`lineItems`: array de `OrderLineItemRequest`<br><br>Cada ítem incluye:<br>`dishId`: number<br>`dishName`: string<br>`unitPrice`: number<br>`quantity`: number | `200`: OK.<br><br>Retorna `OrderResponse` con la orden creada, sus ítems y el total calculado. | Registra una nueva orden y calcula el total automáticamente según platos, precios y cantidades. |
+| **Orders** | `/api/orders/{id}` | `GET` | Get order by ID | Obtiene una orden específica mediante su identificador. | `id`: integer `int64` en path.<br><br>Descripción: Order ID. | No aplica. | `200`: OK.<br><br>Retorna `OrderResponse`. | Permite consultar el detalle de una orden específica. |
+| **Orders** | `/api/orders/{id}` | `DELETE` | Delete an order | Elimina una orden del sistema. | `id`: integer `int64` en path.<br><br>Descripción: Order ID. | No aplica. | `200`: OK.<br><br>Retorna `ApiResponseVoid`. | Permite retirar una orden registrada dentro del sistema. |
+| **Finance & Reports** | `/api/finance/dashboard` | `GET` | Get financial dashboard | Obtiene métricas del dashboard financiero, incluyendo ingresos, gastos, utilidad, variaciones y top 5 de platos. | No requiere parámetros. | No aplica. | `200`: OK.<br><br>Retorna `DashboardResponse` con `totalIncome`, `totalExpenses`, `netProfit`, `incomeVariation`, `expensesVariation` y `top5Dishes`. | Alimenta el dashboard principal de FoodFlow con indicadores financieros clave. |
+| **Finance & Reports** | `/api/finance/reports` | `GET` | Get financial report | Obtiene reportes financieros para periodos diarios, semanales o mensuales, con comparación frente al periodo anterior. | `period`: string en query, requerido.<br><br>Valores esperados: `DAILY`, `WEEKLY`, `MONTHLY`.<br><br>Valor por defecto: `DAILY`. | No aplica. | `200`: OK.<br><br>Retorna `FinancialReportResponse` con periodo, fechas, métricas, platos destacados y desglose de gastos. | Permite consultar reportes financieros por periodo para analizar ingresos, gastos, utilidad neta y categorías de gasto. |
+
+#### Esquemas principales de datos
+
+| Schema | Propósito | Campos principales |
+|--------|-----------|-------------------|
+| `RegisterRequest` | Solicitud para registrar un nuevo usuario. | `name`, `email`, `password` |
+| `LoginRequest` | Solicitud para iniciar sesión. | `email`, `password` |
+| `UpdateProfileRequest` | Solicitud para actualizar datos del perfil. | `name`, `email` |
+| `UpdatePasswordRequest` | Solicitud para cambiar contraseña. | `currentPassword`, `newPassword` |
+| `UserResponse` | Respuesta con información del usuario. | `id`, `name`, `email`, `profileImageUrl`, `createdAt` |
+| `SubscribeRequest` | Solicitud para suscribirse a un plan. | `plan` |
+| `SubscriptionResponse` | Respuesta con información de la suscripción. | `id`, `plan`, `status`, `startDate`, `endDate`, `cancellationDate` |
+| `SubscriptionPlanResponse` | Respuesta con información de un plan disponible. | `name`, `monthlyPrice`, `benefits` |
+| `ProductRequest` | Solicitud para crear o actualizar un producto. | `name`, `stockLevel`, `unitCost`, `unitOfMeasure` |
+| `ProductResponse` | Respuesta con información de un producto. | `id`, `name`, `stockLevel`, `unitCost`, `unitOfMeasure`, `createdAt` |
+| `DishRequest` | Solicitud para crear o actualizar un plato. | `name`, `description`, `price`, `ingredients` |
+| `DishResponse` | Respuesta con información de un plato. | `id`, `name`, `description`, `price`, `ingredients`, `createdAt` |
+| `OrderRequest` | Solicitud para crear una orden. | `tableIdentifier`, `lineItems` |
+| `OrderLineItemRequest` | Ítem enviado dentro de una orden. | `dishId`, `dishName`, `unitPrice`, `quantity` |
+| `OrderResponse` | Respuesta con información completa de una orden. | `id`, `tableIdentifier`, `orderDate`, `lineItems`, `totalAmount` |
+| `OrderLineItemResponse` | Ítem retornado dentro de una orden. | `dishId`, `dishName`, `unitPrice`, `quantity`, `lineTotal` |
+| `DashboardResponse` | Respuesta del dashboard financiero. | `totalIncome`, `totalExpenses`, `netProfit`, `incomeVariation`, `expensesVariation`, `top5Dishes` |
+| `FinancialReportResponse` | Respuesta de reportes financieros por periodo. | `period`, `startDate`, `endDate`, `metrics`, `topDishes`, `expenseBreakdown` |
+| `FinancialMetricsResponse` | Métricas financieras utilizadas en reportes. | `totalIncome`, `totalExpenses`, `netProfit`, `incomeVariation`, `expensesVariation` |
+| `TopDishResponse` | Representa un plato destacado por ventas o ingresos. | `dishId`, `dishName`, `quantitySold`, `totalRevenue` |
+| `ExpenseCategoryResponse` | Representa una categoría dentro del desglose de gastos. | `name`, `amount`, `percentage` |
+| `ApiError` | Representa errores de validación o procesamiento. | `field`, `message` |
+| `ApiResponse` | Estructura general de respuesta de la API. | `success`, `message`, `data`, `errors`, `timestamp` |
+| `ApiResponseVoid` | Respuesta general sin cuerpo de datos específico. | `success`, `message`, `data`, `errors`, `timestamp` |
+
+#### Estructura general de respuesta
+
+Todas las respuestas documentadas por Swagger mantienen una estructura general basada en el modelo `ApiResponse`, lo que permite estandarizar la comunicación entre el backend y el frontend de FoodFlow.
+
+```
+{
+  "success": true,
+  "message": "string",
+  "data": {},
+  "errors": [
+    {
+      "field": "string",
+      "message": "string"
+    }
+  ],
+  "timestamp": "2026-04-30T03:12:57.000Z"
+}
+```
 
 ### 5.2.7. Team Collaboration Insights
 
