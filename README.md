@@ -174,7 +174,7 @@ ClaudeFlow es una startup liderada por estudiantes de la Universidad Peruana de 
 | ![WernerLang.jpg](assets/WernerLang.jpg) | Lang Nassi, Werner Khalil | U202310003 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Soy un estudiante que le gusta investigar cosas nuevas. | Investigador, Innovador, Analista, Cooperativo. |
 | ![LuisRodriguez.jpg](assets/LuisRodriguez.png) | Rodriguez Rodriguez, Luis Piero | U202311334 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), actualmente en 7mo ciclo, con interés en el rubro de desarrollo y análisis de datos. | Colaborativo, amigable, responsable, adaptativo |
 | ![GustavoRoman.jpg](assets/GustavoRoman.jpg) | Román Pajuelo, Luis Gustavo | U202123373 | Ingeniería de Software | Estudiante de la Universidad Peruana de Ciencias Aplicadas (UPC), cursando en 7.º ciclo. Me considero un estudiante con ganas de seguir aprendiendo constantemente | Responsable, Cooperativo, Proactivo, Perseverante. |
-| ![SantiagoSuarez.jpg](assets/SantiagoSuarez.jpg) | Suárez Romero, Santiago Manuel | U202311532 | Ingeniería de Software | | |
+| ![SantiagoSuarez.jpg](assets/SantiagoSuarez.jpeg) | Suárez Romero, Santiago Manuel | U202311532 | Ingeniería de Software | | |
 
 ## 1.2 Solution Profile
 
