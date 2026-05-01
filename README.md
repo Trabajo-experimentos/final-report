@@ -1907,13 +1907,19 @@ Para este propósito, se identificaron los principales subconjuntos del sistema 
 
 ### 4.6.1 Software Architecture Context Diagram
 
-El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web.
+El diagrama de contexto muestra una vista de alto nivel de las relaciones entre el sistema de software FoodFlow, su usuario principal y los sistemas de soporte necesarios para su funcionamiento.
+
+En el caso de FoodFlow, el actor principal es el Restaurant Owner, quien utiliza la plataforma para gestionar la información financiera y operativa de su restaurante. Desde el sistema, el usuario puede administrar platos, productos de inventario, órdenes, reportes financieros, perfil de usuario y suscripciones.
+
+Asimismo, el sistema se relaciona con una base de datos PostgreSQL, utilizada para almacenar la información persistente del negocio, incluyendo usuarios, suscripciones, platos, productos, órdenes y detalles de órdenes. No se consideran servicios externos adicionales como pasarelas de pago, servicios de correo o APIs de terceros, ya que no se encuentran implementados en el código fuente analizado.
 
 <p align="center">
   <img src="assets/Context_Diagram.png" alt="ContextDiagram" width="300">
 </p>
 
 ### 4.6.2 Software Architecture Container Diagrams.
+
+El diagrama de contenedores muestra una vista general de las aplicaciones y fuentes de datos que forman parte de la ejecución del sistema FoodFlow.
 
 <p align="center">
   <img src="assets/Containers_Diagram.png" alt="ContainersDiagram" width="500">
