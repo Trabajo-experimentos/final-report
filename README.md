@@ -1578,15 +1578,179 @@ Finalmente, la última sección muestra el footer de la landing page. Este bloqu
 
 ## 4.4 Web Applications UX/UI Design
 
+El diseño UX/UI de la aplicación web de FoodFlow se desarrolló considerando como principios principales la claridad, la accesibilidad y la eficiencia en la gestión de información financiera y operativa. Al tratarse de una plataforma orientada a dueños de restaurantes, la experiencia visual se enfocó en reducir la complejidad de uso y facilitar el acceso rápido a módulos clave como dashboard, inventario, menú, órdenes, finanzas, perfil y suscripciones.
+
+La propuesta busca que el usuario pueda interpretar datos importantes de su negocio sin depender de conocimientos contables avanzados. Para ello, se priorizó una navegación lateral clara, componentes visuales consistentes, tarjetas de métricas, tablas organizadas, formularios simples y gráficos comprensibles. Asimismo, se incorporó una jerarquía tipográfica legible, contraste adecuado entre elementos y una paleta visual alineada con la identidad de FoodFlow, permitiendo que la interacción con la plataforma sea fluida, ordenada y orientada a la toma de decisiones.
+
 ### 4.4.1 Web Applications Wireframes
+
+
 
 ### 4.4.2 Web Applications Wireflow Diagrams
 
+
+
 ### 4.4.3 Web Applications Mock-ups
+
+La etapa de mockups representa la consolidación visual de las pantallas principales de la aplicación web FoodFlow, trasladando la estructura funcional definida previamente hacia una propuesta de alta fidelidad. En esta fase se evidencia la aplicación de la identidad visual del producto, el uso de la paleta cálida en tonos naranjas, la jerarquía tipográfica, los componentes de navegación lateral, las tarjetas de métricas, las tablas de información y los formularios modales. El objetivo de estos mockups es mostrar cómo FoodFlow ofrece una experiencia clara, moderna y funcional para que los dueños de restaurantes gestionen sus finanzas, inventario, platos, órdenes, perfil y suscripciones desde una sola plataforma.
+
+**Pantalla de inicio de sesión**
+
+La pantalla de inicio de sesión funciona como el primer punto de acceso a la aplicación web de FoodFlow. Su diseño utiliza una composición limpia y centrada, colocando el formulario principal dentro de una tarjeta blanca con bordes redondeados y sombra suave, lo que genera una sensación de orden y enfoque. Los campos de Email y Password permiten que el usuario ingrese sus credenciales de forma directa, mientras que el botón principal “Sign In” destaca mediante el color naranja característico de la marca, guiando visualmente la acción principal.
+
+En la parte superior derecha se incorporan controles para alternar entre español e inglés, así como un botón de cambio de modo visual. Esto refuerza la accesibilidad de la interfaz y permite adaptar la experiencia al idioma y preferencia visual del usuario. La pantalla mantiene un diseño minimalista, evitando distracciones y priorizando el proceso de autenticación.
+
+<p align="center">
+  <img src="assets/MockUpWebLogin.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de registro**
+
+La pantalla de registro mantiene la misma línea visual del inicio de sesión, pero amplía el formulario para permitir la creación de una nueva cuenta. La tarjeta central incluye los campos Full Name, Email, Password y Confirm Password, organizados de manera vertical para facilitar la lectura y el llenado progresivo de la información. El título “FoodFlow” se mantiene como elemento principal de identidad, acompañado por un subtítulo que indica claramente el propósito de la pantalla.
+
+El botón “Sign Up” utiliza nuevamente el naranja como color de acción principal, reforzando la coherencia visual del sistema. En la parte inferior se incluye el enlace hacia la pantalla de inicio de sesión, permitiendo que los usuarios que ya tienen una cuenta regresen fácilmente al flujo de acceso. La composición general transmite simplicidad, claridad y confianza durante el proceso de creación de cuenta.
+
+<p align="center">
+  <img src="assets/MockUpWebRegister.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de dashboard con menú de usuario**
+
+Este mockup muestra el dashboard principal con el menú de usuario desplegado desde la parte superior derecha. La pantalla conserva la estructura del panel, las métricas financieras, acciones rápidas, platos con más ingresos y órdenes recientes, mientras que el menú flotante ofrece accesos a configuración y cierre de sesión.
+
+La presencia de este menú permite centralizar acciones relacionadas con la cuenta sin ocupar espacio permanente dentro de la interfaz. Su diseño compacto y ubicado junto al avatar del usuario facilita el acceso rápido a opciones personales. Esta interacción refuerza la usabilidad del sistema al mantener disponibles las funciones de sesión de manera discreta y ordenada.
+
+<p align="center">
+  <img src="assets/MockUpWeb1.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de menú: listado de platos**
+
+La pantalla de menú y platos muestra la información registrada sobre la oferta gastronómica del restaurante. En la parte superior se incluye un buscador que permite localizar platos específicos por nombre, mientras que el botón “Agregar plato” facilita la creación de nuevos registros. La tabla presenta columnas para nombre, descripción, precio, ingredientes y acciones.
+
+Este diseño permite revisar de manera clara cada plato del menú, sus componentes principales y su precio de venta. Las acciones de edición y eliminación permiten mantener el catálogo actualizado. La organización de esta pantalla favorece la gestión diaria del menú y ayuda a mantener una oferta ordenada para la operación del restaurante.
+
+<p align="center">
+  <img src="assets/MockUpWeb2.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de menú: agregar nuevo plato**
+
+El modal de agregar nuevo plato permite registrar platos dentro del menú del restaurante. El formulario solicita nombre, descripción, precio e ingredientes, datos necesarios para mantener una oferta gastronómica organizada y actualizada. La estructura del modal es sencilla y se enfoca en los campos esenciales para la creación del plato.
+
+El fondo oscurecido permite separar visualmente el proceso de registro del contenido principal. Los botones “Cancelar” y “Crear” facilitan la confirmación o anulación de la acción. Esta pantalla permite que el dueño del restaurante mantenga control sobre su menú y agregue nuevos platos de forma rápida.
+
+<p align="center">
+  <img src="assets/MockUpWeb3.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de inventario: listado de productos**
+
+La pantalla principal de inventario permite administrar los insumos y existencias del restaurante. En la parte superior se muestra una alerta que informa la existencia de productos con stock bajo, lo que ayuda al usuario a identificar situaciones que requieren atención. También se incluye un campo de búsqueda para localizar productos de manera rápida.
+
+La tabla de inventario presenta columnas como producto, stock, costo unitario, valor total, proveedor y acciones. Los niveles de stock se muestran mediante etiquetas visuales, facilitando la lectura del estado de cada insumo. Las acciones de edición y eliminación permiten mantener la información actualizada. Esta pantalla contribuye a mejorar el control de compras, existencias y costos asociados al inventario.
+
+<p align="center">
+  <img src="assets/MockUpWeb4.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de inventario: agregar nuevo producto**
+
+El modal de agregar producto permite registrar nuevos insumos dentro del inventario del restaurante. La pantalla oscurece el fondo para concentrar la atención en el formulario, el cual solicita datos como nombre del producto, descripción, stock, unidad de medida, costo unitario, umbral de stock bajo, categoría y proveedor.
+
+Esta organización permite capturar información operativa y financiera relevante para el control del inventario. El campo de umbral de stock bajo resulta especialmente útil para identificar productos que requieren reposición. Los botones “Cancelar” y “Crear” permiten cerrar el modal o confirmar el registro, manteniendo un flujo de interacción claro y directo.
+
+<p align="center">
+  <img src="assets/MockUpWeb5.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de órdenes: listado general**
+
+La pantalla de órdenes presenta una tabla con el historial de pedidos registrados en el sistema. Cada fila muestra información clave como número de orden, mesa, tipo, cantidad de ítems, total, estado y acciones disponibles. Esta estructura permite que el usuario consulte rápidamente el estado de las órdenes y realice acciones como eliminación cuando sea necesario.
+
+El botón “Nueva orden” se ubica en la parte superior derecha, destacando la acción principal del módulo. La tabla mantiene una distribución amplia y limpia, con paginación inferior para organizar los registros. Esta pantalla permite controlar las órdenes del restaurante de forma centralizada y ordenada.
+
+<p align="center">
+  <img src="assets/MockUpWeb6.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de órdenes: creación de nueva orden**
+
+El mockup de creación de orden muestra un modal centrado sobre la pantalla de órdenes, utilizando un fondo oscurecido para enfocar la atención del usuario en la acción actual. El formulario permite ingresar la mesa o identificador de la orden y seleccionar los ítems correspondientes, indicando el plato, cantidad y precio asociado.
+
+La interfaz calcula el total de la orden y lo muestra de manera destacada en la parte inferior, evitando cálculos manuales y reduciendo posibles errores. También se incluyen acciones para agregar nuevos ítems, cancelar el proceso o crear la orden. Este diseño facilita el registro de pedidos de manera ordenada, visual y alineada con la operación diaria de un restaurante.
+
+<p align="center">
+  <img src="assets/MockUpWeb7.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de finanzas**
+
+La pantalla de finanzas centraliza la información analítica del restaurante mediante reportes financieros y visualizaciones. En la parte superior se presentan tarjetas de resumen para ingresos totales, gastos totales, ganancia y órdenes. A la derecha se encuentran los filtros de periodo Diario, Semanal y Mensual, permitiendo que el usuario cambie el alcance temporal del análisis.
+
+El contenido principal incluye gráficos de ingresos y gastos por categoría, platos principales por ingresos y desglose de gastos. Esta organización permite interpretar el rendimiento financiero desde diferentes perspectivas, combinando indicadores numéricos con visualizaciones gráficas. La pantalla está diseñada para facilitar decisiones basadas en datos, ayudando al dueño del restaurante a identificar tendencias, costos y fuentes de ingreso relevantes.
+
+<p align="center">
+  <img src="assets/MockUpWeb8.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de configuración: perfil**
+
+La pestaña de perfil permite al usuario revisar y actualizar su información personal dentro de FoodFlow. El formulario muestra campos como nombre, correo electrónico y suscripción actual, organizados en una tarjeta limpia y de fácil lectura. La sección de suscripción se presenta como un campo informativo, permitiendo al usuario reconocer rápidamente el plan asociado a su cuenta.
+
+El botón “Guardar cambios” utiliza el color naranja como acción principal, manteniendo coherencia con el resto de la aplicación. Esta pantalla cumple una función administrativa esencial, ya que permite que el usuario mantenga actualizados sus datos personales y revise información relevante de su cuenta desde un único espacio.
+
+<p align="center">
+  <img src="assets/MockUpWeb9.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de configuración: seguridad**
+
+La pestaña de seguridad está enfocada en la actualización de contraseña del usuario. La interfaz presenta un formulario contenido en una tarjeta blanca, con campos para ingresar la contraseña actual, la nueva contraseña y la confirmación de la nueva contraseña. Esta distribución permite que el proceso sea claro, lineal y fácil de completar.
+
+El botón de cambio de contraseña aparece deshabilitado mientras no se cumplan las condiciones necesarias, lo que comunica visualmente que la acción requiere información válida antes de ejecutarse. Esta pantalla prioriza la seguridad de la cuenta sin sobrecargar al usuario, manteniendo una experiencia simple y consistente con el resto de la sección de configuración.
+
+<p align="center">
+  <img src="assets/MockUpWeb10.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de configuración: suscripción**
+
+La vista de configuración en la pestaña de suscripción permite al usuario revisar los planes disponibles dentro de FoodFlow. La pantalla mantiene la navegación lateral y la barra superior, mientras que el contenido central se organiza en tres tarjetas principales: Gratis, Estándar y Premium. Cada tarjeta muestra el precio mensual, los beneficios incluidos y un botón para mejorar el plan.
+
+El diseño facilita la comparación entre planes, presentando los límites y beneficios de cada opción de forma clara. El uso del color naranja en precios, íconos de verificación y botones de acción refuerza la jerarquía visual y orienta la atención hacia las decisiones de suscripción. Esta pantalla está pensada para que el dueño del restaurante pueda evaluar rápidamente qué plan se ajusta mejor a sus necesidades operativas.
+
+<p align="center">
+  <img src="assets/MockUpWeb11.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla de dashboard en modo oscuro**
+
+La versión oscura del dashboard conserva la misma organización funcional, pero adapta la interfaz a una estética de alto contraste. El fondo oscuro permite destacar los componentes principales mediante tonos naranjas, marrones y bordes sutiles, manteniendo la identidad visual de FoodFlow sin perder legibilidad. Esta variante resulta útil para usuarios que prefieren trabajar en ambientes de baja iluminación o desean una experiencia visual más cómoda.
+
+Las tarjetas financieras resaltan ingresos, gastos, ganancia y órdenes totales con colores cálidos y contrastes marcados. Las acciones rápidas se mantienen visibles mediante botones naranjas y contornos definidos. Asimismo, las secciones de platos con más ingresos y órdenes recientes se presentan en contenedores oscuros con separadores claros, conservando la lectura ordenada de la información.
+
+<p align="center">
+  <img src="assets/MockUpWeb12.png" alt="Mockup de FoodFlow">
+</p>
+
+**Pantalla principal en inglés (i18n)**
+
+Esta pantalla muestra la pantalla principal de FoodFlow traducido completamente al inglés, demostrando la capacidad de internacionalización (i18n) de la plataforma. La estructura general, las tarjetas de métricas, la navegación lateral y las secciones de acciones rápidas mantienen su disposición original, pero todos los textos, etiquetas y módulos se adaptan al idioma seleccionado mediante el control ubicado en la barra superior.
+
+Esta funcionalidad asegura que la aplicación sea accesible para un público más amplio y facilita su adopción por parte de usuarios internacionales o equipos de trabajo multilingües. Al igual que en su contraparte en español, la interfaz permite monitorear de forma clara los ingresos, gastos, platos populares y órdenes recientes, conservando la misma consistencia visual, jerarquía y experiencia de usuario sin importar el idioma configurado.
+
+<p align="center">
+  <img src="assets/MockUpWeb13.png" alt="Mockup de FoodFlow">
+</p>
 
 ### 4.4.4 Web Applications User Flow Diagrams
 
+
+
 ## 4.5 Web Applications Prototyping
+
+
 
 ## 4.6 Domain-Driven Software Architecture
 
