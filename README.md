@@ -1613,7 +1613,9 @@ Para este propósito, se identificaron los principales subconjuntos del sistema 
 
 El sistema tiene como actor principal al **dueño del restaurante**, quien accede desde una interfaz web.
 
-<img alt="contexto" src="https://github.com/user-attachments/assets/67481017-f88b-4c69-b8d5-e9dac63b09fe" />
+<p align="center">
+  <img src="assets/Context_Diagram.png" alt="ContextDiagram" width="300">
+</p>
 
 ### 4.6.2 Software Architecture Container Diagrams.
 
