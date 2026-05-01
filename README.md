@@ -1927,9 +1927,57 @@ El diagrama de contenedores muestra una vista general de las aplicaciones y fuen
 
 ### 4.6.3 Software Architecture Components Diagrams.
 
-#### 4.6.3.1 Bounded Context: .
+Los diagramas de componentes muestran una vista más detallada de los principales módulos internos de la API RESTful de FoodFlow. Estos diagramas representan la organización del backend según los Bounded Contexts identificados en el código fuente, siguiendo una estructura basada en Domain-Driven Design.
 
-#### 4.6.3.2 Bounded Context: .
+Cada Bounded Context agrupa componentes relacionados con una responsabilidad específica del dominio. En general, cada contexto está organizado en controladores, servicios de aplicación y repositorios. Los controladores reciben las solicitudes HTTP, los servicios coordinan la lógica de negocio y los repositorios se encargan de acceder a la persistencia mediante Spring Data JPA.
+
+#### 4.6.3.1 Bounded Context: Identity
+
+Este contexto se encarga de la gestión de identidad y autenticación de usuarios. Incluye el registro, inicio de sesión, generación de tokens JWT, consulta de perfil, actualización de datos personales y cambio de contraseña.
+
+<p align="center">
+  <img src="assets/IdentityDiagram.png" alt="PB" width="400">
+</p>
+
+#### 4.6.3.2 Bounded Context: Billing
+
+Este contexto gestiona las suscripciones del usuario. Permite consultar los planes disponibles, registrar una suscripción, cancelar una suscripción activa y consultar el plan actual asociado al usuario autenticado.
+
+<p align="center">
+  <img src="assets/BillingDiagram.png" alt="PB" width="400">
+</p>
+
+#### 4.6.3.3 Bounded Context: Catalog 
+
+Este contexto administra el catálogo de platos del restaurante. Permite crear, listar, buscar, actualizar y eliminar platos, incluyendo información como nombre, descripción, precio e ingredientes.
+
+<p align="center">
+  <img src="assets/CatalogDiagram.png" alt="PB" width="400">
+</p>
+
+#### 4.6.3.4 Bounded Context: Inventory 
+
+Este contexto gestiona los productos del inventario del restaurante. Permite registrar productos, consultar existencias, actualizar niveles de stock, administrar costos unitarios y eliminar productos del inventario.
+
+<p align="center">
+  <img src="assets/InventoryDiagram.png" alt="PB" width="400">
+</p>
+
+#### 4.6.3.5 Bounded Context: Sales
+
+Este contexto se encarga de la gestión de órdenes. Permite crear órdenes con sus respectivos detalles, calcular el monto total de venta, listar órdenes registradas y eliminar órdenes. Además, utiliza información del contexto de catálogo para validar los platos incluidos en cada orden.
+
+<p align="center">
+  <img src="assets/SalesDiagram.png" alt="PB" width="600">
+</p>
+
+#### 4.6.3.6 Bounded Context: Finance
+
+Este contexto se encarga del análisis financiero y la generación de reportes. Calcula ingresos, gastos, utilidad neta, variaciones por periodo, platos más vendidos y desglose de gastos. Para ello, utiliza datos provenientes de los contextos de ventas e inventario.
+
+<p align="center">
+  <img src="assets/FinanceDiagram.png" alt="PB" width="600">
+</p>
 
 
 ## 4.7 Software Object-Oriented Design
