@@ -1915,6 +1915,10 @@ El sistema tiene como actor principal al **dueño del restaurante**, quien acced
 
 ### 4.6.2 Software Architecture Container Diagrams.
 
+<p align="center">
+  <img src="assets/Containers_Diagram.png" alt="ContainersDiagram" width="500">
+</p>
+
 ### 4.6.3 Software Architecture Components Diagrams.
 
 #### 4.6.3.1 Bounded Context: .
