@@ -1584,7 +1584,139 @@ La propuesta busca que el usuario pueda interpretar datos importantes de su nego
 
 ### 4.4.1 Web Applications Wireframes
 
+Los wireframes de FoodFlow representan la base estructural de la aplicación web antes de aplicar la identidad visual final, colores, branding y componentes de alta fidelidad. Esta etapa permite definir la distribución de los módulos principales, la jerarquía de información, la ubicación de los elementos interactivos y la organización general de cada pantalla sin distraerse con detalles estéticos. A través de estos esquemas, se valida que la experiencia del usuario sea clara, ordenada y funcional para dueños de restaurantes que necesitan gestionar información financiera y operativa desde una sola plataforma.
 
+En esta propuesta estructural se prioriza una navegación lateral persistente, una barra superior de contexto, áreas de contenido amplias, formularios centralizados, tablas de datos y tarjetas de métricas. Cada wireframe permite visualizar cómo se organizarán las funciones principales de FoodFlow, tales como autenticación, dashboard, menú, inventario, órdenes, finanzas, perfil, seguridad y suscripciones.
+
+**Pantalla de registro**
+
+La pantalla de registro plantea una estructura centrada para la creación de nuevas cuentas dentro de FoodFlow. El formulario se ubica en el centro de la pantalla dentro de un contenedor independiente, permitiendo que el usuario complete sus datos de manera ordenada y sin elementos distractores. La disposición vertical de los campos facilita un flujo progresivo para ingresar nombre completo, correo electrónico, contraseña y confirmación de contraseña.
+
+El wireframe también contempla un botón principal para finalizar el registro y un enlace inferior para retornar al inicio de sesión en caso el usuario ya cuente con una cuenta. Esta estructura busca que el proceso de incorporación sea simple, directo y fácil de comprender desde el primer uso de la plataforma.
+
+<p align="center">
+  <img src="assets/WireframeWeb1.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de inicio de sesión**
+
+La pantalla de inicio de sesión funciona como el acceso principal a la aplicación web. Su composición se basa en un formulario centralizado con los campos esenciales para autenticación: correo electrónico y contraseña. Al mantener estos elementos dentro de una tarjeta aislada, el wireframe dirige la atención del usuario hacia la acción principal de ingresar al sistema.
+
+Además, se incluye un enlace inferior hacia la pantalla de registro, permitiendo que los nuevos usuarios puedan crear una cuenta sin abandonar el flujo de acceso. Esta pantalla establece una estructura limpia y funcional para validar credenciales y permitir el ingreso a los módulos internos de FoodFlow.
+
+<p align="center">
+  <img src="assets/WireframeWeb2.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de dashboard con menú de usuario**
+
+Este wireframe presenta la vista principal del dashboard, incorporando la navegación lateral, la barra superior, las tarjetas de métricas y el menú desplegable del usuario. La pantalla está diseñada para ofrecer una lectura rápida del estado general del restaurante, mostrando indicadores clave en la parte superior y secciones de consulta en la zona inferior.
+
+La estructura incluye tarjetas para métricas financieras y operativas, una sección de acciones rápidas y dos bloques principales para visualizar platos destacados y órdenes recientes. El menú de usuario, ubicado en la parte superior derecha, permite acceder a opciones relacionadas con la cuenta, como configuración o cierre de sesión, sin interferir con el contenido principal del dashboard.
+
+<p align="center">
+  <img src="assets/WireframeWeb13.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de menú y platos**
+
+La pantalla de menú y platos organiza la información gastronómica del restaurante mediante una tabla principal. El wireframe contempla una navegación lateral fija, un encabezado de sección, una breve descripción del módulo, un campo de búsqueda y un botón para agregar nuevos platos.
+
+La tabla permite visualizar información relevante de cada plato, como nombre, descripción, precio, ingredientes y acciones disponibles. Esta estructura facilita que el dueño del restaurante consulte, busque y mantenga actualizado su menú desde una vista clara y ordenada.
+
+<p align="center">
+  <img src="assets/WireframeWeb12.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de agregar nuevo plato**
+
+El wireframe de agregar nuevo plato muestra un modal central sobre la pantalla de menú. Esta decisión estructural permite que el usuario realice la acción de creación sin abandonar el contexto actual. El fondo de la pantalla se mantiene visible, pero queda en segundo plano para concentrar la atención en el formulario.
+
+El formulario incluye campos para registrar los datos principales del plato, como nombre, descripción, precio e ingredientes. En la parte inferior se ubican las acciones para cancelar o confirmar el registro. Esta organización permite crear nuevos elementos del menú de manera directa, manteniendo un flujo de trabajo simple y controlado.
+
+<p align="center">
+  <img src="assets/WireframeWeb11.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de inventario**
+
+La pantalla de inventario está diseñada para administrar productos e insumos del restaurante. El wireframe plantea una estructura con encabezado de módulo, botón de acción para agregar productos, aviso informativo sobre stock bajo, campo de búsqueda y una tabla central para listar los productos registrados.
+
+La tabla organiza datos como producto, stock, costo unitario, valor total, proveedor y acciones. Esta disposición permite revisar rápidamente el estado del inventario y detectar productos que requieren atención. El diseño prioriza la claridad operativa, facilitando el control de existencias y costos asociados a los insumos.
+
+<p align="center">
+  <img src="assets/WireframeWeb10.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de agregar nuevo producto**
+
+El wireframe de agregar producto utiliza un modal central para registrar nuevos insumos dentro del inventario. La pantalla principal queda atenuada, mientras el formulario concentra la interacción del usuario. Esta estructura evita cambios de pantalla innecesarios y mantiene al usuario dentro del flujo de inventario.
+
+El formulario contempla campos para nombre del producto, descripción, stock, unidad de medida, costo unitario, umbral de stock bajo, categoría y proveedor. Esta organización permite capturar información suficiente para administrar existencias, costos y alertas operativas. En la parte inferior se incluyen las acciones de cancelar o crear el producto.
+
+<p align="center">
+  <img src="assets/WireframeWeb9.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de órdenes**
+
+La pantalla de órdenes presenta una tabla de gestión para consultar los pedidos registrados en el restaurante. El wireframe incluye el encabezado del módulo, una descripción breve, un botón para crear una nueva orden y una tabla central con la información principal de cada registro.
+
+La tabla contempla columnas para número de orden, mesa, tipo, cantidad de ítems, total, estado y acciones. Esta distribución permite que el usuario identifique rápidamente el estado de cada pedido y realice acciones de gestión cuando sea necesario. La paginación inferior contribuye a mantener la tabla organizada cuando existan múltiples registros.
+
+<p align="center">
+  <img src="assets/WireframeWeb8.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de creación de orden**
+
+El wireframe de creación de orden muestra un modal enfocado en registrar pedidos de forma estructurada. El formulario permite ingresar el identificador de la mesa y agregar uno o más ítems a la orden. Cada ítem se organiza en bloques que contemplan selección de plato, cantidad y precio asociado.
+
+La parte inferior del modal reserva un espacio para mostrar el total de la orden, lo cual permite validar el monto antes de confirmar el registro. Esta estructura busca reducir errores manuales y facilitar la creación de pedidos desde una interfaz clara, manteniendo al usuario dentro del contexto de órdenes.
+
+<p align="center">
+  <img src="assets/WireframeWeb7.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de finanzas**
+
+La pantalla de finanzas organiza los reportes y métricas analíticas del restaurante. En la parte superior se ubican tarjetas de resumen que permiten consultar indicadores principales como ingresos, gastos, ganancia y órdenes. También se contempla un selector de periodo para alternar entre vistas de análisis.
+
+El contenido principal se distribuye en gráficos y bloques analíticos. La sección superior presenta una visualización comparativa de ingresos y gastos, mientras que la zona inferior divide el análisis entre platos principales por ingresos y desglose de gastos. Esta estructura facilita que el usuario interprete el comportamiento financiero del restaurante desde una vista centralizada.
+
+<p align="center">
+  <img src="assets/WireframeWeb6.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de configuración: perfil**
+
+El wireframe de configuración en la pestaña de perfil permite gestionar los datos personales del usuario. La pantalla incluye una navegación por pestañas, separando la información del perfil de otras opciones de configuración. Dentro del contenido principal se presenta una tarjeta con campos editables para datos básicos de la cuenta.
+
+La estructura contempla campos para nombre, correo electrónico y suscripción actual, junto con un botón para guardar los cambios. Esta organización permite que el usuario revise y actualice su información de manera clara, sin mezclarla con configuraciones de seguridad o suscripción.
+
+<p align="center">
+  <img src="assets/WireframeWeb5.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de configuración: seguridad**
+
+La pestaña de seguridad está diseñada para gestionar el cambio de contraseña. El wireframe presenta un formulario dentro de una tarjeta independiente, solicitando la contraseña actual, la nueva contraseña y la confirmación de la nueva contraseña.
+
+Esta estructura favorece un proceso lineal y fácil de comprender. Al separar la seguridad del resto de configuraciones, se evita sobrecargar la pantalla y se permite que el usuario complete la actualización de credenciales de manera controlada. El botón de acción se ubica al final del formulario, reforzando la secuencia natural del proceso.
+
+<p align="center">
+  <img src="assets/WireframeWeb4.png" alt="Wireframe de FoodFlow">
+</p>
+
+**Pantalla de configuración: suscripción**
+
+El wireframe de suscripción organiza los planes disponibles en tarjetas comparativas. La pantalla mantiene la navegación lateral y la estructura de pestañas de configuración, pero enfoca el contenido principal en la presentación de opciones de pago y beneficios.
+
+Cada tarjeta representa un plan distinto, mostrando precio, periodicidad, lista de beneficios y botón de acción. Esta distribución permite comparar alternativas de manera rápida y ordenada. La estructura está pensada para que el usuario pueda revisar las diferencias entre planes y elegir la opción que mejor se adapte a las necesidades de su restaurante.
+
+<p align="center">
+  <img src="assets/WireframeWeb3.png" alt="Wireframe de FoodFlow">
+</p>
 
 ### 4.4.2 Web Applications Wireflow Diagrams
 
