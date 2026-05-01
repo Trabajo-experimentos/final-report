@@ -2355,6 +2355,7 @@ Al mantener el backend en un repositorio independiente, se facilita la organizac
 Link del repositorio del backend: [https://github.com/ClaudeFlow-Org/FoodFlow-Backend](https://github.com/ClaudeFlow-Org/FoodFlow-Backend)
 
 #### Links de los repositorios:
+
 - Link del repositorio del reporte: [https://github.com/ClaudeFlow-Org/FoodFlow-Report](https://github.com/ClaudeFlow-Org/FoodFlow-Report)
 - Link del repositorio de la landing page: [https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage](https://github.com/ClaudeFlow-Org/FoodFlow-LandingPage)
 - Link del repositorio del frontend: [https://github.com/ClaudeFlow-Org/FoodFlow-Frontend](https://github.com/ClaudeFlow-Org/FoodFlow-Frontend)
@@ -2453,12 +2454,16 @@ En el **frontend**, la aplicación se estructura por responsabilidad:
 
 En el **backend**, el paquete base `com.foodflow` se divide por bounded contexts:
 
-- `identity` (esto en el swagger se muestra como Authentication y User Profile)
-- `inventory` (esto en el swagger se muestra como Inventory / Products)
-- `catalog` (esto en el swagger se muestra como Menu / Dishes)
-- `sales` (esto en el swagger se muestra como Orders)
-- `billing` (esto en el swagger se muestra como Subscriptions)
-- `finance` (esto en el swagger se muestra como Finance y Reports)
+| Bounded Context en Backend | Paquete / Módulo | Controller | Nombre en Swagger | Base Path |
+|---|---|---|---|---|
+| `billing` | `com.foodflow.billing` | `SubscriptionController` | `Subscriptions` | `/api/subscriptions` |
+| `identity` | `com.foodflow.identity` | `AuthController` | `Authentication` | `/api/auth` |
+| `identity` | `com.foodflow.identity` | `UserController` | `User Profile` | `/api/users` |
+| `sales` | `com.foodflow.sales` | `OrderController` | `Orders` | `/api/orders` |
+| `catalog` | `com.foodflow.catalog` | `DishController` | `Menu / Dishes` | `/api/dishes` |
+| `inventory` | `com.foodflow.inventory` | `ProductController` | `Inventory / Products` | `/api/products` |
+| `finance` | `com.foodflow.finance` | `FinanceController` | `Finance & Reports` | `/api/finance` |
+| `common` | `com.foodflow.common` | No tiene controller de negocio | No aparece como grupo principal | N/A |
 
 Cada contexto mantiene una separación por capas:
 
@@ -2732,6 +2737,16 @@ La arquitectura de servicios de FoodFlow fue implementada mediante un backend de
 
 Para la persistencia de datos se utilizó Supabase, permitiendo almacenar y administrar la información del sistema en un entorno cloud accesible y escalable. Asimismo, con el objetivo de facilitar la validación de los endpoints y la integración con la aplicación web, se incorporó documentación interactiva mediante Swagger, desde donde es posible revisar los contratos de datos, consultar las rutas disponibles y realizar pruebas de los servicios en tiempo real.
 
+| En el Backend | En Swagger |
+|---|---|
+| `billing` | `Subscriptions` |
+| `identity` | `Authentication` y `User Profile` |
+| `sales` | `Orders` |
+| `catalog` | `Menu / Dishes` |
+| `inventory` | `Inventory / Products` |
+| `finance` | `Finance & Reports` |
+| `common` | No aparece como bounded context funcional en Swagger |
+
 Link del backend: [https://foodflow-backend-y3lj.onrender.com/](https://foodflow-backend-y3lj.onrender.com/)
 
 ### 5.2.6. RESTful API documentation
@@ -2739,6 +2754,16 @@ Link del backend: [https://foodflow-backend-y3lj.onrender.com/](https://foodflow
 <p align="center">
   <img src="assets/FoodFlowSwagger.png" alt="">
 </p>
+
+| En el Backend | En Swagger |
+|---|---|
+| `billing` | `Subscriptions` |
+| `identity` | `Authentication` y `User Profile` |
+| `sales` | `Orders` |
+| `catalog` | `Menu / Dishes` |
+| `inventory` | `Inventory / Products` |
+| `finance` | `Finance & Reports` |
+| `common` | No aparece como bounded context funcional en Swagger |
 
 Link de la documentación swagger: [https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html](https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html)
 
