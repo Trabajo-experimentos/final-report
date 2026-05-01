@@ -2247,6 +2247,10 @@ La adopción de estas convenciones permite que FoodFlow mantenga una base de có
 
 ### 5.2.2. Implemented Landing Page Evidence
 
+<p align="center">
+  <img src="assets/LandingDeploy.png" alt="">
+</p>
+
 Se completó el desarrollo de la Landing Page de FoodFlow como el primer espacio de presentación del producto ante potenciales usuarios. Esta página funciona como una entrada informativa y comercial a la plataforma, permitiendo que los visitantes comprendan rápidamente qué problema resuelve FoodFlow, cómo ayuda a los restaurantes y cuáles son sus principales beneficios.
 
 A nivel visual y funcional, la implementación respeta la identidad definida para FoodFlow, utilizando una composición moderna, jerarquía tipográfica clara, tarjetas informativas, contraste adecuado, componentes visuales consistentes y una estructura adaptable a distintos tamaños de pantalla. De esta manera, la Landing Page no solo comunica la propuesta de valor de la aplicación, sino que también facilita que los dueños de restaurantes identifiquen a FoodFlow como una solución accesible para organizar sus finanzas, centralizar información operativa y tomar decisiones basadas en datos.
@@ -2254,6 +2258,10 @@ A nivel visual y funcional, la implementación respeta la identidad definida par
 Link de la Landing Page: [https://claudeflow-org.github.io/FoodFlow-LandingPage/](https://claudeflow-org.github.io/FoodFlow-LandingPage/)
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
+
+<p align="center">
+  <img src="assets/FrontendDeploy.png" alt="">
+</p>
 
 Se ha completado el desarrollo y despliegue de la aplicación web de FoodFlow, la cual forma parte del ecosistema digital de ClaudeFlow y está orientada a la gestión financiera y operativa de restaurantes. Esta solución fue implementada como una plataforma web accesible desde navegador, permitiendo a los usuarios interactuar con módulos como dashboard, inventario, menú, órdenes, reportes financieros, perfil, suscripciones y autenticación.
 
@@ -2361,6 +2369,10 @@ El Acuerdo de Servicio (SaaS) para FoodFlow establece los términos y condicione
 
 ### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
 
+<p align="center">
+  <img src="assets/FoodFlowSwagger.png" alt="">
+</p>
+
 La arquitectura de servicios de FoodFlow fue implementada mediante un backend desarrollado en Java con Spring Boot, encargado de centralizar la lógica de negocio y exponer los servicios necesarios para el funcionamiento de la aplicación web. Esta capa backend permite gestionar las operaciones relacionadas con autenticación, inventario, menú, órdenes, reportes, perfiles y suscripciones, manteniendo una estructura orientada a servicios RESTful para facilitar la comunicación con el frontend.
 
 Para la persistencia de datos se utilizó Supabase, permitiendo almacenar y administrar la información del sistema en un entorno cloud accesible y escalable. Asimismo, con el objetivo de facilitar la validación de los endpoints y la integración con la aplicación web, se incorporó documentación interactiva mediante Swagger, desde donde es posible revisar los contratos de datos, consultar las rutas disponibles y realizar pruebas de los servicios en tiempo real.
@@ -2368,6 +2380,10 @@ Para la persistencia de datos se utilizó Supabase, permitiendo almacenar y admi
 Link del backend: [https://foodflow-backend-y3lj.onrender.com/](https://foodflow-backend-y3lj.onrender.com/)
 
 ### 5.2.6. RESTful API documentation
+
+<p align="center">
+  <img src="assets/FoodFlowSwagger.png" alt="">
+</p>
 
 Link de la documentación swagger: [https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html](https://foodflow-backend-y3lj.onrender.com/swagger-ui/index.html)
 
