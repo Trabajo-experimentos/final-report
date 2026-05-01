@@ -1979,298 +1979,407 @@ Este contexto se encarga del análisis financiero y la generación de reportes. 
   <img src="assets/FinanceDiagram.png" alt="PB" width="600">
 </p>
 
+## 4.7. Software Object-Oriented Design
 
-## 4.7 Software Object-Oriented Design
+### 4.7.1. Class Diagrams
 
-### 4.7.1 Class Diagrams
+#### 4.7.1.1. Bounded Context: Identity
 
-#### 4.7.1.1 Bounded Context: .
+<p align="center">
+  <img src="assets/identityClassDiagram.png" alt="">
+</p>
 
-#### 4.7.1.2 Bounded Context: .
+Este diagrama de clases UML detalla la capa de dominio del contexto Identity. La clase User, como raíz del agregado, encapsula la información del usuario (nombre, email, contraseña, imagen de perfil) y orquesta la lógica de actualización de datos personales y credenciales. Se compone de un UserId (ValueObject) y se valida mediante los objetos de valor inmutables Email y Password, los cuales aplican reglas de formato y longitud mínima respectivamente. La interfaz UserRepository define el contrato de persistencia, mientras que PasswordEncoder y JwtTokenProvider son servicios de infraestructura abstraídos como interfaces para mantener el dominio desacoplado de la implementación de seguridad y JWT.
 
+#### 4.7.1.2. Bounded Context: Catalog
 
-<img alt="Untitled diagram-2025-10-09-034906" src="https://github.com/user-attachments/assets/7cd76b45-2db5-4829-947f-626c5e9c8989" />
+<p align="center">
+  <img src="assets/catalogClassDiagram.png" alt="">
+</p>
 
-<img alt="1" src="https://github.com/user-attachments/assets/215ac1e6-a2cf-402c-860a-5bc39099118a" />
+Este diagrama de clases UML representa la capa de dominio del contexto Catalog. La entidad Dish, como raíz del agregado, encapsula toda la información de un platillo del menú (nombre, descripción, precio, ingredientes) y garantiza la validez de sus datos a través de reglas dentro de updateDetails(). El identificador DishId se modela como un objeto de valor inmutable. La interfaz DishRepository define las operaciones de persistencia, incluyendo búsquedas filtradas por usuario y nombre, manteniendo el dominio desacoplado de la base de datos. CatalogApplicationService orquesta los casos de uso del contexto, validando precios positivos y unicidad de nombres por usuario.
 
-<img alt="2" src="https://github.com/user-attachments/assets/7de7aabb-a9af-430c-8132-bd98b56e7e32" />
+#### 4.7.1.3. Bounded Context: Inventory
 
-<img alt="3" src="https://github.com/user-attachments/assets/375c8a3e-7681-464c-b13c-a81289038fe0" />
+<p align="center">
+  <img src="assets/inventoryClassDiagram.png" alt="">
+</p>
 
-<img alt="4" src="https://github.com/user-attachments/assets/7b090aca-b29f-4046-b750-085e7ca219ab" />
+Este diagrama de clases UML muestra la estructura del Domain Layer del contexto Inventory. La entidad Product, como raíz del agregado, modela un insumo del inventario con su nivel de stock, costo unitario y unidad de medida, encapsulando la lógica de actualización mediante updateDetails(). El ProductId se modela como un objeto de valor inmutable que asegura la identidad. La interfaz ProductRepository define el contrato para la persistencia, manteniendo la lógica del dominio desacoplada de los detalles de la infraestructura. El InventoryApplicationService valida invariantes como stock no negativo, costo positivo y unicidad del nombre del producto por usuario.
 
-<img alt="5" src="https://github.com/user-attachments/assets/050f0fe3-540b-4dd1-ac65-31cc6efa786f" />
+#### 4.7.1.4. Bounded Context: Sales
 
-<div style="page-break-after: always;"></div>
+<p align="center">
+  <img src="assets/salesClassDiagram.png" alt="">
+</p>
 
-### 4.7.2 Class Dictionary
+Este diagrama de clases UML muestra el diseño de la capa de dominio del contexto Sales. La entidad Order, como raíz del agregado, asegura la consistencia transaccional de una venta. Está compuesta por un OrderId (ValueObject) y una lista de OrderLineItem, modelado como objeto de valor inmutable que captura el snapshot del platillo (dishId, nombre, precio unitario, cantidad) en el momento de la venta. La relación de composición indica que los OrderLineItem no pueden existir fuera de un Order. La lógica de negocio principal (calculateTotal(), addLineItem()) se encapsula en la raíz del agregado. El SalesApplicationService colabora con el contexto Catalog (vía DishRepository) para obtener los precios actualizados al momento de crear la orden.
 
-#### Suscripción
+#### 4.7.1.5. Bounded Context: Finance
 
-| Clase                      | Tipo             | Descripción                                               | Propósito                                                                                                                                      |
-|----------------------------|------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| **SubscriptionController** | Controlador      | Maneja las peticiones HTTP relacionadas con suscripciones | Expone endpoints REST para que los usuarios puedan ver planes, suscribirse, consultar su suscripción y cancelarla                              |
-| **SubscriptionService**    | Servicio         | Contiene la lógica de negocio de las suscripciones        | Orquesta el proceso completo: valida datos, procesa pagos, activa suscripciones y gestiona renovaciones                                        |
-| **Subscription**           | Entidad          | Representa una suscripción activa de un usuario           | Almacena información de la suscripción individual: qué usuario, qué plan eligió, cuándo inicia/termina, estado del pago                        |
-| **SubscriptionPlan**       | Entidad/Catálogo | Representa los planes de suscripción disponibles          | Define los diferentes planes que se ofrecen (Básico, Premium, Enterprise) con sus precios, características y límites                           |
-| **SubscriptionRepository** | Repositorio      | Acceso a datos de suscripciones de usuarios               | Maneja operaciones CRUD de las **suscripciones activas/históricas de usuarios**. Cada vez que un usuario se suscribe, se crea un registro aquí |
-| **PlanRepository**         | Repositorio      | Acceso a datos de planes disponibles                      | Maneja operaciones CRUD de los **planes que ofreces como negocio** (catálogo de productos). Son los planes base que no cambian por usuario     |
-| **SubscriptionStatus**     | Enum             | Estados posibles de una suscripción                       | Rastrea el flujo: desde que el usuario selecciona un plan, valida pago, procesa, hasta que queda activa o falla                                |
-| **BillingPeriod**          | Enum             | Períodos de facturación                                   | Define si el plan se cobra mensual, trimestral o anualmente                                                                                    |
-| **PaymentClient**          | Cliente          | Interfaz para procesar pagos                              | Se comunica con una pasarela de pago externa (Stripe, PayPal, etc.) para procesar transacciones                                                |
-| **PaymentData**            | DTO              | Datos de pago del usuario                                 | Encapsula información sensible: tarjeta, titular, fecha de expiración, CVV                                                                     |
-| **PaymentResult**          | DTO              | Resultado del procesamiento de pago                       | Contiene si el pago fue exitoso, ID de transacción y mensajes de error si aplica                                                               |
----
+<p align="center">
+  <img src="assets/financeClassDiagram.png" alt="">
+</p>
 
-#### Inventario
+Este diagrama de clases UML detalla la capa de dominio del contexto Finance. La clase FinancialReport actúa como raíz del agregado, encapsulando un reporte financiero completo para un período determinado. Se compone de un objeto FinancialMetrics (entidad que calcula ingresos, gastos, beneficio neto y sus variaciones porcentuales respecto al período anterior), una lista de TopDish (objetos de valor inmutables que representan los platillos más vendidos) y una lista de ExpenseCategory (objetos de valor que desglosan los gastos por categoría con su porcentaje calculado). El enum ReportPeriod encapsula la lógica temporal para calcular rangos de fechas (diario, semanal, mensual). El FinanceApplicationService es un servicio de aplicación que actúa como Anti-Corruption Layer, consumiendo datos de los contextos Sales (OrderRepository) e Inventory (ProductRepository) para sintetizar reportes y métricas.
 
-| Clase                   | Tipo        | Descripción                                      | Propósito                                                                                            |
-|-------------------------|-------------|--------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| **InventoryController** | Controlador | Maneja peticiones HTTP de inventario             | Expone endpoints para registrar productos, actualizar stock y consultar inventario                   |
-| **InventoryService**    | Servicio    | Lógica de negocio del inventario                 | Gestiona operaciones de productos: crear, actualizar stock, descontar ingredientes usados en órdenes |
-| **Product**             | Entidad     | Representa un producto/ingrediente en inventario | Almacena información del producto: nombre, categoría, precio de compra, stock actual, proveedor      |
-| **ProductStatus**       | Enum        | Estados del producto                             | Indica el estado del producto en el sistema: pendiente, registrado, stock disponible, bajo o agotado |
-| **ProductRepository**   | Repositorio | Acceso a datos de productos                      | Maneja operaciones CRUD de productos en inventario                                                   |
+#### 4.7.1.6. Bounded Context: Billing
 
----
+<p align="center">
+  <img src="assets/billingClassDiagram.png" alt="">
+</p>
 
-#### Menú
+Este diagrama de clases UML detalla la capa de dominio del contexto Billing. La clase Subscription es la raíz del agregado, encapsulando el ciclo de vida completo de una suscripción de usuario, con métodos como cancel() que aplica reglas de negocio (no permite cancelar dos veces) e isActive() que evalúa la vigencia. Su identidad se modela mediante un SubscriptionId (ValueObject basado en UUID). El enum SubscriptionPlan centraliza la información de los tres planes disponibles (FREE, STANDARD, PREMIUM) junto con sus precios y beneficios; mientras que SubscriptionStatus define los estados posibles (ACTIVE, CANCELLED, EXPIRED). La interfaz SubscriptionRepository define el contrato de persistencia, y el BillingApplicationService orquesta los casos de uso garantizando que un usuario no pueda tener dos suscripciones activas simultáneamente.
 
-| Clase              | Tipo        | Descripción                     | Propósito                                                                       |
-|--------------------|-------------|---------------------------------|---------------------------------------------------------------------------------|
-| **MenuController** | Controlador | Maneja peticiones HTTP del menú | Expone endpoints para crear platos y consultar el menú                          |
-| **MenuService**    | Servicio    | Lógica de negocio del menú      | Gestiona la creación y consulta de platos disponibles para venta                |
-| **Dish**           | Entidad     | Representa un plato del menú    | Almacena información del plato: nombre, descripción, precio de venta, categoría |
-| **DishStatus**     | Enum        | Estados del plato               | Indica si el plato está en proceso de creación o ya está registrado en el menú  |
-| **DishRepository** | Repositorio | Acceso a datos de platos        | Maneja operaciones CRUD de platos del menú                                      |
+### 4.7.2. Class Dictionary
 
----
+#### 4.7.2.1. Bounded Context: Identity
 
-#### Órdenes
+##### Domain Layer
 
-| Clase                | Tipo                   | Descripción                              | Propósito                                                                                       |
-|----------------------|------------------------|------------------------------------------|-------------------------------------------------------------------------------------------------|
-| **OrderController**  | Controlador            | Maneja peticiones HTTP de órdenes        | Expone endpoints para cargar órdenes, consultarlas y filtrar por rango de fechas                |
-| **OrderService**     | Servicio               | Lógica de negocio de órdenes             | Procesa órdenes de venta, calcula totales, actualiza inventario y coordina con otros servicios  |
-| **Order**            | Entidad                | Representa una orden de venta            | Almacena información de la orden: número, items vendidos, total, fecha, estado de procesamiento |
-| **OrderItem**        | Entidad                | Representa un ítem dentro de una orden   | Detalle de cada plato vendido: qué plato, cantidad, precio unitario, subtotal                   |
-| **OrderStatus**      | Enum                   | Estados de la orden                      | Rastrea el procesamiento: cargada, procesando, actualizando stock, registrada, completada       |
-| **OrderRepository**  | Repositorio            | Acceso a datos de órdenes                | Maneja operaciones CRUD de órdenes, con filtros por fecha y estado                              |
-| **MessagingService** | Servicio de mensajería | Publica eventos entre microservicios     | Comunica eventos importantes: orden procesada, actualización de stock, suscripción activada     |
-| **StockUpdateEvent** | Evento                 | Evento de actualización de inventario    | Mensaje que se envía cuando una orden requiere descontar stock                                  |
-| **InventoryClient**  | Cliente                | Interfaz para comunicarse con Inventario | Permite al servicio de órdenes consultar y actualizar el inventario de otros microservicios     |
+**User (Entity / Aggregate Root):** Representa un usuario registrado en FoodFlow (dueño de un restaurante). Es la raíz del agregado del contexto.
 
-<div style="page-break-after: always;"></div>
+* Atributos: id, name, email, password, profileImageUrl, createdAt, updatedAt.
+* Métodos: updateProfile(name, email), updatePassword(newPassword), updateProfileImageUrl(imageUrl).
+
+**UserId (ValueObject):** Identificador único e inmutable del usuario.
+
+* Atributos: value.
+* Métodos: of(value), empty().
+
+**Email (ValueObject):** Representa un correo electrónico válido que cumple un patrón regex.
+
+* Atributos: value.
+* Métodos: of(value), validación interna en el constructor.
+
+**Password (ValueObject):** Representa una contraseña válida con longitud mínima de 6 caracteres.
+
+* Atributos: value.
+* Métodos: of(value), validación interna en el constructor.
+
+**UserRepository (Repository):** Define operaciones para persistir y recuperar usuarios.
+
+* Métodos: save(user), findById(id), findByEmail(email), existsByEmail(email), delete(id).
+
+##### Application Layer
+
+**IdentityApplicationService (Application Service):** Orquesta los casos de uso de autenticación y gestión de perfil.
+
+* Métodos: register(request), login(request), getProfile(userId), updateProfile(userId, request), updatePassword(userId, request).
+
+**PasswordEncoder (Service Interface):** Contrato para el encriptado/verificación de contraseñas.
+
+* Métodos: encode(rawPassword), matches(raw, encoded).
+
+**JwtTokenProvider (Service Interface):** Contrato para generación y validación de tokens JWT.
+
+* Métodos: generateToken(email, userId), getEmailFromToken(token), getUserIdFromToken(token), validateToken(token).
+
+##### Interface Layer
+
+**AuthController (Controller):** Gestiona las peticiones HTTP de registro y login (/api/auth).
+
+* Métodos: register(request), login(request).
+
+**UserController (Controller):** Gestiona las peticiones HTTP del perfil del usuario autenticado (/api/users).
+
+* Métodos: getProfile(userAuth), updateProfile(userAuth, request), updatePassword(userAuth, request).
+
+##### Infrastructure Layer
+
+**UserRepositoryImpl (Repository Impl):** Implementa UserRepository usando JPA.
+
+**JwtTokenProviderImpl (Service Impl):** Implementación de JwtTokenProvider con la librería JJWT.
+
+**PasswordEncoderImpl (Service Impl):** Implementación de PasswordEncoder (BCrypt).
+
+**JwtAuthenticationFilter (Filter):** Filtro Spring Security que extrae el JWT del header.
+
+**SecurityConfig (Configuration):** Configuración de Spring Security.
+
+#### 4.7.2.2. Bounded Context: Catalog
+
+##### Domain Layer
+
+**Dish (Entity / Aggregate Root):** Representa un platillo del menú del restaurante.
+
+* Atributos: id, name, description, price, ingredients, userId, createdAt, updatedAt.
+* Métodos: updateDetails(name, description, price, ingredients).
+
+**DishId (ValueObject):** Identificador único e inmutable del platillo.
+
+* Atributos: value.
+* Métodos: of(value), empty().
+
+**DishRepository (Repository):** Define las operaciones de persistencia para platillos.
+
+* Métodos: save(dish), findById(id), findByUserId(userId), findByUserIdAndNameContaining(userId, name), delete(id), existsByUserIdAndName(userId, name).
+
+##### Application Layer
+
+**CatalogApplicationService (Application Service):** Orquesta los casos de uso del catálogo.
+
+* Métodos: addDish(userId, request), getAllDishes(userId), searchDishes(userId, name), getDishById(userId, dishId), updateDish(userId, dishId, request), deleteDish(userId, dishId).
+
+##### Interface Layer
+
+**DishController (Controller):** Gestiona las peticiones HTTP del menú de platillos (/api/dishes).
+
+* Métodos: addDish(userAuth, request), getAllDishes(userAuth, search), getDishById(userAuth, id), updateDish(userAuth, id, request), deleteDish(userAuth, id).
+
+##### Infrastructure Layer
+
+**DishRepositoryImpl (Repository Impl):** Implementa DishRepository mediante JPA.
+
+**DishJpaEntity (JPA Entity):** Mapeo a la tabla dishes.
+
+**DishJpaRepository (Spring Data Repository):** Provee operaciones CRUD nativas de Spring Data.
+
+**DishMapper (Mapper):** Convierte entre Dish (dominio) y DishJpaEntity (infraestructura).
+
+#### 4.7.2.3. Bounded Context: Inventory
+
+##### Domain Layer
+
+**Product (Entity / Aggregate Root):** Representa un insumo o producto en el inventario del restaurante.
+
+* Atributos: id, name, stockLevel, unitCost, unitOfMeasure, userId, createdAt, updatedAt.
+* Métodos: updateDetails(name, stockLevel, unitCost, unitOfMeasure).
+
+**ProductId (ValueObject):** Identificador único e inmutable del producto.
+
+* Atributos: value.
+* Métodos: of(value), empty().
+
+**ProductRepository (Repository):** Define las operaciones de persistencia para productos.
+
+* Métodos: save(product), findById(id), findByUserId(userId), delete(id), existsByUserIdAndName(userId, name).
+
+##### Application Layer
+
+**InventoryApplicationService (Application Service):** Orquesta los casos de uso del inventario.
+
+* Métodos: addProduct(userId, request), getAllProducts(userId), getProductById(userId, productId), updateProduct(userId, productId, request), deleteProduct(userId, productId).
+
+##### Interface Layer
+
+**ProductController (Controller):** Gestiona las peticiones HTTP del inventario (/api/products).
+
+* Métodos: addProduct(userAuth, request), getAllProducts(userAuth), getProductById(userAuth, id), updateProduct(userAuth, id, request), deleteProduct(userAuth, id).
+
+##### Infrastructure Layer
+
+**ProductRepositoryImpl (Repository Impl):** Implementa ProductRepository mediante JPA.
+
+**ProductJpaEntity (JPA Entity):** Mapeo a la tabla products.
+
+**ProductJpaRepository (Spring Data Repository):** Provee operaciones CRUD nativas de Spring Data.
+
+**ProductMapper (Mapper):** Convierte entre Product y ProductJpaEntity.
+
+#### 4.7.2.4. Bounded Context: Sales
+
+##### Domain Layer
+
+**Order (Entity / Aggregate Root):** Representa una orden de venta realizada por el restaurante a un cliente. Es la raíz del agregado.
+
+* Atributos: id, userId, tableIdentifier, orderDate, lineItems, totalAmount.
+* Métodos: calculateTotal(), addLineItem(item).
+
+**OrderId (ValueObject):** Identificador único e inmutable de la orden.
+
+* Atributos: value.
+* Métodos: of(value), empty().
+
+**OrderLineItem (ValueObject):** Representa un platillo dentro de una orden con la cantidad y precio congelados al momento de la venta.
+
+* Atributos: dishId, dishName, unitPrice, quantity.
+* Métodos: getLineTotal(), equals(o), hashCode().
+
+**OrderRepository (Repository):** Define las operaciones de persistencia para órdenes.
+
+* Métodos: save(order), findById(id), findByUserId(userId), findByUserIdAndDateBetween(userId, start, end), delete(id).
+
+##### Application Layer
+
+**SalesApplicationService (Application Service):** Orquesta los casos de uso del proceso de ventas. Colabora con el contexto Catalog para resolver platillos.
+
+* Métodos: createOrder(userId, request), getAllOrders(userId), getOrderById(userId, orderId), deleteOrder(userId, orderId).
+
+##### Interface Layer
+
+**OrderController (Controller):** Gestiona las peticiones HTTP relacionadas con órdenes (/api/orders).
+
+* Métodos: createOrder(userAuth, request), getAllOrders(userAuth), getOrderById(userAuth, id), deleteOrder(userAuth, id).
+
+##### Infrastructure Layer
+
+**OrderRepositoryImpl (Repository Impl):** Implementa OrderRepository mediante JPA.
+
+**OrderJpaEntity (JPA Entity):** Mapeo a la tabla orders.
+
+**OrderLineItemJpaEntity (JPA Entity):** Mapeo a la tabla order_line_items (relación @OneToMany con OrderJpaEntity).
+
+**OrderJpaRepository (Spring Data Repository):** Provee operaciones CRUD nativas de Spring Data.
+
+**OrderMapper (Mapper):** Convierte entre Order y OrderJpaEntity incluyendo sus line items.
+
+#### 4.7.2.5. Bounded Context: Finance
+
+##### Domain Layer
+
+**FinancialReport (Aggregate Root):** Encapsula un reporte financiero para un período específico. Es la raíz del agregado.
+
+* Atributos: period, startDate, endDate, metrics, topDishes, expenseBreakdown.
+
+**FinancialMetrics (Entity):** Encapsula los indicadores financieros calculados (ingresos, gastos, utilidad neta y sus variaciones).
+
+* Atributos: totalIncome, totalExpenses, netProfit, incomeVariation, expensesVariation.
+* Métodos: calculateVariations(previous).
+
+**TopDish (ValueObject):** Representa un platillo top en ventas para un período.
+
+* Atributos: dishId, dishName, quantitySold, totalRevenue.
+
+**ExpenseCategory (ValueObject):** Representa un desglose de gasto por categoría con su monto y porcentaje.
+
+* Atributos: name, amount, percentage.
+* Métodos: calculatePercentage(totalExpenses).
+
+**ReportPeriod (Enum / ValueObject):** Encapsula la lógica de períodos temporales para reportes.
+
+* Valores: DAILY, WEEKLY, MONTHLY.
+* Métodos: getPeriodStart(ref), getPeriodEnd(ref), getPreviousPeriodStart(ref), getPreviousPeriodEnd(ref).
+
+##### Application Layer
+
+**FinanceApplicationService (Application Service):** Orquesta el cálculo del dashboard y los reportes financieros, integrando datos de los contextos Sales e Inventory.
+
+* Métodos: getDashboard(userId), getFinancialReport(userId, periodStr).
+
+##### Interface Layer
+
+**FinanceController (Controller):** Gestiona las peticiones HTTP del dashboard y reportes (/api/finance).
+
+* Métodos: getDashboard(userAuth), getFinancialReport(userAuth, period).
+
+##### Infrastructure Layer
+
+Este contexto no tiene infraestructura propia: reutiliza repositorios de Sales (OrderRepository) e Inventory (ProductRepository). Es un Customer/Supplier que actúa como agregador de datos en tiempo real.
+
+#### 4.7.2.6. Bounded Context: Billing
+
+##### Domain Layer
+
+**Subscription (Entity / Aggregate Root):** Representa la suscripción de un usuario a un plan de FoodFlow.
+
+* Atributos: id, userId, plan, status, startDate, endDate, cancellationDate, stripeSubscriptionId.
+* Métodos: cancel(), isActive().
+
+**SubscriptionId (ValueObject):** Identificador único basado en UUID.
+
+* Atributos: value.
+* Métodos: of(value), generate(), empty().
+
+**SubscriptionPlan (Enum / ValueObject):** Cataloga los planes disponibles con su precio y beneficios.
+
+* Valores: FREE (0.0), STANDARD (29.99), PREMIUM (79.99).
+* Atributos: displayName, monthlyPrice, benefits.
+* Métodos: fromDisplayName(displayName).
+
+**SubscriptionStatus (Enum):** Estados del ciclo de vida de la suscripción.
+
+* Valores: ACTIVE, CANCELLED, EXPIRED.
+
+**SubscriptionRepository (Repository):** Define las operaciones de persistencia para suscripciones.
+
+* Métodos: save(subscription), findById(id), findByUserId(userId), findAllActive().
+
+##### Application Layer
+
+**BillingApplicationService (Application Service):** Orquesta los casos de uso de suscripción y facturación.
+
+* Métodos: getAvailablePlans(), subscribe(userId, request), cancelSubscription(userId), getCurrentSubscription(userId).
+
+##### Interface Layer
+
+**SubscriptionController (Controller):** Gestiona las peticiones HTTP de planes y suscripciones (/api/subscriptions).
+
+* Métodos: getPlans(), subscribe(userAuth, request), cancel(userAuth), getCurrent(userAuth).
+
+##### Infrastructure Layer
+
+**SubscriptionRepositoryImpl (Repository Impl):** Implementa SubscriptionRepository mediante JPA.
+
+**SubscriptionJpaEntity (JPA Entity):** Mapeo a la tabla subscriptions.
+
+**SubscriptionJpaRepository (Spring Data Repository):** Provee operaciones CRUD nativas de Spring Data.
+
+**SubscriptionMapper (Mapper):** Convierte entre Subscription y SubscriptionJpaEntity.
+
+**SubscriptionPlanEnum / SubscriptionStatusEnum (JPA Enums):** Representaciones persistentes de los enums del dominio.
 
 ## 4.8 Database Design
 
 ### 4.8.1 Relational Database Diagram
 
-La base de datos **Postgres** mantiene las entidades descritas en los capítulos anteriores:
+<p align="center">
+  <img src="assets/diagramaBDfoodflow.png" alt="PB" width="600">
+</p>
 
-![WhatsApp Image 2025-11-30 at 9 21 40 PM](https://github.com/user-attachments/assets/59d10088-aa49-4da6-a5b4-be8bac062fe1)
+El diseño de base de datos de **FoodFlow** está construido sobre una base de datos relacional PostgreSQL y se genera desde las entidades JPA implementadas en el backend. La estructura actual se organiza alrededor de los bounded contexts desarrollados en el sistema: **Identity**, **Billing**, **Catalog**, **Inventory**, **Sales** y **Finance**.
 
-<div style="page-break-after: always;"></div>
+El modelo persistente está compuesto por las tablas `users`, `subscriptions`, `dishes`, `products`, `orders` y `order_line_items`. Estas tablas permiten almacenar la información principal del sistema, como usuarios, suscripciones, platos del menú, productos de inventario y órdenes registradas. Asimismo, existen relaciones lógicas mediante identificadores como `user_id` y `dish_id`, además de una relación explícita entre órdenes y sus ítems mediante `order_id`.
 
-#### Entidades del Sistema (Bounded Contexts)
+#### 4.8.1.1. Bounded Context: Identity
 
-#### 1. USER (Usuario)
-Almacena la información de los usuarios del sistema.
+El bounded context de **Identity** se encarga de la gestión de usuarios, autenticación y perfil dentro de FoodFlow. Su tabla principal en la base de datos es `users`, la cual almacena la información necesaria para identificar a cada usuario del sistema.
 
-| Campo      | Tipo        | Descripción                                       |
-|------------|-------------|---------------------------------------------------|
-| id         | string (PK) | Identificador único del usuario                   |
-| email      | string (UK) | Correo electrónico único del usuario              |
-| name       | string      | Nombre completo del usuario                       |
-| role       | string      | Rol del usuario en el sistema (admin, user, etc.) |
-| created_at | datetime    | Fecha de creación del registro                    |
-| updated_at | datetime    | Fecha de última actualización                     |
+La tabla `users` contiene atributos como `id`, `name`, `email`, `password`, `profile_image_url`, `created_at` y `updated_at`. El atributo `id` funciona como identificador único del usuario, mientras que `email` cuenta con una restricción de unicidad para evitar registros duplicados. El campo `password` almacena la contraseña procesada por el backend para permitir el inicio de sesión seguro.
 
-**Propósito**: Gestionar los usuarios que interactúan con el sistema y pueden adquirir suscripciones.
+Esta tabla actúa como entidad central del sistema, ya que otros bounded contexts dependen del usuario autenticado para asociar información específica del restaurante. Por ello, tablas como `subscriptions`, `dishes`, `products` y `orders` incluyen el atributo `user_id`, permitiendo separar los datos pertenecientes a cada usuario.
 
----
+#### 4.8.1.2. Bounded Context: Billing
 
-#### 2. SUBSCRIPTION (Suscripción)
-Registra las suscripciones activas e históricas de los usuarios.
+El bounded context de **Billing** gestiona las suscripciones de los usuarios dentro de FoodFlow. Su representación persistente se encuentra en la tabla `subscriptions`, donde se almacena el plan activo o cancelado asociado a un usuario.
 
-| Campo          | Tipo        | Descripción                                                  |
-|----------------|-------------|--------------------------------------------------------------|
-| id             | string (PK) | Identificador único de la suscripción                        |
-| user_id        | string (FK) | Referencia al usuario suscrito                               |
-| plan_id        | string (FK) | Referencia al plan seleccionado                              |
-| status         | string      | Estado de la suscripción (ACTIVO, EXPIRADO, CANCELADO, etc.) |
-| start_date     | datetime    | Fecha de inicio de la suscripción                            |
-| end_date       | datetime    | Fecha de finalización de la suscripción                      |
-| auto_renew     | boolean     | Indica si la suscripción se renueva automáticamente          |
-| payment_method | string      | Método de pago utilizado                                     |
-| transaction_id | string      | ID de la transacción de pago                                 |
-| created_at     | datetime    | Fecha de creación del registro                               |
-| updated_at     | datetime    | Fecha de última actualización                                |
+La tabla `subscriptions` contiene los atributos `id`, `user_id`, `plan`, `status`, `start_date`, `end_date`, `cancellation_date` y `stripe_subscription_id`. El atributo `id` es una cadena generada como identificador único de la suscripción. El campo `plan` utiliza valores definidos en el backend como `FREE`, `STANDARD` y `PREMIUM`, mientras que `status` representa el estado de la suscripción con valores como `ACTIVE`, `CANCELLED` y `EXPIRED`.
 
-**Propósito**: Controlar el acceso de los usuarios a las funcionalidades del sistema según su plan activo.
+La relación con el usuario se establece mediante `user_id`, que vincula una suscripción con el usuario propietario. En la implementación actual no existe una tabla independiente para planes de suscripción, ya que los planes se definen como enumeraciones dentro del código del backend.
 
----
+#### 4.8.1.3. Bounded Context: Catalog
 
-#### 3. SUBSCRIPTION_PLAN (Plan de Suscripción)
-Define los diferentes planes de suscripción disponibles.
+El bounded context de **Catalog** administra los platos del menú del restaurante. Su tabla principal es `dishes`, encargada de almacenar la información de cada plato registrado por el usuario.
 
-| Campo          | Tipo        | Descripción                                         |
-|----------------|-------------|-----------------------------------------------------|
-| id             | string (PK) | Identificador único del plan                        |
-| name           | string      | Nombre del plan (Básico, Premium, Enterprise, etc.) |
-| description    | string      | Descripción detallada del plan                      |
-| price          | decimal     | Precio del plan                                     |
-| billing_period | string      | Periodo de facturación (MENSUAL, TRIMESTRAL, ANUAL) |
-| features       | string      | Lista de características incluidas (JSON o texto)   |
-| max_users      | int         | Número máximo de usuarios permitidos                |
-| max_orders     | int         | Número máximo de órdenes permitidas                 |
-| created_at     | datetime    | Fecha de creación del registro                      |
-| updated_at     | datetime    | Fecha de última actualización                       |
+La tabla `dishes` contiene los atributos `id`, `name`, `description`, `price`, `ingredients`, `user_id`, `created_at` y `updated_at`. El atributo `name` identifica el plato, `description` permite registrar información adicional, `price` almacena el precio de venta y `ingredients` guarda los ingredientes asociados al plato.
 
-**Propósito**: Definir las opciones de suscripción disponibles con sus características y limitaciones.
+Cada plato pertenece lógicamente a un usuario mediante el campo `user_id`. Esta relación permite que cada dueño de restaurante gestione únicamente los platos de su propio menú. Además, la tabla `dishes` se relaciona lógicamente con `order_line_items` mediante el atributo `dish_id`, ya que las órdenes registran qué platos fueron incluidos en cada venta.
 
----
+#### 4.8.1.4. Bounded Context: Inventory
 
-#### 4. PAYMENT_TRANSACTION (Transacción de Pago)
-Registra todas las transacciones de pago relacionadas con suscripciones.
+El bounded context de **Inventory** se encarga de la gestión de productos e insumos disponibles en el restaurante. Su tabla principal es `products`, donde se registra la información de stock y costos.
 
-| Campo           | Tipo        | Descripción                                            |
-|-----------------|-------------|--------------------------------------------------------|
-| id              | string (PK) | Identificador único de la transacción                  |
-| subscription_id | string (FK) | Referencia a la suscripción asociada                   |
-| amount          | decimal     | Monto de la transacción                                |
-| currency        | string      | Moneda utilizada (USD, PEN, etc.)                      |
-| status          | string      | Estado de la transacción (EXITOSO, FALLIDO, PENDIENTE) |
-| transaction_id  | string      | ID único de la transacción del proveedor de pagos      |
-| payment_method  | string      | Método de pago usado (tarjeta, PayPal, etc.)           |
-| processed_at    | datetime    | Fecha y hora en que se procesó el pago                 |
-| created_at      | datetime    | Fecha de creación del registro                         |
+La tabla `products` contiene los atributos `id`, `name`, `stock_level`, `unit_cost`, `unit_of_measure`, `user_id`, `created_at` y `updated_at`. El atributo `stock_level` representa la cantidad disponible del producto, `unit_cost` registra el costo unitario y `unit_of_measure` define la unidad de medida utilizada, como unidades, kilogramos o litros.
 
-**Propósito**: Mantener un historial completo de todas las transacciones de pago para auditoría y seguimiento.
+La relación con el usuario se realiza mediante `user_id`, lo que permite mantener inventarios separados por cada dueño de restaurante. Esta información también es utilizada por el bounded context de **Finance** para calcular gastos a partir del valor del inventario registrado.
 
----
+#### 4.8.1.5. Bounded Context: Sales
 
-#### 5. PRODUCT (Producto)
-Almacena información de los productos del inventario.
+El bounded context de **Sales** modela la gestión de órdenes de clientes. Su diseño se basa en dos tablas principales: `orders` y `order_line_items`. Esta separación permite representar una orden como agregado principal y sus platos vendidos como elementos asociados.
 
-| Campo          | Tipo        | Descripción                                           |
-|----------------|-------------|-------------------------------------------------------|
-| id             | string (PK) | Identificador único del producto                      |
-| name           | string      | Nombre del producto                                   |
-| category       | string      | Categoría del producto                                |
-| purchase_price | decimal     | Precio de compra del producto                         |
-| current_stock  | int         | Stock actual disponible                               |
-| unit           | string      | Unidad de medida (kg, unidad, litro, etc.)            |
-| purchase_date  | datetime    | Fecha de compra del producto                          |
-| supplier       | string      | Proveedor del producto                                |
-| status         | string      | Estado del producto (DISPONIBLE, STOCK_BAJO, AGOTADO) |
-| created_at     | datetime    | Fecha de creación del registro                        |
-| updated_at     | datetime    | Fecha de última actualización                         |
+La tabla `orders` contiene los atributos `id`, `user_id`, `table_identifier`, `order_date` y `total_amount`. El campo `table_identifier` permite identificar la mesa o referencia de la orden, mientras que `order_date` registra la fecha de creación y `total_amount` almacena el monto total calculado por el backend.
 
-**Propósito**: Gestionar el inventario de productos y materia prima del negocio.
+La tabla `order_line_items` contiene los atributos `id`, `dish_id`, `dish_name`, `unit_price`, `quantity` y `order_id`. Cada registro representa un plato incluido dentro de una orden. La relación entre `orders` y `order_line_items` es de uno a muchos: una orden puede contener varios ítems, pero cada ítem pertenece a una sola orden.
 
----
+El campo `dish_name` se almacena junto con `dish_id` para conservar el nombre del plato dentro del detalle de la orden. Además, el subtotal de cada ítem no se guarda como columna, ya que se calcula dinámicamente en el backend multiplicando `unit_price` por `quantity`.
 
-#### 6. DISH (Platillo)
-Contiene los platillos disponibles en el menú.
+#### 4.8.1.6. Bounded Context: Finance
 
-| Campo       | Tipo        | Descripción                                               |
-|-------------|-------------|-----------------------------------------------------------|
-| id          | string (PK) | Identificador único del platillo                          |
-| name        | string      | Nombre del platillo                                       |
-| description | string      | Descripción del platillo                                  |
-| price       | decimal     | Precio de venta del platillo                              |
-| category    | string      | Categoría del platillo (entrada, principal, postre, etc.) |
-| status      | string      | Estado del platillo (DISPONIBLE, NO_DISPONIBLE)           |
-| created_at  | datetime    | Fecha de creación del registro                            |
-| updated_at  | datetime    | Fecha de última actualización                             |
+El bounded context de **Finance** no cuenta con tablas propias en la base de datos actual. Su funcionamiento se basa en procesar información ya existente en los bounded contexts de **Sales** e **Inventory**.
 
-**Propósito**: Administrar el menú de platillos ofrecidos a los clientes.
+Para calcular ingresos, el sistema utiliza los datos de `orders` y `order_line_items`, principalmente el monto total de las órdenes y los platos vendidos. Para calcular gastos, utiliza la información de `products`, considerando el stock disponible y el costo unitario de cada producto. Con estos datos, el backend genera métricas como ingresos totales, gastos totales, utilidad neta, variaciones por período, platos más vendidos y desglose de gastos.
 
----
-
-#### 7. ORDER (Orden)
-Registra las órdenes realizadas por los clientes.
-
-| Campo        | Tipo        | Descripción                                          |
-|--------------|-------------|------------------------------------------------------|
-| id           | string (PK) | Identificador único de la orden                      |
-| order_number | string (UK) | Número único de orden para identificación            |
-| total_amount | decimal     | Monto total de la orden                              |
-| status       | string      | Estado de la orden (CARGADA, PROCESANDO, COMPLETADA) |
-| order_date   | datetime    | Fecha y hora en que se realizó la orden              |
-| processed_at | datetime    | Fecha y hora en que se procesó la orden              |
-| created_at   | datetime    | Fecha de creación del registro                       |
-| updated_at   | datetime    | Fecha de última actualización                        |
-
-**Propósito**: Gestionar las órdenes de los clientes y su procesamiento.
-
----
-
-#### 8. ORDER_ITEM (Item de Orden)
-Detalla los platillos incluidos en cada orden.
-
-| Campo      | Tipo        | Descripción                           |
-|------------|-------------|---------------------------------------|
-| id         | string (PK) | Identificador único del item          |
-| order_id   | string (FK) | Referencia a la orden principal       |
-| dish_id    | string (FK) | Referencia al platillo ordenado       |
-| dish_name  | string      | Nombre del platillo (desnormalizado)  |
-| quantity   | int         | Cantidad de platillos ordenados       |
-| unit_price | decimal     | Precio unitario del platillo          |
-| subtotal   | decimal     | Subtotal del item (cantidad × precio) |
-| created_at | datetime    | Fecha de creación del registro        |
-
-**Propósito**: Detallar el contenido específico de cada orden.
-
----
-
-#### 9. INCOME_DETAIL (Detalle de Ingresos)
-Desglosa la información detallada de ingresos en un reporte.
-
-| Campo               | Tipo        | Descripción                            |
-|---------------------|-------------|----------------------------------------|
-| id                  | string (PK) | Identificador único del detalle        |
-| report_id           | string (FK) | Referencia al reporte principal        |
-| total_sales         | decimal     | Total de ventas en el periodo          |
-| order_count         | int         | Cantidad de órdenes procesadas         |
-| average_order_value | decimal     | Valor promedio por orden               |
-| sales_by_dish       | string      | Ventas desglosadas por platillo (JSON) |
-| sales_by_day        | string      | Ventas desglosadas por día (JSON)      |
-| created_at          | datetime    | Fecha de creación del registro         |
-
-**Propósito**: Proporcionar análisis detallado de los ingresos generados.
-
----
-
-#### 10. LOSS_DETAIL (Detalle de Pérdidas)
-Desglosa la información detallada de pérdidas en un reporte.
-
-| Campo                 | Tipo        | Descripción                              |
-|-----------------------|-------------|------------------------------------------|
-| id                    | string (PK) | Identificador único del detalle          |
-| report_id             | string (FK) | Referencia al reporte principal          |
-| total_purchases       | decimal     | Total de compras en el periodo           |
-| purchase_count        | int         | Cantidad de compras realizadas           |
-| purchases_by_category | string      | Compras desglosadas por categoría (JSON) |
-| purchases_by_day      | string      | Compras desglosadas por día (JSON)       |
-| created_at            | datetime    | Fecha de creación del registro           |
-
-**Propósito**: Proporcionar análisis detallado de las pérdidas o gastos incurridos.
-
----
-
-#### Relaciones entre Entidades
-
-| Relación                           | Cardinalidad | Descripción                                                                                              |
-|------------------------------------|--------------|----------------------------------------------------------------------------------------------------------|
-| USER → SUBSCRIPTION                | 1:N          | Un usuario puede tener múltiples suscripciones (historial de suscripciones actuales y pasadas)           |
-| SUBSCRIPTION → SUBSCRIPTION_PLAN   | N:1          | Cada suscripción pertenece a un plan específico; un plan puede ser usado por múltiples suscripciones     |
-| SUBSCRIPTION → PAYMENT_TRANSACTION | 1:N          | Una suscripción puede generar múltiples transacciones (pagos iniciales, renovaciones, intentos fallidos) |
-| ORDER → ORDER_ITEM                 | 1:N          | Una orden contiene múltiples items; cada item pertenece a una única orden                                |
-| DISH → ORDER_ITEM                  | 1:N          | Un platillo puede estar en múltiples items de orden; cada item referencia un único platillo              |
-
----
+Esta decisión mantiene el bounded context de **Finance** como un contexto de consulta y análisis, sin duplicar datos financieros en tablas adicionales. De esta manera, los reportes se construyen a partir de la información operacional ya persistida en el sistema.
 
 # Capítulo V: Product Implementation
 
