@@ -2453,13 +2453,12 @@ En el **frontend**, la aplicación se estructura por responsabilidad:
 
 En el **backend**, el paquete base `com.foodflow` se divide por bounded contexts:
 
-- `identity`
-- `inventory`
-- `catalog`
-- `sales`
-- `billing`
-- `finance`
-- `common`
+- `identity` (esto en el swagger se muestra como Authentication y User Profile)
+- `inventory` (esto en el swagger se muestra como Inventory / Products)
+- `catalog` (esto en el swagger se muestra como Menu / Dishes)
+- `sales` (esto en el swagger se muestra como Orders)
+- `billing` (esto en el swagger se muestra como Subscriptions)
+- `finance` (esto en el swagger se muestra como Finance y Reports)
 
 Cada contexto mantiene una separación por capas:
 
