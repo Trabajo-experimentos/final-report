@@ -1878,7 +1878,29 @@ Esta funcionalidad asegura que la aplicación sea accesible para un público má
 
 ### 4.4.4 Web Applications User Flow Diagrams
 
+- Registro de cuenta en la plataforma
 
+<p align="center">
+  <img src="assets/UserFlowCrearCuenta.png" alt="UserFlow">
+</p>
+
+- Registro de platos (menú) en la plataforma
+
+<p align="center">
+  <img src="assets/UserFlowRegistrarPlato.png" alt="UserFlow">
+</p>
+
+- Registro de productos (inventario) en la plataforma
+
+<p align="center">
+  <img src="assets/UserFlowRegistrarProductos.png" alt="UserFlow">
+</p>
+
+- Registro de órdenes (pedidos) en la plataforma
+
+<p align="center">
+  <img src="assets/UserFlowRegistrarOrden.png" alt="UserFlow">
+</p>
 
 ## 4.5 Web Applications Prototyping
 
@@ -3119,3 +3141,6 @@ Todas las respuestas documentadas por Swagger mantienen una estructura general b
 
 # Anexos
 
+- Bounded Context Canvas: https://miro.com/app/board/uXjVHZHeSzc=/?share_link_id=246445723878
+- Domain Message Flow Modelling: https://miro.com/app/board/uXjVHZAXIRc=/?share_link_id=910118949056
+- Event Storming: https://miro.com/app/board/uXjVHZDYSgE=/?share_link_id=949441154741
