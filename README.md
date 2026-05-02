@@ -1895,15 +1895,132 @@ Para este propósito, se identificaron los principales subconjuntos del sistema 
 #### Event Storming
 
 
+##### Paso 1: Identificación de Eventos de Dominio (Domain Events)
+En la primera fase del taller se identificaron los Eventos de Dominio como hechos relevantes ya ocurridos en el negocio y expresados en pasado. Para FoodFlow se catalogaron eventos tales como “Usuario registrado”, “Usuario autenticado”, “Perfil actualizado”, “Plato registrado”, “Plato actualizado”, etc. La selección de estos eventos se creó a partir de la evidencia del código y se hizo sin introducir por ahora restricciones técnicas, con el objetivo de acordar un lenguaje común y delimitar el alcance funcional del sistema.
+
+<p align="center">
+  <img src="assets/ES_step1.jpg" alt="Step 1">
+</p>
+
+##### Paso 2: Definición de Líneas de Tiempo (Timelines)
+Una vez listados los eventos, se organizaron cronológicamente para construir narrativas operativas representativas del dominio. Este ordenamiento permite identificar causalidades y ramificaciones y detectar eventos faltantes o escenarios no cubiertos por las reglas de negocio observadas en las capas de servicio.
+
+<p align="center">
+  <img src="assets/ES_step2.jpg" alt="Step 2">
+</p>
+
+##### Paso 3: Identificación de Comandos (Commands)
+Los comandos representan las intenciones que provocan eventos y sirven como puntos de entrada del sistema. Cada comando se corresponde con llamadas a la API y controladores visibles en el repositorio, al modelar la relación comando-evento se clarifican responsabilidades de la API y las validaciones a aplicar en la capa de aplicación.
+
+<p align="center">
+  <img src="assets/ES_step3.jpg" alt="Step 3">
+</p>
+
+##### Paso 4: Sistemas Externos (External Systems)
+Para FoodFlow el ecosistema externo principal es la aplicación web SPA (cliente React) que actúa como productor de comandos y consumidor de read models, la base de datos relacional usada por los repositorios JPA como almacenamiento de estado, y los servicios transversales de infraestructura.
+
+<p align="center">
+  <img src="assets/ES_step4.jpg" alt="Step 4">
+</p>
+
+##### Paso 5: Actores y Políticas (Actors & Policies)
+Los actores humanos principales son el Administrador/dueño del restaurante y el personal operativo (meseros/cajeros) que, en la implementación actual, actúan bajo cuentas autenticadas.
+Las políticas de negocio automáticas detectadas incluyen verificación de unicidad de correo, restricción de acceso y visibilidad de productos, platos e inventario y validaciones de integridad.
+
+<p align="center">
+  <img src="assets/ES_step5.jpg" alt="Step 5">
+</p>
+
+##### Paso 6: Puntos de dolor (Pain Points)
+Del análisis se identifican posibles debilidades dentro del flujo de uso del sistema, áreas de incertidumbre y riesgos en el procesamiento. La realización de esta identificació permite priorizar esfuerzos de desarrollo y diseño de mecanismos de contingencia y respuesta ante su aparición.
+
+<p align="center">
+  <img src="assets/ES_step6.jpg" alt="Step 6">
+</p>
+
+##### Paso 7: Modelos de Lectura (Read Models)
+Los read models definen vistas optimizadas para consulta que la interfaz necesita antes de emitir comandos. Estos modelos deben construirse pensando en los flujos de uso del usuario final y en mantener trazabilidad entre eventos y la proyección usada por el cliente.
+
+<p align="center">
+  <img src="assets/ES_step7.jpg" alt="Step 7">
+</p>
+
 #### Candidate Context Discovery
 
+Con la base establecida en el Event Storming, se inició la fase de Candidate Context Discovery para definir los límites lógicos de FoodFlow. El objetivo fue descomponer la complejidad de la plataforma de gestión de restaurantes en Bounded Contexts preliminares, cada uno responsable de una faceta del negocio, de modo que la autonomía y la coherencia de las reglas de negocio queden garantizadas.
+A partir de los eventos identificados se propusieron los siguientes candidatos: identity (autenticación y perfil), billing (gestión de suscripciones y planes), catalog (definición y mantenimiento del menú), inventory (control de productos e insumos), sales (registro y manejo de órdenes) y finance (cálculo de métricas y reportes financieros).
+
+<p align="center">
+  <img src="assets/CCD_Identity.jpg" alt="identity">
+</p>
+
+<p align="center">
+  <img src="assets/CCD_Billing.jpg" alt="billing">
+</p>
+
+<p align="center">
+  <img src="assets/CCD_Catalog.jpg" alt="catalog">
+</p>
+
+<p align="center">
+  <img src="assets/CCD_Inventory.jpg" alt="inventory">
+</p>
+
+<p align="center">
+  <img src="assets/CCD_Sales.jpg" alt="sales">
+</p>
+
+<p align="center">
+  <img src="assets/CCD_Finance.jpg" alt="finance">
+</p>
 
 #### Domain Message Flows Modelling
 
+Tras definir los Bounded Contexts, se utilizó Domain Storytelling para modelar gráficamente la interacción y el flujo de mensajes entre ellos. Esta técnica transforma los procesos en narrativas dinámicas que validan la arquitectura de FoodFlow, asegurando que la colaboración entre actores y sistemas cumpla con los objetivos reales del producto.
+
+<p align="center">
+  <img src="assets/DMFM_sc1.jpg" alt="sc1">
+</p>
+
+<p align="center">
+  <img src="assets/DMFM_sc2.jpg" alt="sc2">
+</p>
+
+<p align="center">
+  <img src="assets/DMFM_sc3.jpg" alt="sc3">
+</p>
+
+<p align="center">
+  <img src="assets/DMFM_sc4.jpg" alt="sc4">
+</p>
 
 #### Bounded Context Canvases
 
+En esta sección se presentan los lienzos detallados para los Bounded Context identificados. Cada canvas actúa como un contrato estratégico que define la misión, el lenguaje ubicuo y las decisiones críticas de los módulos que integran la solución de FoodFlow.
 
+<p align="center">
+  <img src="assets/BCC_Billing.jpg" alt="bcc">
+</p>
+
+<p align="center">
+  <img src="assets/BCC_Catalog.jpg" alt="bcc">
+</p>
+
+<p align="center">
+  <img src="assets/BCC_Finance.jpg" alt="bcc">
+</p>
+
+<p align="center">
+  <img src="assets/BCC_Identity.jpg" alt="bcc">
+</p>
+
+<p align="center">
+  <img src="assets/BCC_Inventory.jpg" alt="bcc">
+</p>
+
+<p align="center">
+  <img src="assets/BCC_Sales.jpg" alt="bcc">
+</p>
 
 ### 4.6.1 Software Architecture Context Diagram
 
