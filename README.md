@@ -116,12 +116,20 @@ Para el desarrollo de este informe se utilizó GitHub como plataforma de colabor
     - [4.6.1 Software Architecture Context Diagram](#461-software-architecture-context-diagram)
     - [4.6.2 Software Architecture Container Diagrams.](#462-software-architecture-container-diagrams)
     - [4.6.3 Software Architecture Components Diagrams.](#463-software-architecture-components-diagrams)
-      - [4.6.3.1 Bounded Context: .](#4631-bounded-context-)
-      - [4.6.3.2 Bounded Context: .](#4632-bounded-context-)
+      - [4.6.3.1 Bounded Context: Identity](#4631-bounded-context-identity)
+      - [4.6.3.2 Bounded Context: Billing](#4632-bounded-context-billing)
+      - [4.6.3.3 Bounded Context: Catalog](#4633-bounded-context-catalog)
+      - [4.6.3.4 Bounded Context: Inventory](#4634-bounded-context-inventory)
+      - [4.6.3.5 Bounded Context: Sales](#4635-bounded-context-sales)
+      - [4.6.3.6 Bounded Context: Finance](#4636-bounded-context-finance)
   - [4.7 Software Object-Oriented Design](#47-software-object-oriented-design)
     - [4.7.1 Class Diagrams](#471-class-diagrams)
-      - [4.7.1.1 Bounded Context: .](#4711-bounded-context-)
-      - [4.7.1.2 Bounded Context: .](#4712-bounded-context-)
+    - [4.7.1.1 Bounded Context: Identity](#4711-bounded-context-identity)
+    - [4.7.1.2 Bounded Context: Catalog](#4712-bounded-context-catalog)
+    - [4.7.1.3 Bounded Context: Inventory](#4713-bounded-context-inventory)
+    - [4.7.1.4 Bounded Context: Sales](#4714-bounded-context-sales)
+    - [4.7.1.5 Bounded Context: Finance](#4715-bounded-context-finance)
+    - [4.7.1.6 Bounded Context: Billing](#4716-bounded-context-billing)
     - [4.7.2 Class Dictionary](#472-class-dictionary)
   - [4.8 Database Design](#48-database-design)
     - [4.8.1 Relational Database Diagram](#481-relational-database-diagram)
@@ -3094,6 +3102,14 @@ Todas las respuestas documentadas por Swagger mantienen una estructura general b
 ```
 
 ### 5.2.7. Team Collaboration Insights
+
+<p align="center">
+  <img src="assets/FoodFlow_gitcommits.jpg" alt="inventory">
+</p>
+
+<p align="center">
+  <img src="assets/FoodFlow_contributors.jpg" alt="inventory">
+</p>
 
 ## 5.3. Video About-the-Product
 
