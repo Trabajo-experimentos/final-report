@@ -3115,6 +3115,10 @@ Todas las respuestas documentadas por Swagger mantienen una estructura general b
 
 ## 5.3. Video About-the-Product
 
+Se hizo un video mostrando el uso de la aplicación
+
+Link del video about the product: [https://1drv.ms/v/c/21f348d94fc5db3f/IQC7_Ni9bUVwQ4iHgwWy2nAcATYJjDLnpDwcm-3YUS-fd-I?e=HWDjfq](https://1drv.ms/v/c/21f348d94fc5db3f/IQC7_Ni9bUVwQ4iHgwWy2nAcATYJjDLnpDwcm-3YUS-fd-I?e=HWDjfq)
+
 # Conclusiones y recomendaciones
 
 ## Conclusiones
