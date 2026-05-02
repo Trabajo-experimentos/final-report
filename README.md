@@ -2863,6 +2863,14 @@ La adopción de estas convenciones permite que FoodFlow mantenga una base de có
 
 ### 5.2.1. Sprint Backlogs.
 
+El primer avance del informe se desarrolló entre el 24 de abril y el 1 de mayo. Durante este periodo se trabajó en la organización inicial del documento, la redacción de contenidos base y la integración de las secciones principales del reporte.
+
+| Sprint | Fecha de inicio | Fecha de fin | Objetivo | Actividades principales | Estado |
+|--------|-----------------|--------------|----------|-------------------------|--------|
+| Sprint 1 | 24/04/26 | 01/05/26 | Consolidar la base del primer avance del informe. | Organicé la estructura general del documento, redacté contenidos iniciales de las secciones principales, ajusté el índice para mejorar la navegación y revisé la coherencia entre apartados. | Completado |
+| Sprint 1 | 24/04/26 | 01/05/26 | Avanzar con la documentación académica y técnica. | Desarrollé la descripción del producto, el análisis del problema, la propuesta de valor y la primera integración de evidencia visual y referencial. | Completado |
+| Sprint 1 | 24/04/26 | 01/05/26 | Dejar listo el documento para revisión interna. | Realicé una revisión final de formato, enlaces internos, títulos y consistencia de redacción para preparar el documento para el siguiente avance. | Completado |
+
 ### 5.2.2. Implemented Landing Page Evidence
 
 <p align="center">
@@ -3114,6 +3122,10 @@ Todas las respuestas documentadas por Swagger mantienen una estructura general b
 </p>
 
 ## 5.3. Video About-the-Product
+
+Se hizo un video mostrando el uso de la aplicación
+
+Link del video about the product: [https://1drv.ms/v/c/21f348d94fc5db3f/IQC7_Ni9bUVwQ4iHgwWy2nAcATYJjDLnpDwcm-3YUS-fd-I?e=HWDjfq](https://1drv.ms/v/c/21f348d94fc5db3f/IQC7_Ni9bUVwQ4iHgwWy2nAcATYJjDLnpDwcm-3YUS-fd-I?e=HWDjfq)
 
 # Conclusiones y recomendaciones
 
